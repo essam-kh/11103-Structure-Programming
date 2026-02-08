@@ -1,8 +1,8 @@
 ---
-title: <b>Week 1</b> (Introduction)
+title: <b>Week 1</b>
 ---
 
-### Introduction & Basics
+## Introduction & Basics
 
 <div class="resource-grid">
   <a href="{{ site.baseurl }}/notes/week-01/notes/" class="resource-card card-notes">Lecture Notes</a>

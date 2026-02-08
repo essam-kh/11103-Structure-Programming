@@ -59,7 +59,8 @@ Output: 5678= 5000+600+70+8
 
 ## Question 4
 Write a program that reads a birth date (year, month, day) and the current date, then calculates the age in days.
-*Note: Assume a year has 360 days and a month has 30 days.*
+> **Note:** Assume a year has 360 days and a month has 30 days.
+{: .note }
 
 **Example:**
 ```

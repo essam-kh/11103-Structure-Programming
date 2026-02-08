@@ -107,6 +107,36 @@ Additional exercises for mastery.
       Solve Challenge <span class="problem-arrow">→</span>
     </div>
   </div>
+
+  <!-- Problem A (326175) -->
+  <div class="problem-card">
+    <a href="https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/A" target="_blank" class="card-link-overlay">Problem A</a>
+    <div class="problem-header">
+      <div class="problem-icon">🅰️</div>
+    </div>
+    <div class="problem-body">
+      <h3 class="problem-title">Problem A</h3>
+      <p class="problem-desc">Contest 326175</p>
+    </div>
+    <div class="problem-footer">
+      Solve Challenge <span class="problem-arrow">→</span>
+    </div>
+  </div>
+
+  <!-- Problem C (326175) -->
+  <div class="problem-card">
+    <a href="https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/C" target="_blank" class="card-link-overlay">Problem C</a>
+    <div class="problem-header">
+      <div class="problem-icon">©️</div>
+    </div>
+    <div class="problem-body">
+      <h3 class="problem-title">Problem C</h3>
+      <p class="problem-desc">Contest 326175</p>
+    </div>
+    <div class="problem-footer">
+      Solve Challenge <span class="problem-arrow">→</span>
+    </div>
+  </div>
 </div>
 
 

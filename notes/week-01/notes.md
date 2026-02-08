@@ -36,7 +36,7 @@ int main() {
 
 ### Explanation
 
--   `#include <stdio.h>`: This line tells the compiler to include the **Standard Input Output** library. This library contains the definitions for functions like `printf` that we use to output text.
+-   `#include <stdio.h>`: This line tells the compiler to include the **Standard Input Output** library. This library contains the definitions for functions like `printf/scanf` that we use to output/input text.
 -   `int main()`: This is the **main function** where the program execution begins. Every C program must have exactly one main function.
 -   `{ ... }`: The curly braces define the **scope** or body of the function. All the code for the `main` function lives inside these braces.
 -   `printf("Welcome To PSUT\n");`: This function prints the text "Welcome To PSUT" to the screen.
@@ -82,8 +82,10 @@ A variable is a named memory location that stores a value. Each variable has:
 ### Data Types
 Common data types in C:
 1. `int`: Whole numbers without fractions (e.g., 34, 0, -1, 159)
-2. `char`: Single characters (e.g., 's', 'A', '#', '+', '8')
-3. `float`: Real numbers with decimals (e.g., 2.0, -137.42, 0.0001)
+2. `long int`: Larger whole numbers (e.g., 9000000L)
+3. `char`: Single characters (e.g., 's', 'A', '#', '+', '8')
+4. `float`: Real numbers with decimals (e.g., 2.0, -137.42, 0.0001)
+5. `double`: High-precision real numbers (e.g., 3.1415926535)
 
 ### Declaring Variables
 To declare a variable, specify the data type followed by the variable name:
@@ -142,10 +144,12 @@ scanf("%d", &age);
 - `&age`: Address-of operator to store the value in the correct memory location
 
 ### Format Specifiers
-- `%d`: Decimal integer
-- `%f`: Float value -->  by default prints a 6 deciaml places
-- `%c`: Character
-- `%s`: String (sequence of characters)
+Format specifiers act as **placeholders** inside the string. They tell the function (`printf` or `scanf`) exactly what type of data to process.
+
+- `%d`: **Decimal Integer** - Tells the function to print or read a whole number (e.g., `10`, `-5`).
+- `%f`: **Float** - Prints a real number. By default, it prints 6 decimal places (e.g., `3.140000`).
+- `%c`: **Character** - Prints or reads a single character (e.g., `'A'`).
+- `%s`: **String** - Prints or reads a text string (e.g., `"Hello"`).
 
 ## Formatting Output
 

@@ -2,7 +2,7 @@
 title: <b>Week 2</b>
 ---
 
-### Week 2 Topics
+## Functions
 
 <div class="resource-grid">
   <a href="{{ site.baseurl }}/notes/week-02/notes/" class="resource-card card-notes">Lecture Notes</a>
