@@ -4,12 +4,12 @@ title: 1. Course Info
 permalink: /:path/
 seo:
   type: Course
-  name: Introduction to Computing
+  name: Structure of Programming
 ---
 
-# 11102: Introduction to Computing
+# 11103: Structure of Programming
 {:.no_toc}
-<span style="font-size: 0.8em; font-weight: normal; color: gray;">Princess Sumaya University for Technology - Fall 2025</span>
+<span style="font-size: 0.8em; font-weight: normal; color: gray;">Princess Sumaya University for Technology - Spring 2026</span>
 {:.no_toc}
 
 ## Table of contents
@@ -22,41 +22,47 @@ seo:
 
 ## Course Overview
 
-Welcome! This course is a gentle (and hopefully fun) introduction to computing. We will use programming in Python as a vehicle for introducing some fundamentals of the field. As you learn how to program, you will develop skills that you need in your future courses and also explore applications in various computing areas, such as artificial intelligence, computer security, and image processing. You will also begin to appreciate what it takes to design and build large software systems. In short, this course will give you a taste of computing and prepare you for what lies ahead.
-
+Welcome! This course is designed to take you from the basics of code to a deep understanding of how programs work. As you solve problems week by week, you will build the critical thinking skills necessary for advanced fields like software engineering and system design. In short, this course is where you stop just using software and start understanding how to build it.
 ## Prerequisites
 
-No prior programming experience is expected. Just bring your curiosity, a commitment to practice regularly, and enough perseverance to keep going when things get tricky.
+Zero prior experience is expected. Success in this course relies on three things: your curiosity to learn new systems, your consistency in practicing the material, and your perseverance in solving complex problems. Bring your focus, and we will handle the rest.
 
-## Textbooks
+## Textbook
 
-We will use the following two textbooks, both of which are available online for free. We will also use slides, notes, and other resources as necessary. The <a href='/11102-f25/schedule'>Schedule</a> page will learning material and which chapter(s) from which book are required.
+We will use the following textbook. We will also use slides, notes, and other resources as necessary.
 
 <div style="display: flex; align-items: center; gap: 1em; margin-bottom: 1.5em; margin-top: 1em;">
-<img src="assets/images/books/python4everybody.jpg" alt="Python4Everybody Book Cover" width="100"/>
+<img src="assets/images/books/how-to-program.png" alt="C How to Program Book Cover" width="100"/>
 <div>
-    Severance, Charles R. <strong>Python for Everybody: Exploring Data Using Python 3</strong>, 2024.[<a href='https://do1.dr-chuck.com/pythonlearn/EN_us/pythonlearn.pdf'>PDF</a>][<a href='https://www.py4e.com/lessons'>Online Lessons</a>]
+    <strong>C: How to Program</strong>, by Deitel and Deitel, Prentice Hall, 8th Edition (or later).
+</div>
+</div>
+
+## References
+
+<div style="display: flex; align-items: center; gap: 1em; margin-bottom: 1.5em; margin-top: 1em;">
+<img src="assets/images/books/problem-solving-in-c.jpeg" alt="Problem Solving in C Book Cover" width="100"/>
+<div>
+  <strong>Problem Solving and Program Design in C</strong>, Latest Edition, Jeri R. Hanly, and Elliot B. Koffman.
 </div>
 </div>
 
 <div style="display: flex; align-items: center; gap: 1em; margin-bottom: 1.5em; margin-top: 1em;">
-<img src="assets/images/books/think_python_3e.jpg" alt="Think Python Book Cover" width="100"/>
+<img src="assets/images/books/programming-from-problem-analysis.png" alt="C Programming From Problem Analysis Book Cover" width="100"/>
 <div>
-  Downey, Allen. <strong>Think Python: How to Think Like a Computer Scientist</strong>, 3rd ed., O'Reilly Media, 2024.[<a href='https://allendowney.github.io/ThinkPython/'>HTML</a>]
+  <strong>C++ Programming: From Problem Analysis to Program Design</strong>, Latest edition, DS Malik.
 </div>
 </div>
 
 ## Course Topics
 
-The first 7 weeks of the semester will focus on programming in Python. Each of the remaining weeks will focus on an application area in computer science using hands-on projects and examples. Here is what you should expect to achieve by the end of the semester:
+The first few weeks of the semester will focus on the fundamentals of C programming, including memory concepts, arithmetic, functions, selection statements, loops, and arrays. Each of the remaining weeks will explore advanced topics such as sorting, 2D arrays, recursion, and pointers. Here is what you should expect to achieve by the end of the semester:
 
-- Be able to **_read, trace, and modify_** simple programs in Python. 
-- Be able to **_design and test_** small/medium-sized programs in Python.
-- Understand how **_information is represented_** and stored on computers.
-- Understand how to **_compare different algorithms_** for solving a problem.
-- Perform basic **_manipulations of images_** using Python.
-- Understand basic concepts in **_computer security_** like data integrity and confidentiality.
-- Understand basic concepts related to **_machine learning and data analysis_**.
+- Be able to **analyze and solve** computational problems using core C programming concepts including variables, control structures, and functions.
+- Be able to **implement and manipulate** data structures such as 1D/2D arrays and strings for data processing.
+- Be able to **apply advanced techniques** including recursion and pointers to write efficient and modular code.
+- Be able to **design and debug** complete C programs using modern development tools.
+
 
 ## Assessments & Grades
 
@@ -68,19 +74,9 @@ The first 7 weeks of the semester will focus on programming in Python. Each of t
            <th>Description</th></tr>
     </thead>
     <tbody>
-      <tr> <td>Exercises</td>        
-           <td>5%</td>        
-           <td>11 problem sets due at the end of every week. The lowest is automatically dropped.</td>
-           </tr>
-      <tr> <td>Self Assessments</td> 
-           <td>5%</td>        
-           <td>11 quizzes for self assessment purposes done at home and due at the end of every week. The lowest is automatically dropped.</td></tr>
       <tr> <td>Quizzes</td>          
-           <td>12%</td>        
-           <td>Two quizzes done in class, each worth 6%.</td></tr>
-      <tr> <td>Assignments</td>   
-           <td>8%</td>       
-           <td>Details will be posted on the <a href='/11102-f25/assignments'>Assignments</a> page.</td></tr>
+           <td>30%</td>        
+           <td>5 quizzes done in class, each worth 6%.</td></tr>
       <tr> <td>Midterm Exam</td>     
            <td>30%</td>       
            <td>The exact date and time will be set by the university.</td></tr>
@@ -100,37 +96,21 @@ The first 7 weeks of the semester will focus on programming in Python. Each of t
 
 ## Tools
 <div style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1.5em; margin-top: 1em;">
-<img src="assets/images/tools/python.png" alt="Python Logo" width="50"/>
+<img src="assets/images/tools/c.png" alt="C Logo" width="50"/>
 <div>
-  <strong>Python</strong><br>
-  We will learn programming in python! [<a href='https://www.python.org/downloads/'>download</a>]
+  <strong>C</strong><br>
+  We will learn programming in C!
 </div>
 </div>
 
 <div style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1.5em; margin-top: 1em;">
-<img src="assets/images/tools/vscode.png" alt="VSCode Logo" width="50"/>
+<img src="assets/images/tools/codeblocks.png" alt="Code::Blocks Logo" width="50"/>
 <div>
-  <strong>VS Code</strong><br>
-  This is the IDE (Integrated Development Environment) you will use for programming in Python. While you are allowed to use other IDEs, this is the one we will use in the classroom, base the course material on, and provide support for. [<a href='https://code.visualstudio.com/download'>download</a>] [<a href='https://marketplace.visualstudio.com/items?itemName=ms-python.python'>configure python</a>]
+  <strong>Code::Blocks</strong><br>
+  This is the IDE (Integrated Development Environment) you will use for programming in C. While you are allowed to use other IDEs, this is the one we will use in the classroom, base the course material on, and provide support for. [<a href='https://www.codeblocks.org/downloads/'>download</a>]
+  [<a href='https://drive.google.com/drive/folders/1jSmRyASH4vSD4wbdqSzqae1DjSkGRNkI'>Installation Guide & Video</a>]
 </div>
 </div>
-
-<div style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1.5em; margin-top: 1em;">
-<img src="assets/images/tools/copilot.jpg" alt="Copilot Logo" width="50"/>
-<div>
-  <strong>GitHub Copilot</strong><br>
-  This is a GenAI assistant for programming that we will use as a plugin in VSCode. [<a href='https://marketplace.visualstudio.com/items?itemName=GitHub.copilot'>install</a>]
-</div>
-</div>
-
-<div style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1.5em; margin-top: 1em;">
-  <img src="assets/images/tools/edstem.png" alt="Edstem Logo" width="50"/>
-  <div>
-    <strong>EdStem</strong><br>
-    This is where you will ask questions, interact with your instructors and classmates, and solve the weekly exercises and self-assessments. You will receive an email invitation to create an account and join the course. [<a href='https://edstem.org/us/courses/87448'>Direct Link to Course</a>]
-  </div>
-</div>
-
 <div style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1.5em; margin-top: 1em;">
   <img src="assets/images/tools/psut.png" alt="Edstem Logo" width="50"/>
   <div>

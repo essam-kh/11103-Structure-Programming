@@ -1,0 +1,19 @@
+<div class="week-navigation">
+  {% if include.prev_link %}
+    <a href="{{ site.baseurl }}{{ include.prev_link }}" class="nav-btn prev">
+      <span class="nav-arrow">&larr;</span>
+      <span class="nav-label">Previous: {{ include.prev_title }}</span>
+    </a>
+  {% else %}
+    <div class="nav-placeholder"></div>
+  {% endif %}
+
+  {% if include.next_link %}
+    <a href="{{ site.baseurl }}{{ include.next_link }}" class="nav-btn next">
+      <span class="nav-label">Next: {{ include.next_title }}</span>
+      <span class="nav-arrow">&rarr;</span>
+    </a>
+  {% else %}
+    <div class="nav-placeholder"></div>
+  {% endif %}
+</div>

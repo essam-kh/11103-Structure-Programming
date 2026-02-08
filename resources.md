@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 6. Resources
+title: 5. Resources
 description: >-
     Extra resources
 ---
@@ -8,39 +8,103 @@ description: >-
 # Extra Resources
 
 ## Previous Exams
-- **Midterm Exam**: Fall 2025 [[pdf](), [solution]()]
-- **Quiz 1**: Fall 2025 [[pdf](https://drive.google.com/file/d/1E18VkzHBfq5AEK6ZYb095t4eYX8rVEf6/view?usp=sharing), [solution](https://drive.google.com/file/d/1z7PvUPi_RhVb3tBjExySZMxW6zDdRcfc/view?usp=drive_link)]
-- **Quiz 2**: Fall 2025 [[pdf](https://drive.google.com/file/d/1iuwAg2kEzxFnWl1431kyJ7DMh1rxIm17/view?usp=sharing), [solution](https://drive.google.com/file/d/1mkyiZEryPwYhB5kYPSmrV9v0z52LPa4h/view?usp=sharing)]
-- **Final Exam**: Fall 2025
+<div class="grade-table-wrapper">
+  <table class="grade-table">
+    <thead>
+      <tr>
+        <th style="width: 40%;">Exam</th>
+        <th style="width: 30%;">Semester</th>
+        <th style="width: 30%; text-align: center;">Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Fall 2025 -->
+      <tr>
+        <td><strong>Midterm Exam</strong></td>
+        <td>Fall 2025</td>
+        <td style="text-align: center;"><a href="https://drive.google.com/file/d/1d_q3OzXF__iOLidack5BZYqPJquls-1O/view?usp=sharing" class="btn btn-outline fs-2">PDF</a></td>
+      </tr>
+      <tr>
+        <td><strong>Quiz 1</strong></td>
+        <td>Fall 2025</td>
+        <td style="text-align: center;"><a href="https://drive.google.com/file/d/17gKzZgr2K8d2x1rJni_NhLJ3efP1D7Lg/view?usp=sharing" class="btn btn-outline fs-2">PDF</a></td>
+      </tr>
+      <tr>
+        <td><strong>Quiz 2</strong></td>
+        <td>Fall 2025</td>
+        <td style="text-align: center;"><a href="https://drive.google.com/file/d/14QhmCwPSaW1R1887FWJ3qummHVCWu8By/view?usp=sharing" class="btn btn-outline fs-2">PDF</a></td>
+      </tr>
+       <tr>
+        <td><strong>Quiz 3</strong></td>
+        <td>Fall 2025</td>
+        <td style="text-align: center;"><a href="https://drive.google.com/file/d/1LTN218vaZCVpQgu90pQ4p0VktAy_vWaC/view?usp=sharing" class="btn btn-outline fs-2">PDF</a></td>
+      </tr>
+       <tr>
+        <td><strong>Quiz 4</strong></td>
+        <td>Fall 2025</td>
+        <td style="text-align: center;"><a href="https://drive.google.com/file/d/1tI0M7zzTEu6oMW0z7cIDHnNEmbN5qDFj/view?usp=sharing" class="btn btn-outline fs-2">PDF</a></td>
+      </tr>
 
-## Python Exercises
+      <!-- Fall 2024 -->
+      <tr>
+        <td><strong>Midterm Exam</strong></td>
+        <td>Fall 2024</td>
+        <td style="text-align: center;"><a href="https://drive.google.com/file/d/1nKKokG_CN1YjL2p9_w-jJ7HTzj5fH3qf/view?usp=sharing" class="btn btn-outline fs-2">PDF</a></td>
+      </tr>
 
-- [practicepython.org](https://www.practicepython.org/)
-- [Exercism](https://exercism.org/tracks/python/exercises)
+      <!-- Spring 2024 -->
+      <tr>
+        <td><strong>Midterm Exam</strong></td>
+        <td>Spring 2024</td>
+        <td style="text-align: center;"><a href="https://drive.google.com/file/d/1ruCVJsPfh2A6O2PZeuCmUfs9IZsx5Wk0/view?usp=sharing" class="btn btn-outline fs-2">PDF</a></td>
+      </tr>
+      <tr>
+        <td><strong>Final Exam</strong></td>
+        <td>Spring 2024</td>
+        <td style="text-align: center;"><a href="https://drive.google.com/file/d/1Y5Kdbml0pbQcwIAk9bNHg8QnhCrglw-o/view?usp=sharing" class="btn btn-outline fs-2">PDF</a></td>
+      </tr>
+      <tr>
+        <td><strong>Quiz 1</strong></td>
+        <td>Spring 2024</td>
+        <td style="text-align: center;"><a href="https://drive.google.com/file/d/1ikDey7pkq7_DJ5ui8ylQtzeFEqwljW2t/view?usp=sharing" class="btn btn-outline fs-2">PDF</a></td>
+      </tr>
+      <tr>
+        <td><strong>Quiz 2</strong></td>
+        <td>Spring 2024</td>
+        <td style="text-align: center;"><a href="https://drive.google.com/file/d/1A3o-j-xyxSgw_6Op3dKSKVVYS1YFf2XT/view?usp=sharing" class="btn btn-outline fs-2">PDF</a></td>
+      </tr>
+      <tr>
+        <td><strong>Quiz 3</strong></td>
+        <td>Spring 2024</td>
+        <td style="text-align: center;"><a href="https://drive.google.com/file/d/1qe8xndvUWT_bIj8SigaYB_IpImH7dL7X/view?usp=sharing" class="btn btn-outline fs-2">PDF</a></td>
+      </tr>
+      <tr>
+        <td><strong>Quiz 4</strong></td>
+        <td>Spring 2024</td>
+        <td style="text-align: center;"><a href="https://drive.google.com/file/d/1A_CHVPc3Yz8bzonHGHb51VK9IOwKBet9/view?usp=sharing" class="btn btn-outline fs-2">PDF</a></td>
+      </tr>
+      <tr>
+        <td><strong>Quiz 5</strong></td>
+        <td>Spring 2024</td>
+        <td style="text-align: center;"><a href="https://drive.google.com/file/d/1gpsNwf_qrmw_4XJKCo8V7fwsR-Rug0g-/view?usp=sharing" class="btn btn-outline fs-2">PDF</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## C Exercises
+
+- [codeforwin](https://codeforwin.org/c-programming)
+- [Exercism](https://exercism.org/tracks/c/exercises)
 
 ## Learning Resources
 
-- [CS Circles (University of Waterloo)](https://cscircles.cemc.uwaterloo.ca/)
-- [Pyflo](https://pyflo.net/)
-- [Hour of Python](https://hourofpython.com/)
-
-## Free Python Books
-
-- Interactive versions of [Think Python](https://greenteapress.com/wp/think-python-2e/):
-    - [Think Like a Computer](https://runestone.academy/ns/books/published/FOPP-PIE/ThinkLikeComputer-3.html)
-    - [Foundations of Python](https://runestone.academy/ns/books/published/foppff/)
-    - [Welcome to CS](https://runestone.academy/ns/books/published/welcomecs2/welcomecs.html)
-- Al Sweigart's books:
-    - [Automate the Boring Stuff in Python](https://automatetheboringstuff.com/)
-    - [Invent With Python](https://inventwithpython.com/)
-    - [Python Programming Exercises, Gently Explained](https://inventwithpython.com/pythongently/)
-    - [The Big Book of Small Python Projects](https://inventwithpython.com/bigbookpython/)
-    - [Cracking Codes in Python](https://inventwithpython.com/cracking/)
+- [Learn C](https://www.learn-c.org/)
+- [Starter Tutorials](https://www.startertutorials.com/blog/c-programming-tutorial.html)
 
 ## Tools
 
-- [PythonTutor](https://pythontutor.com/): Provides step-by-step memory visualizations for Python programs.
-- [vscode.dev](https://vscode.dev/): An online version of VS Code. 
-- Online Python IDEs: [Online-Python](https://www.online-python.com/), [PythonOnline](https://pythononline.net/), [onlineGDB](https://www.onlinegdb.com/online_python_compiler), [CodeChef](https://www.codechef.com/ide), [OneCompiler](https://onecompiler.com/python), [OnlineIDE](https://www.online-ide.com/online_python_interpreter)
-- [Strype](https://strype.org/editor/): A restricted IDE that prevents making syntax errors!
+- [PythonTutor](https://pythontutor.com/): Provides step-by-step memory visualizations for C programs.
+- [Code::Blocks](https://www.codeblocks.org/): The official website for Code::Blocks IDE. 
+- Online C IDEs: [OnlineGDB](https://www.onlinegdb.com/online_c_compiler), [CodeChef](https://www.codechef.com/ide), [OneCompiler](https://onecompiler.com/c), [OnlineIDE](https://www.online-ide.com/online_c_interpreter)
 - [Replit](https://replit.com/): A vibe coding platform (created by a PSUT graduate!)

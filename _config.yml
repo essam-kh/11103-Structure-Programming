@@ -13,12 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: 11102 - Fall 2025
-tagline: Introduction to Computing (Fall 2025) @ PSUT
-description: Fall 2025 course website for "11102 - Introduction to Computing" at Princess Sumaya University for Technology.
-author: Ibrahim Albluwi
-baseurl: '/11102-f25' # the subpath of your site, e.g. /blog
-url: 'https://ialbluwi.github.io' # the base hostname & protocol for your site, e.g. http://example.com
+title: 11103 Structure Programming
+tagline: Structured Programming (Spring 2026) @ PSUT
+description: Lab resources, schedule, and assignments for Structure Programming 11103.
+author: Essam Khader
+baseurl: '/11103-Structure-Programming' # the subpath of your site, e.g. /blog
+url: "https://essam-kh.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
 
 # Theme settings
@@ -28,19 +28,14 @@ search_enabled: true
 heading_anchors: true
 permalink: pretty
 aux_links:
-  Ibrahim Albluwi:
-    - 'https://ialbluwi.github.io/'
+  Essam Khader:
+    - '/11103-Structure-Programming/staff#essam-khader'
 # footer_content: "This website was created using the <a href='https://github.com/kevinlin1/just-the-class'>Just the Class</a> template."
 
 # Collections for website data
 collections:
   staffers:
   modules:
-  schedules:
-  announcements:
-  modules_su_tue_thu:
-    output: false
-  modules_mo_we:
     output: false
 
 
@@ -60,16 +55,7 @@ defaults:
       type: modules
     values:
       layout: module
-  - scope:
-      path: ''
-      type: schedules
-    values:
-      layout: schedule
-  - scope:
-      path: ''
-      type: announcements
-    values:
-      layout: announcement
+
 
 compress_html:
   clippings: all
@@ -103,7 +89,7 @@ callouts:
     title: Example 
     color: grey-dk
 
-logo: "/assets/images/sketch-long.png"
+logo: "/assets/images/structure-logo.png"
 
 enable_copy_code_button: false
 math: katex
