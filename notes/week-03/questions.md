@@ -122,7 +122,7 @@ Perimeter: 31.42
 </code></pre></div></div>
   </div>
   <div style="flex: 0 0 350px;">
-    <img src="{{ site.baseurl }}/assets/images/area-formulas.png" alt="Area Formulas" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <img src="{{ site.baseurl }}/assets/images/perimeter-formulas.png" alt="Perimeter Formulas" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
   </div>
 </div>
 {% include expandable-code.html title="Solution" id="sol-8" file="code/week-03/solution-08.c" %}
