@@ -12,7 +12,7 @@ This document demonstrates syntax for Functions, Standard Libraries, Scope, and 
 ## Predefined Functions
 
 ### Math Functions (`<math.h>`)
-Requires `#include <math.h>` and often linking with `-lm` compiler flag.
+Requires `#include <math.h>`
 
 ```c
 #include <stdio.h>

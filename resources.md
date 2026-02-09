@@ -106,5 +106,5 @@ description: >-
 
 - [PythonTutor](https://pythontutor.com/): Provides step-by-step memory visualizations for C programs.
 - [Code::Blocks](https://www.codeblocks.org/): The official website for Code::Blocks IDE. 
-- Online C IDEs: [OnlineGDB](https://www.onlinegdb.com/online_c_compiler), [CodeChef](https://www.codechef.com/ide), [OneCompiler](https://onecompiler.com/c), [OnlineIDE](https://www.online-ide.com/online_c_interpreter)
+- Online C IDEs: [OnlineGDB](https://www.onlinegdb.com/online_c_compiler), [CodeChef](https://www.codechef.com/ide), [OneCompiler](https://onecompiler.com/c), [OnlineIDE](https://www.online-ide.com)
 - [Replit](https://replit.com/): A vibe coding platform (created by a PSUT graduate!)

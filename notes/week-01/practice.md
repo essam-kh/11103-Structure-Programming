@@ -22,9 +22,6 @@ Additional exercises for mastery.
   <!-- Problem C -->
   <div class="problem-card">
     <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/C" target="_blank" class="card-link-overlay">Simple Calculator</a>
-    <div class="problem-header">
-      <div class="problem-icon">🧮</div>
-    </div>
     <div class="problem-body">
       <h3 class="problem-title">Simple Calculator</h3>
       <p class="problem-desc">Problem C</p>
@@ -37,9 +34,6 @@ Additional exercises for mastery.
   <!-- Problem D -->
   <div class="problem-card">
     <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/D" target="_blank" class="card-link-overlay">Difference</a>
-    <div class="problem-header">
-      <div class="problem-icon">➖</div>
-    </div>
     <div class="problem-body">
       <h3 class="problem-title">Difference</h3>
       <p class="problem-desc">Problem D</p>
@@ -52,9 +46,6 @@ Additional exercises for mastery.
   <!-- Problem F -->
   <div class="problem-card">
     <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/F" target="_blank" class="card-link-overlay">Digits Summation</a>
-    <div class="problem-header">
-      <div class="problem-icon">🔢</div>
-    </div>
     <div class="problem-body">
       <h3 class="problem-title">Digits Summation</h3>
       <p class="problem-desc">Problem F</p>
@@ -67,9 +58,7 @@ Additional exercises for mastery.
   <!-- Problem G -->
   <div class="problem-card">
     <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/G" target="_blank" class="card-link-overlay">Summation from 1 to N</a>
-    <div class="problem-header">
-      <div class="problem-icon">∑</div>
-    </div>
+
     <div class="problem-body">
       <h3 class="problem-title">Summation from 1 to N</h3>
       <p class="problem-desc">Problem G</p>
@@ -81,9 +70,6 @@ Additional exercises for mastery.
   <!-- Problem N -->
   <div class="problem-card">
     <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/N" target="_blank" class="card-link-overlay">Char</a>
-    <div class="problem-header">
-      <div class="problem-icon">🔤</div>
-    </div>
     <div class="problem-body">
       <h3 class="problem-title">Char</h3>
       <p class="problem-desc">Problem N</p>
@@ -96,9 +82,6 @@ Additional exercises for mastery.
   <!-- Problem R -->
   <div class="problem-card">
     <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/R" target="_blank" class="card-link-overlay">Age in Days</a>
-    <div class="problem-header">
-      <div class="problem-icon">📅</div>
-    </div>
     <div class="problem-body">
       <h3 class="problem-title">Age in Days</h3>
       <p class="problem-desc">Problem R</p>
@@ -111,12 +94,9 @@ Additional exercises for mastery.
   <!-- Problem A (326175) -->
   <div class="problem-card">
     <a href="https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/A" target="_blank" class="card-link-overlay">Problem A</a>
-    <div class="problem-header">
-      <div class="problem-icon">🅰️</div>
-    </div>
     <div class="problem-body">
-      <h3 class="problem-title">Problem A</h3>
-      <p class="problem-desc">Contest 326175</p>
+      <h3 class="problem-title">Winter Sale</h3>
+      <p class="problem-desc">Problem A</p>
     </div>
     <div class="problem-footer">
       Solve Challenge <span class="problem-arrow">→</span>
@@ -126,12 +106,9 @@ Additional exercises for mastery.
   <!-- Problem C (326175) -->
   <div class="problem-card">
     <a href="https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/C" target="_blank" class="card-link-overlay">Problem C</a>
-    <div class="problem-header">
-      <div class="problem-icon">©️</div>
-    </div>
     <div class="problem-body">
-      <h3 class="problem-title">Problem C</h3>
-      <p class="problem-desc">Contest 326175</p>
+      <h3 class="problem-title">Next Alphabet</h3>
+      <p class="problem-desc">Problem C</p>
     </div>
     <div class="problem-footer">
       Solve Challenge <span class="problem-arrow">→</span>

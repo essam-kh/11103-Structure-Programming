@@ -23,8 +23,6 @@ The best way to develop and maintain a large program is to divide it into severa
 
 C provides many standard functions to perform common tasks, especially mathematical calculations. To use these, you often need to include the `<math.h>` header.
 
-C provides many standard functions to perform common tasks, especially mathematical calculations. To use these, you often need to include the `<math.h>` header.
-
 {: .note }
 > **Black Box Concept**
 >
@@ -92,7 +90,7 @@ By default, `rand()` produces the **same sequence of numbers** every time you ru
 
 To allow the `rand` function to produce different sequences, we must **seed** the random number generator using `srand()`.
 
-*   **Syntax:** `srand(unsigned int seed);`
+*   **Syntax:** `srand(time(NULL));`
 *   **Common Usage:** Use the current time as the seed so it changes on every run.
     *   Requires `<time.h>`
     *   Call `srand(time(NULL));` **once** at the beginning of `main`.
@@ -167,6 +165,30 @@ return_type function_name(parameter_list) {
 2.  **Function Name**: A unique identifier for the function.
 3.  **Parameter List**: A comma-separated list of input variables (type and name).
 4.  **Body**: The block of code that executes when the function is called.
+
+<div style="display: flex; gap: 1.5rem; margin-top: 1.5rem;">
+  <!-- Void Function Card -->
+  <div style="flex: 1; background: #f8f9fa; border: 1px solid #e1e4e8; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column;">
+    <h3 style="margin-top: 0; color: #24292e; border-bottom: 1px solid #e1e4e8; padding-bottom: 0.5rem; margin-bottom: 1rem;">Void Function</h3>
+    <p style="margin-bottom: 1rem; flex-grow: 1;">Using <code>void</code> means the function <strong>returns nothing</strong>.</p>
+    <div class="language-c highlighter-rouge" style="margin: 0;"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">printHello</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Hello!\n"</span><span class="p">);</span>
+    <span class="c1">// No return needed</span>
+<span class="p">}</span>
+</code></pre></div></div>
+  </div>
+
+  <!-- Non-Void Function Card -->
+  <div style="flex: 1; background: #f8f9fa; border: 1px solid #e1e4e8; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column;">
+    <h3 style="margin-top: 0; color: #24292e; border-bottom: 1px solid #e1e4e8; padding-bottom: 0.5rem; margin-bottom: 1rem;">Non-Void Function</h3>
+    <p style="margin-bottom: 1rem; flex-grow: 1;">Specifying a type (e.g., <code>int</code>) means it <strong>must return a value</strong>.</p>
+    <div class="language-c highlighter-rouge" style="margin: 0;"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">square</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span><span class="p">;</span>
+    <span class="c1">// Must return an int</span>
+<span class="p">}</span>
+</code></pre></div></div>
+  </div>
+</div>
 
 ### Function Prototypes
 
@@ -253,18 +275,19 @@ float average = (float) total / count; // total is cast to float explicitly
 > float average = 1.0 * total / count; 
 > ```
 
+
 ---
 
 ## Storage Classes
 
 Storage classes define the **scope** (visibility) and **lifetime** of variables.
 
-### 1. Automatic (`auto`)
+### 1. Automatic
 *   **Scope**: Local (inside a function or block).
 *   **Lifetime**: Created when the block is entered, destroyed when exited.
 *   **Default**: This is the default for all local variables.
 
-### 2. Static (`static`)
+### 2. Static
 *   **Scope**: Local (inside a function), but...
 *   **Lifetime**: Exists for the **entire program execution**.
 *   **Key Feature**: Retains its value between function calls.

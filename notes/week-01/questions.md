@@ -7,6 +7,9 @@ nav_exclude: true
 
 # Week 1 Programming Questions
 
+> **Note:** Try to solve these questions on your own before checking the solutions.
+{: .note }
+
 ## Question 1
 Write a program that takes two integers as input from the user and performs the following operations:
 1. Addition

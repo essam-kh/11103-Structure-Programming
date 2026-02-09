@@ -7,14 +7,14 @@ nav_exclude: true
 
 # Week 2: Extra Practice
 
-Additional exercises to strengthen your understanding of Functions and Loops.
+Additional exercises for mastery.
 
 <div style="text-align: center; margin-bottom: 3rem;">
   <a href="https://codeforces.com" target="_blank">
     <img src="{{ site.baseurl }}/assets/images/tools/codeforces.png" alt="Codeforces" style="height: 60px; margin-bottom: 1rem;">
   </a>
   <p style="font-size: 1.2rem; color: #718096; max-width: 600px; margin: 0 auto;">
-    Practice solving problems using functions.
+    Sharpen your skills with these selected problems. Focus on input/output handling and basic arithmetic operations.
   </p>
 </div>
 
@@ -23,12 +23,9 @@ Additional exercises to strengthen your understanding of Functions and Loops.
   <!-- Problem A (223205) -->
   <div class="problem-card">
     <a href="https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/A" target="_blank" class="card-link-overlay">Problem A</a>
-    <div class="problem-header">
-      <div class="problem-icon">🅰️</div>
-    </div>
     <div class="problem-body">
-      <h3 class="problem-title">Problem A</h3>
-      <p class="problem-desc">Contest 223205</p>
+      <h3 class="problem-title">Add</h3>
+      <p class="problem-desc">Problem A</p>
     </div>
     <div class="problem-footer">
       Solve Challenge <span class="problem-arrow">→</span>
@@ -38,12 +35,9 @@ Additional exercises to strengthen your understanding of Functions and Loops.
   <!-- Problem E (223205) -->
   <div class="problem-card">
     <a href="https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/E" target="_blank" class="card-link-overlay">Problem E</a>
-    <div class="problem-header">
-      <div class="problem-icon">📧</div>
-    </div>
     <div class="problem-body">
-      <h3 class="problem-title">Problem E</h3>
-      <p class="problem-desc">Contest 223205</p>
+      <h3 class="problem-title">Swap</h3>
+      <p class="problem-desc">Problem E</p>
     </div>
     <div class="problem-footer">
       Solve Challenge <span class="problem-arrow">→</span>
@@ -53,12 +47,9 @@ Additional exercises to strengthen your understanding of Functions and Loops.
   <!-- Elephant -->
   <div class="problem-card">
     <a href="https://codeforces.com/problemset/problem/617/A" target="_blank" class="card-link-overlay">Elephant</a>
-    <div class="problem-header">
-      <div class="problem-icon">🐘</div>
-    </div>
     <div class="problem-body">
       <h3 class="problem-title">Elephant</h3>
-      <p class="problem-desc">Problem 617A</p>
+      <p class="problem-desc">Problem A</p>
     </div>
     <div class="problem-footer">
       Solve Challenge <span class="problem-arrow">→</span>
@@ -68,12 +59,9 @@ Additional exercises to strengthen your understanding of Functions and Loops.
   <!-- Vasya and Socks -->
   <div class="problem-card">
     <a href="https://codeforces.com/contest/460/problem/A" target="_blank" class="card-link-overlay">Vasya and Socks</a>
-    <div class="problem-header">
-      <div class="problem-icon">🧦</div>
-    </div>
     <div class="problem-body">
       <h3 class="problem-title">Vasya and Socks</h3>
-      <p class="problem-desc">Problem 460A</p>
+      <p class="problem-desc">Problem A</p>
     </div>
     <div class="problem-footer">
       Solve Challenge <span class="problem-arrow">→</span>
