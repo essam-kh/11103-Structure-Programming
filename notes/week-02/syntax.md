@@ -194,4 +194,4 @@ int main() {
 }
 ```
 
-{% include week-nav.html prev_link="/notes/week-02/notes/" prev_title="Lecture Notes" next_link="/notes/week-02/questions/" next_title="Questions" %}
+{% include week-nav.html prev_link="/notes/week-02/notes/" prev_title="Lecture Notes" next_link="/notes/week-02/worksheet/" next_title="Worksheet" %}

@@ -40,10 +40,6 @@ int main() {
             scanf("%lf %lf %lf", &val1, &val2, &val3);
             printf("Perimeter: %.2lf\n", tri_per(val1, val2, val3));
             break;
-        case 4:
-            // Intentional fallthrough or extra case? 
-            // The original code stops at 3.
-            break;
         default:
             printf("Invalid choice.\n");
     }

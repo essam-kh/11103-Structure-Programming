@@ -5,7 +5,7 @@ parent: Week 3
 nav_exclude: true
 ---
 
-# Week 3 Practice
+# Week 3: Extra Practice
 
 Additional exercises for mastery.
 
@@ -19,8 +19,10 @@ Additional exercises for mastery.
 </div>
 
 <div class="problem-grid">
+
   <!-- Problem J -->
   <div class="problem-card">
+    <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/J" target="_blank" class="card-link-overlay">Multiples</a>
     <div class="problem-body">
       <h3 class="problem-title">Multiples</h3>
       <p class="problem-desc">Problem J</p>
@@ -32,6 +34,7 @@ Additional exercises for mastery.
 
   <!-- Problem I -->
   <div class="problem-card">
+    <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/I" target="_blank" class="card-link-overlay">Welcome for you with Conditions</a>
     <div class="problem-body">
       <h3 class="problem-title">Welcome for you with Conditions</h3>
       <p class="problem-desc">Problem I</p>
@@ -43,6 +46,7 @@ Additional exercises for mastery.
 
   <!-- Problem K -->
   <div class="problem-card">
+    <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/K" target="_blank" class="card-link-overlay">Max and Min</a>
     <div class="problem-body">
       <h3 class="problem-title">Max and Min</h3>
       <p class="problem-desc">Problem K</p>
@@ -54,6 +58,7 @@ Additional exercises for mastery.
 
   <!-- Problem M -->
   <div class="problem-card">
+    <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/M" target="_blank" class="card-link-overlay">Capital or Small or Digit</a>
     <div class="problem-body">
       <h3 class="problem-title">Capital or Small or Digit</h3>
       <p class="problem-desc">Problem M</p>
@@ -65,6 +70,7 @@ Additional exercises for mastery.
 
   <!-- Problem P -->
   <div class="problem-card">
+    <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/P" target="_blank" class="card-link-overlay">First digit !</a>
     <div class="problem-body">
       <h3 class="problem-title">First digit !</h3>
       <p class="problem-desc">Problem P</p>
@@ -76,6 +82,7 @@ Additional exercises for mastery.
 
   <!-- Problem S -->
   <div class="problem-card">
+    <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/S" target="_blank" class="card-link-overlay">Interval</a>
     <div class="problem-body">
       <h3 class="problem-title">Interval</h3>
       <p class="problem-desc">Problem S</p>
@@ -87,6 +94,7 @@ Additional exercises for mastery.
 
   <!-- Problem T -->
   <div class="problem-card">
+    <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/T" target="_blank" class="card-link-overlay">Sort Numbers</a>
     <div class="problem-body">
       <h3 class="problem-title">Sort Numbers</h3>
       <p class="problem-desc">Problem T</p>
@@ -98,6 +106,7 @@ Additional exercises for mastery.
 
   <!-- Problem X -->
   <div class="problem-card">
+    <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/X" target="_blank" class="card-link-overlay">Two intervals</a>
     <div class="problem-body">
       <h3 class="problem-title">Two intervals</h3>
       <p class="problem-desc">Problem X</p>
@@ -109,6 +118,7 @@ Additional exercises for mastery.
 
   <!-- Problem Y -->
   <div class="problem-card">
+    <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/Y" target="_blank" class="card-link-overlay">The last 2 digits</a>
     <div class="problem-body">
       <h3 class="problem-title">The last 2 digits</h3>
       <p class="problem-desc">Problem Y</p>
@@ -118,8 +128,9 @@ Additional exercises for mastery.
     </div>
   </div>
 
-  <!-- Problem I (Again) -->
+  <!-- Problem I-->
   <div class="problem-card">
+    <a href="https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/I" target="_blank" class="card-link-overlay">Lucky Numbers</a>
     <div class="problem-body">
       <h3 class="problem-title">Lucky Numbers</h3>
       <p class="problem-desc">Problem I</p>
@@ -131,4 +142,4 @@ Additional exercises for mastery.
 
 </div>
 
-{% include week-nav.html prev_link="/notes/week-03/questions/" prev_title="Questions" %}
+{% include week-nav.html prev_link="/notes/week-03/worksheet/" prev_title="Worksheet" %}

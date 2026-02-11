@@ -5,7 +5,8 @@ parent: Week 2
 nav_exclude: true
 ---
 
-# Week 2: Lecture Notes
+# Structured Programming - Week 2 Notes
+
 ## Introduction to Functions
 
 The best way to develop and maintain a large program is to divide it into several smaller program modules, each of which is more manageable than the original program. Modules are written as **functions** in C.
@@ -66,7 +67,7 @@ To use the predefined functions, we must include the appropriate header files us
 | **`<math.h>`** | Contains function prototypes for math library functions. |
 | **`<stdio.h>`** | Contains standard input/output functions types and information used by them. |
 | **`<stdlib.h>`** | Contains function prototypes for conversions, random numbers, memory allocation, and other utility functions. |
-| **`<string.h>`** | Contains function prototypes for string processing functions. |
+| `<string.h>` | Contains function prototypes for string processing functions. |
 | **`<time.h>`** | Contains function prototypes and types for manipulating time and date. |
 | `<assert.h>` | Contains macros and information for adding diagnostics that aid program debugging. |
 | `<ctype.h>` | Contains function prototypes for character testing and conversion (e.g., lowercase to uppercase). |
@@ -82,7 +83,7 @@ To use the predefined functions, we must include the appropriate header files us
 
 ## Random Number Generation
 
-The `rand()` function (from `<stdlib.h>`) generates a pseudorandom integer between `0` and `RAND_MAX`.
+The `rand()` function (from `<stdlib.h>`) generates a pseudorandom integer between `0` and `RAND_MAX` (most likely 32767).
 
 ### Seeding the Random Number Generator
 
@@ -231,6 +232,27 @@ int square(int y) {
 
 ---
 
+## Call by Value vs. Call by Reference
+
+| Feature | Call by Value | Call by Reference |
+| :--- | :--- | :--- |
+| **Concept** | Copy of argument passed to function | Passes original argument (address) |
+| **Effect** | Changes in function do **not** affect original | Changes in function **affect** original |
+| **Usage** | Use when function does not need to modify argument | Only used with trusted functions |
+| **Safety** | Avoids accidental changes | Can modify original data |
+
+### Conceptual Difference
+
+Think of it like sharing a document:
+
+*   **Call by Value:** You give your friend a **photocopy** of the document. If they write on it (modify the data), your original document remains unchanged.
+*   **Call by Reference:** You give your friend access to the **original** document. If they write on it, you see the changes too.
+
+> **Note:** In C, functions use **Call by Value** by default. To use Call by Reference, we use **Pointers**, which will be covered in later weeks.
+{: .note }
+
+---
+
 ## Type Promotion & Conversion
 
 When an expression contains variables of different data types, C automatically converts them to a common type. This is called **Implicit Conversion** or **Promotion**.
@@ -313,6 +335,15 @@ int main() {
 }
 ```
 ---
+
+### Variable Default Values
+
+> **Note:**
+>
+> *   **Global Variables:** The default value for all global variables (static or auto) is 0.
+> *   **Local Variables (auto):** The default value is garbage (random value).
+> *   **Local Variables (static):** The default value is 0.
+{: .note }
 
 ## Scope Rules
 

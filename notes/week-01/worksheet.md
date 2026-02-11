@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Week 1 Questions
+title: Week 1 Worksheet
 parent: Week 1
 nav_exclude: true
 ---
@@ -19,6 +19,9 @@ Write a program that takes two integers as input from the user and performs the 
 5. Modulus
 
 The program should then print the results of each operation in a formatted manner.
+
+> **Note**: The solution does not handle division by zero as conditional statements have not been covered yet.
+{: .warning }
 
 **Example:**
 ```
@@ -61,19 +64,16 @@ Output: 5678= 5000+600+70+8
 {% include expandable-code.html title="Solution" id="sol-3" file="code/week-01/solution-03.c" %}
 
 ## Question 4
-Write a program that reads a birth date (year, month, day) and the current date, then calculates the age in days.
+Write a program that reads a date (year, month, and day) and calculates the total number of days from year 0 up to that date.
 > **Note:** Assume a year has 360 days and a month has 30 days.
 {: .note }
 
 **Example:**
 ```
-Enter your birth year (e.g., 1990): 1990
-Enter your birth month (1-12): 5
-Enter your birth day (1-31): 15
-Enter the current year (e.g., 2023): 2023
-Enter the current month (1-12): 10
-Enter the current day (1-31): 25
-Your age in days is: 12040
+Enter the year (e.g., 2023): 2023
+Enter the month (1-12): 10
+Enter the day (1-31): 25
+Total number of days is: 728305
 ```
 
 {% include expandable-code.html title="Solution" id="sol-4" file="code/week-01/solution-04.c" %}

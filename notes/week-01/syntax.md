@@ -126,4 +126,4 @@ printf("Value of x after postfix decrement: %d\n", x); // prints 5
 Shows the difference between prefix (`++x`, `--x`) and postfix (`x++`, `x--`) operators.
 
 
-{% include week-nav.html prev_link="/notes/week-01/notes/" prev_title="Lecture Notes" next_link="/notes/week-01/questions/" next_title="Questions" %}
+{% include week-nav.html prev_link="/notes/week-01/notes/" prev_title="Lecture Notes" next_link="/notes/week-01/worksheet/" next_title="Worksheet" %}

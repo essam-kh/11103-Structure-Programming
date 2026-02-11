@@ -70,4 +70,4 @@ Additional exercises for mastery.
 
 </div>
 
-{% include week-nav.html prev_link="/notes/week-02/questions/" prev_title="Questions" %}
+{% include week-nav.html prev_link="/notes/week-02/worksheet/" prev_title="Worksheet" %}

@@ -106,21 +106,35 @@ Rules for variable names:
 4. Cannot be a reserved word (e.g., printf, scanf, return)
 5. Must be unique within the same scope
 
-**Valid examples:**
-- `A2test3`
-- `_A`
-- `student_name`
-- `EmployeeSalary`
-- `ahmad`
+<div style="display: flex; gap: 4rem; align-items: flex-start;">
+  <div>
+    <strong>Valid examples:</strong>
+    <ul>
+      <li><code>A2test3</code></li>
+      <li><code>_A</code></li>
+      <li><code>student_name</code></li>
+      <li><code>EmployeeSalary</code></li>
+      <li><code>ahmad</code></li>
+    </ul>
+  </div>
 
-**Invalid examples:**
-- `2A` (starts with number)
-- `#A` (special character)
-- `student name` (space)
-- `Employee-Salary` (hyphen)
-- `if` (reserved word)
+  <div>
+    <strong>Invalid examples:</strong>
+    <ul>
+      <li><code>2A</code> (starts with number)</li>
+      <li><code>#A</code> (special character)</li>
+      <li><code>student name</code> (space)</li>
+      <li><code>Employee-Salary</code> (hyphen)</li>
+      <li><code>if</code> (reserved word)</li>
+    </ul>
+  </div>
+</div>
+
+> **Note:** Variable names in C are **case-sensitive**. This means `sum`, `Sum`, and `SUM` are three different variables.
+{: .note }
 
 ### Constant Variables
+
 - Store a value that cannot be changed after assignment
 - Must be assigned at declaration time
 - Use `const` before the data type
@@ -130,6 +144,14 @@ Examples:
 const int MAX_GRADE = 100;
 const float PI = 3.14;
 ```
+
+
+> **Warning:** If you try to assign a value to a constant variable after its declaration, you will get a compilation error:
+> ```c
+> const int MAX = 100;
+> MAX = 200; // Error: assignment of read-only variable 'MAX'
+> ```
+{: .warning }
 
 ## Input Statements in C
 
@@ -151,14 +173,23 @@ Format specifiers act as **placeholders** inside the string. They tell the funct
 - `%c`: **Character** - Prints or reads a single character (e.g., `'A'`).
 - `%s`: **String** - Prints or reads a text string (e.g., `"Hello"`).
 
+### `scanf` Whitespace Issue
+> **Note:** In C, you need to add a space before `%c` in `scanf` when you want to skip whitespace characters (like `\n`, space, or `\t`) left in the input buffer from previous input.
+{: .note }
+
+```c
+scanf("%d", &x);
+scanf(" %c", &ch); // Note the space before %c
+```
+
 ## Formatting Output
 
 The `printf()` function supports various formatting options:
 
 ### Basic Formatting
 ```c
-printf("I'm %s, my fav number is %d, and I got %.2f in structured programming!", "Essam", 7, 95.5000);
-// Output: I'm Essam, my fav number is 7, and I got 95.50 in structured programming!
+printf("Name: %s, Number: %d, Grade: %.2f", "Essam", 7, 95.5000);
+// Output: Name: Essam, Number: 7, Grade: 95.50
 ```
 
 ### Width and Precision

@@ -46,7 +46,7 @@ if (condition) {
     <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">"Passed\n"</span><span class="p">);</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">"Next level unlocked\n"</span><span class="p">);</span>
-<span class="c1">// Always printed</span>
+<span class="c1">// Next level unlocked Always get printed</span>
 </code></pre></div></div>
   </div>
   <div style="flex: 1;">
@@ -76,7 +76,7 @@ The expression inside the `if` statement is the **decision maker**.
 *   `3 - 4` evaluates to `-1` → **True**
 *   `(55 - 50) * 0` evaluates to `0` → **False**
 
-### Flowchart vs Pseudocode vs Code
+### Pseudocode vs Code
 
 <div style="display: flex; align-items: flex-start; gap: 2rem; margin: 2rem 0;">
   <div style="flex: 1;">
@@ -114,7 +114,7 @@ if (expression) {
 }
 ```
 
-### Flowchart vs Pseudocode vs Code
+### Pseudocode vs Code
 
 <div style="display: flex; align-items: flex-start; gap: 2rem; margin: 2rem 0;">
   <div style="flex: 1;">
@@ -162,7 +162,7 @@ Used to combine multiple conditions.
 | Operator | Name | Description | Example |
 | :---: | :--- | :--- | :--- |
 | `&&` | **AND** | Both conditions must be true. | `(x > 5) && (y < 10)` |
-| `||` | **OR** | At least one condition must be true. | `(age < 5) \|\| (age > 65)` |
+| `||` | **OR** | At least one condition must be true. | `(age < 5) || (age > 65)` |
 | `!` | **NOT** | Reverses the truth value. | `!(x == 0)` |
 
 ### Truth Tables
@@ -326,3 +326,5 @@ switch (val) {
 
 
 {% include week-nav.html next_link="/notes/week-03/syntax/" next_title="Syntax Guide" %}
+
+</content>
