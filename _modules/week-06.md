@@ -1,8 +1,8 @@
 ---
-title: Week 6
+title: <b>Week 6</b>
 ---
 
-## Week 6 Topics
+## More on Arrays
 
 <div class="resource-grid">
   <a href="{{ site.baseurl }}/notes/week-06/notes/" class="resource-card card-notes">Lecture Notes</a>

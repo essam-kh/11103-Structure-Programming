@@ -29,7 +29,7 @@ C provides many standard functions to perform common tasks, especially mathemati
 >
 > Predefined functions can be treated as a **"Black Box"**. You give them an input (argument), they process it, and they return an output. You don't need to know *how* they work inside, just *how to use* them.
 >
-> ![Black Box Diagram](../../assets/images/black-box.png)
+> ![Black Box Diagram](../../assets/images/content/black-box.png)
 
 ### Common Math Functions
 
@@ -190,6 +190,9 @@ return_type function_name(parameter_list) {
 </code></pre></div></div>
   </div>
 </div>
+
+> **Note**: When a function is called, a block of memory (stack frame) is reserved for that specific call to store its parameters and local variables.
+{: .note }
 
 ### Function Prototypes
 

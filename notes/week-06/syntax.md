@@ -7,96 +7,130 @@ nav_exclude: true
 
 # Week 6 Syntax Guide
 
-## Nested Loops
+## Passing Arrays to Functions
 
-A loop inside another loop. The inner loop completes all its iterations for every single iteration of the outer loop.
+When passing an array to a function, the array "decays" into a pointer to its first element. Changes inside the function affect the original array.
 
 **Syntax:**
 ```c
-for (int i = 0; i < outerLimit; i++) {       // Outer Loop
-    for (int j = 0; j < innerLimit; j++) {   // Inner Loop
-        // Code to run
-    }
-}
+// Function Prototype
+void functionName(dataType arrayName[], int size);
+
+// Function Call
+functionName(actualArray, size);
 ```
 
 **Example:**
 ```c
-for (int i = 1; i <= 3; i++) {
-    for (int j = 1; j <= 2; j++) {
-        printf("i=%d, j=%d\n", i, j);
-    }
-}
-```
-
----
-
-## 2D Arrays
-
-A 2D array is essentially a matrix with rows and columns.
-
-### 1. Declaration
-
-**Syntax:**
-```c
-DataType arrayName[rows][columns];
-```
-
-**Example:**
-```c
-int matrix[3][4]; // 3 rows, 4 columns
-```
-
-### 2. Initialization
-
-**Method A: Nested Braces (Recommended)**
-```c
-int matrix[2][3] = {
-    {1, 2, 3},  // Row 0
-    {4, 5, 6}   // Row 1
-};
-```
-
-**Method B: Linear List**
-```c
-int matrix[2][3] = {1, 2, 3, 4, 5, 6}; // Fills row by row
-```
-
-**Method C: Partial Initialization**
-```c
-int matrix[2][3] = {
-    {1},    // Becomes {1, 0, 0}
-    {4, 5}  // Becomes {4, 5, 0}
-};
-```
-
-### 3. Accessing Elements
-
-**Syntax:**
-```c
-arrayName[rowIndex][colIndex] = value;
-```
-
-**Example:**
-```c
-matrix[0][1] = 10;      // Assigns 10 to row 0, col 1
-int x = matrix[1][2];   // Reads value from row 1, col 2
-```
-
----
-
-## Processing 2D Arrays
-
-We use nested loops to iterate through 2D arrays.
-
-**Common Pattern (Row-Major Order):**
-```c
-for (int i = 0; i < rows; i++) {           // Iterate Rows
-    for (int j = 0; j < cols; j++) {       // Iterate Columns
-        printf("%d ", matrix[i][j]);       // Process Element
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
     }
     printf("\n");
 }
+
+int main() {
+    int nums[5] = {1, 2, 3, 4, 5};
+    printArray(nums, 5); // Pass array name and size
+    return 0;
+}
 ```
+
+---
+
+## Searching Algorithms
+
+### Linear Search
+Iterates through the array to find a specific key. Works on unsorted arrays.
+
+**Syntax:**
+```c
+int linearSearch(int arr[], int size, int key) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == key) {
+            return i; // Return index if found
+        }
+    }
+    return -1; // Return -1 if not found
+}
+```
+
+### Binary Search
+Divides the search interval in half. **Requires a sorted array.**
+
+**Syntax:**
+```c
+int binarySearch(int arr[], int size, int key) {
+    int low = 0, high = size - 1;
+    
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        
+        if (arr[mid] == key)
+            return mid; // Match found
+            
+        if (arr[mid] < key)
+            low = mid + 1; // Ignore left half
+        else
+            high = mid - 1; // Ignore right half
+    }
+    
+    return -1; // Not found
+}
+```
+
+---
+
+## Common Array Algorithms
+
+### Reversing an Array
+Swaps elements from both ends moving towards the center.
+
+**Syntax:**
+```c
+void reverseArray(int arr[], int size) {
+    int start = 0, end = size - 1;
+    while (start < end) {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+}
+```
+
+### Rotating an Array
+Moves elements to the right or left, wrapping around.
+
+<div style="display: flex; gap: 20px;" markdown="1">
+<div style="flex: 1;" markdown="1">
+
+**Rotate Right:**
+```c
+void rotateRight(int arr[], int size) {
+    int last = arr[size - 1];
+    for (int i = size - 1; i > 0; i--) {
+        arr[i] = arr[i - 1];
+    }
+    arr[0] = last;
+}
+```
+</div>
+
+<div style="flex: 1;" markdown="1">
+
+**Rotate Left:**
+```c
+void rotateLeft(int arr[], int size) {
+    int first = arr[0];
+    for (int i = 0; i < size - 1; i++) {
+        arr[i] = arr[i + 1];
+    }
+    arr[size - 1] = first;
+}
+```
+</div>
+</div>
 
 {% include week-nav.html prev_link="/notes/week-06/notes/" prev_title="Lecture Notes" next_link="/notes/week-06/worksheet/" next_title="Worksheet" %}

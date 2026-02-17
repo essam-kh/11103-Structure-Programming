@@ -19,7 +19,7 @@ Your program typically follows this pattern:
     </ul>
   </div>
 
-<img src="{{ site.baseurl }}/assets/images/program-process.png" alt="Program Process" style="max-width: 450px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+<img src="{{ site.baseurl }}/assets/images/content/program-process.png" alt="Program Process" style="max-width: 450px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
 </div>
 
 ## A Simple Program in C
@@ -76,7 +76,7 @@ A variable is a named memory location that stores a value. Each variable has:
     </ul>
   </div>
 
-<img src="{{ site.baseurl }}/assets/images/memory.png" alt="Variables in Memory" style="max-width: 450px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+<img src="{{ site.baseurl }}/assets/images/content/memory.png" alt="Variables in Memory" style="max-width: 450px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
 </div>
 
 ### Data Types

@@ -1,0 +1,53 @@
+<div class="recursion-container" style="text-align: center; margin: 2rem 0; border: 1px solid #e1e4e8; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+  <div style="background: {{ include.bg_color | default: '#fff' }}; padding: 1rem; min-height: 300px; display: flex; align-items: center; justify-content: center;">
+    {% assign default_style = 'max-width: 100%; max-height: 400px;' %}
+    {% assign final_style = include.img_style | default: default_style %}
+    <img id="img-{{ include.id }}" src="{% if include.images.size > 0 %}{{ site.baseurl }}{{ include.images[0].path }}{% else %}{{ site.baseurl }}/assets/images/placeholder.png{% endif %}" alt="Slider Image" style="{{ final_style }} border-radius: 4px; transition: opacity 0.3s ease-in-out;">
+  </div>
+  <div style="background: #f6f8fa; padding: 1rem; border-top: 1px solid #e1e4e8; display: flex; align-items: center; position: relative;">
+    <div style="flex: 1; display: flex; justify-content: center; align-items: center; gap: 2rem;">
+      <button onclick="window['changeSliderStep_{{ include.id }}'](-1)" id="prev-btn-{{ include.id }}" style="background: none; border: none; cursor: pointer; color: #2ea44f; transition: color 0.2s; padding: 0;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      
+      <button onclick="window['changeSliderStep_{{ include.id }}'](1)" id="next-btn-{{ include.id }}" style="background: none; border: none; cursor: pointer; color: #2ea44f; transition: color 0.2s; padding: 0;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+    <span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 600; color: #586069; font-size: 1rem; position: absolute; right: 2rem;">
+      Step <span id="count-{{ include.id }}">1</span>/<span id="total-{{ include.id }}">{% if include.images.size > 0 %}{{ include.images.size }}{% else %}0{% endif %}</span>
+    </span>
+  </div>
+</div>
+
+<script>
+(function() {
+  var images = [
+    {% for img in include.images %}
+      "{{ site.baseurl }}{{ img.path }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+  var index = 0;
+  var imgEl = document.getElementById("img-{{ include.id }}");
+  var countEl = document.getElementById("count-{{ include.id }}");
+  
+  if (images.length > 0) {
+    imgEl.src = images[0];
+  }
+
+  window['changeSliderStep_{{ include.id }}'] = function(n) {
+    if (images.length === 0) return;
+    index += n;
+    
+    if (index < 0) {
+        index = images.length - 1;
+    } else if (index >= images.length) {
+        index = 0;
+    }
+    
+    imgEl.src = images[index];
+    imgEl.alt = "Slider Step " + (index + 1);
+    if(countEl) countEl.textContent = index + 1;
+  };
+})();
+</script>

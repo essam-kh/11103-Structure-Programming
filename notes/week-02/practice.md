@@ -14,7 +14,7 @@ Additional exercises for mastery.
     <img src="{{ site.baseurl }}/assets/images/tools/codeforces.png" alt="Codeforces" style="height: 60px; margin-bottom: 1rem;">
   </a>
   <p style="font-size: 1.2rem; color: #718096; max-width: 600px; margin: 0 auto;">
-    Sharpen your skills with these selected problems. Focus on input/output handling and basic arithmetic operations.
+    Sharpen your skills with these selected problems. Focus on standard library functions, math operations, and random number generation.
   </p>
 </div>
 

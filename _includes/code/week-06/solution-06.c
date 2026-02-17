@@ -1,56 +1,114 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-int main() {
-    int r1, c1, r2, c2;
-
-    printf("Enter rows and columns for Matrix A: ");
-    scanf("%d %d", &r1, &c1);
-
-    printf("Enter rows and columns for Matrix B: ");
-    scanf("%d %d", &r2, &c2);
-
-    if (c1 != r2) {
-        printf("Error! Column of A must be equal to Row of B.\n");
-        return 0;
+int Max(int arr[], int size) {
+    int maxVal = arr[0];
+    for(int i = 1; i < size; i++) {
+        if(arr[i] > maxVal) maxVal = arr[i];
     }
+    return maxVal;
+}
 
-    int a[r1][c1], b[r2][c2], result[r1][c2];
-
-    printf("Enter elements of Matrix A:\n");
-    for (int i = 0; i < r1; i++) {
-        for (int j = 0; j < c1; j++) {
-            scanf("%d", &a[i][j]);
+int SecondMax(int arr[], int size) {
+    int maxVal = Max(arr, size);
+    int secMax = -2147483648; 
+    
+    for(int i = 0; i < size; i++) {
+        if(arr[i] != maxVal && arr[i] > secMax) {
+            secMax = arr[i];
         }
     }
+    return secMax;
+}
 
-    printf("Enter elements of Matrix B:\n");
-    for (int i = 0; i < r2; i++) {
-        for (int j = 0; j < c2; j++) {
-            scanf("%d", &b[i][j]);
+int CountAbove(int arr[], int size, int score) {
+    int count = 0;
+    for(int i = 0; i < size; i++) {
+        if(arr[i] >= score) count++;
+    }
+    return count;
+}
+
+int IndexOf(int arr[], int size, int score) {
+    for(int i = 0; i < size; i++) {
+        if(arr[i] == score) return i;
+    }
+    return -1;
+}
+
+int MostAppeared(int arr[], int size) {
+    int maxCount = 0;
+    int mostElement = arr[0];
+    
+    for(int i = 0; i < size; i++) {
+        int count = 0;
+        for(int j = 0; j < size; j++) {
+            if(arr[j] == arr[i]) count++;
+        }
+        if(count > maxCount) {
+            maxCount = count;
+            mostElement = arr[i];
         }
     }
+    return mostElement;
+}
 
-    for (int i = 0; i < r1; i++) {
-        for (int j = 0; j < c2; j++) {
-            result[i][j] = 0;
-        }
-    }
-
-    for (int i = 0; i < r1; i++) {
-        for (int j = 0; j < c2; j++) {
-            for (int k = 0; k < c1; k++) {
-                result[i][j] += a[i][k] * b[k][j];
+void FillNoDuplicate(int arr[], int size, int low, int high) {
+    int count = 0;
+    while(count < size) {
+        int num = (rand() % (high - low + 1)) + low;
+        int found = 0;
+        for(int i = 0; i < count; i++) {
+            if(arr[i] == num) {
+                found = 1;
+                break;
             }
         }
+        if(!found) {
+            arr[count] = num;
+            count++;
+        }
+    }
+}
+
+void PrintGrade(int arr[], int size) {
+    for(int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    srand(time(0)); 
+    int grades[70];
+    int n, searchGrade;
+
+    printf("Enter number of students (up to 70): ");
+    scanf("%d", &n);
+
+    printf("Enter grades:\n");
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &grades[i]);
     }
 
-    printf("Result Matrix:\n");
-    for (int i = 0; i < r1; i++) {
-        for (int j = 0; j < c2; j++) {
-            printf("%d ", result[i][j]);
-        }
-        printf("\n");
-    }
+    printf("Max Grade: %d\n", Max(grades, n));
+    printf("Second Max Grade: %d\n", SecondMax(grades, n));
+    printf("Number of Passing Grades (>=50): %d\n", CountAbove(grades, n, 50));
+
+    printf("Enter a grade to find its index: ");
+    scanf("%d", &searchGrade);
+    printf("Index of %d: %d\n", searchGrade, IndexOf(grades, n, searchGrade));
+    
+    printf("Most Appeared Grade: %d\n", MostAppeared(grades, n));
+    
+    printf("Grades entered: ");
+    PrintGrade(grades, n);
+
+    int randomGrades[70];
+    printf("\nFilling new array with unique random numbers (0-100)...\n");
+    FillNoDuplicate(randomGrades, n, 0, 100);
+    PrintGrade(randomGrades, n);
 
     return 0;
 }

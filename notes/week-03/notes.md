@@ -12,7 +12,7 @@ nav_exclude: true
 The real power of programming lies in the ability to make decisions and alter the flow of execution based on data. Instead of executing every line in sequential order, a program can choose different paths depending on the situation. This logic is implemented using **conditional statements** (or **selection structures**) in C.
 
 <div style="text-align: center; margin: 2rem 0;">
-  <img src="{{ site.baseurl }}/assets/images/control-structure.png" alt="Control Structure" style="max-width: 600px; width: 100%; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+  <img src="{{ site.baseurl }}/assets/images/content/control-structure.png" alt="Control Structure" style="max-width: 600px; width: 100%; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
 </div>
 
 ## 1. One-Way Selection 
@@ -100,7 +100,7 @@ ENDIF
 
 Relational operators are used to compare two values.
 
-<img src="{{ site.baseurl }}/assets/images/relational-operator.png" alt="Relational Operators" style="max-width: 600px; width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+<img src="{{ site.baseurl }}/assets/images/content/relational-operator.png" alt="Relational Operators" style="max-width: 600px; width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 
 ## 3. Two-Way Selection
 

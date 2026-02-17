@@ -35,7 +35,7 @@ Lowest grade is: 78.00 in Geometry
 </code></pre></div></div>
   </div>
   <div style="flex: 0 0 250px;">
-    <img src="{{ site.baseurl }}/assets/images/leap-year.png" alt="Leap Year Logic" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <img src="{{ site.baseurl }}/assets/images/content/leap-year.png" alt="Leap Year Logic" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
   </div>
 </div>
 {% include expandable-code.html title="Solution" id="sol-2" file="code/week-03/solution-02.c" %}
@@ -122,7 +122,7 @@ Perimeter: 31.42
 </code></pre></div></div>
   </div>
   <div style="flex: 0 0 350px;">
-    <img src="{{ site.baseurl }}/assets/images/perimeter-formulas.png" alt="Perimeter Formulas" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <img src="{{ site.baseurl }}/assets/images/content/perimeter-formulas.png" alt="Perimeter Formulas" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
   </div>
 </div>
 {% include expandable-code.html title="Solution" id="sol-8" file="code/week-03/solution-08.c" %}
