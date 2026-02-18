@@ -377,4 +377,43 @@ Address: 0x7ffee4b5a4e4, Value: 16, Arr Value: 16
 
 
 
+## Pointer to a Char Array
+
+When dealing with strings, we often use a `char` pointer to traverse the characters. The pointer starts at the first character and moves forward until it reaches the null terminator (`\0`).
+
+**Example: Printing characters using a pointer**
+
+```c
+char str[] = "Hello";
+char *ptr = str; // Points to 'H'
+
+while (*ptr != '\0') {
+    printf("%c ", *ptr);
+    ptr++; // Move to the next character
+}
+printf("\n");
+```
+
+### Importance of the Null Terminator
+The null terminator (`\0`) is crucial when working with char pointers. It serves as the stopping condition for loops.
+
+### Constructing a New String
+When you build a new string character by character, you **must manually add the null terminator** (`\0`) at the end. The computer *does not* do this for you automatically when manipulating pointers.
+
+**Example: Copying a string manually**
+```c
+char source[] = "Copy me";
+char dest[20];
+char *p1 = source;
+char *p2 = dest;
+
+while (*p1 != '\0') {
+    *p2 = *p1;
+    p1++;
+    p2++;
+}
+*p2 = '\0'; // CRITICAL: Mark the end of the new string
+```
+Without `*p2 = '\0';`, the `dest` string might not end where you expect, and printing it could show garbage characters.
+
 {% include week-nav.html next_link="/notes/week-10/syntax/" next_title="Syntax Guide" %}

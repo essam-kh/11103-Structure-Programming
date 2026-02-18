@@ -236,4 +236,24 @@ int main() {
 
 {% include expandable-code.html title="Solution" id="sol-8" file="code/week-10/solution-08.c" %}
 
+---
+
+## Question 7: Remove Commas
+Write a C function called `RemoveCommas`. The function receives two Strings in the form of character pointers as the following: `void RemoveCommas(char * oldval, char * newval)`.
+
+Your function should generate a new string called `newval` out of `oldval` by removing all the commas in `oldval`.
+
+**Example:**
+Given the following code:
+```c
+char FilteredName[20];
+RemoveCommas("v1,v2,v3", FilteredName);
+```
+It should store the value `"v1v2v3"` inside `FilteredName`.
+
+**Constraints:**
+- You are not allowed to use arrays inside your function, only character pointers.
+
+{% include expandable-code.html title="Solution" id="sol-9" file="code/week-10/solution-09.c" %}
+
 {% include week-nav.html prev_link="/notes/week-10/syntax/" prev_title="Syntax Guide" next_link="/notes/week-10/practice/" next_title="Practice" %}

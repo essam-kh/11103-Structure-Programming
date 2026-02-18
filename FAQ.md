@@ -46,6 +46,16 @@ description: >-
   </ul>
 </details>
 
+<details class="jtd-accordion">
+  <summary>I understand the lectures and examples, but I struggle to solve new problems on my own.</summary>
+  Understanding a solution someone else wrote is very different from creating one from scratch. Here is how to bridge that gap:
+  <ul>
+    <li><b>Practice Active Recall</b>: When reviewing examples, look at the problem statement, close the notes, and try to write the solution entirely on your own. If you get stuck, peek only for a hint.</li>
+    <li><b>Embrace the Struggle</b>: Getting stuck on a new question is actually the most important part of learning. That moment of struggle is when your brain is building the connections needed to solve future problems. Don't rush to the answer key immediately.</li>
+    <li><b>Think then act</b>: It creates a lot of pressure to stare at a blank screen! If you feel stuck, step away from the keyboard and grab a pen and paper. Trace the logic for the simplest case possible first. Once the simple flow makes sense to you, then you can worry about the edge cases.</li>
+  </ul>
+</details>
+
 </div>
 
 ## Course Management
