@@ -8,9 +8,6 @@ seo:
 ---
 
 # 11103: Structure of Programming
-{:.no_toc}
-<span style="font-size: 0.8em; font-weight: normal; color: gray;">Princess Sumaya University for Technology - Spring 2026</span>
-{:.no_toc}
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -56,43 +53,12 @@ We will use the following textbook. We will also use slides, notes, and other re
 
 ## Course Topics
 
-The first few weeks of the semester will focus on the fundamentals of C programming, including memory concepts, arithmetic, functions, selection statements, loops, and arrays. Each of the remaining weeks will explore advanced topics such as sorting, 2D arrays, recursion, and pointers. Here is what you should expect to achieve by the end of the semester:
+The first few weeks will focus on the fundamentals of C programming, including memory concepts, arithmetic, functions, selection statements, loops, and arrays. Each of the remaining weeks will explore advanced topics such as sorting, 2D arrays, recursion, and pointers. Here is what you should expect to achieve by the end of the course:
 
 - Be able to **analyze and solve** computational problems using core C programming concepts including variables, control structures, and functions.
 - Be able to **implement and manipulate** data structures such as 1D/2D arrays and strings for data processing.
 - Be able to **apply advanced techniques** including recursion and pointers to write efficient and modular code.
 - Be able to **design and debug** complete C programs using modern development tools.
-
-
-## Assessments & Grades
-
-<div class="grade-table-wrapper">
-  <table class="grade-table">
-    <thead>
-      <tr> <th>Assessment</th>       
-           <th>Weight</th>    
-           <th>Description</th></tr>
-    </thead>
-    <tbody>
-      <tr> <td>Quizzes</td>          
-           <td>30%</td>        
-           <td>5 quizzes done in class, each worth 6%.</td></tr>
-      <tr> <td>Midterm Exam</td>     
-           <td>30%</td>       
-           <td>The exact date and time will be set by the university.</td></tr>
-      <tr> <td>Final Exam</td>       
-           <td>40%</td>       
-           <td>The exact date and time will be set by the university.</td></tr>
-    </tbody>
-    <tfoot>
-      <tr><td>Total</td>
-      <td>100%</td>
-      <td></td></tr>
-    </tfoot>
-  </table>
-</div>
-
-
 
 ## Tools
 <div style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1.5em; margin-top: 1em;">
@@ -108,13 +74,6 @@ The first few weeks of the semester will focus on the fundamentals of C programm
 <div>
   <strong>Code::Blocks</strong><br>
   This is the IDE (Integrated Development Environment) you will use for programming in C. While you are allowed to use other IDEs, this is the one we will use in the classroom, base the course material on, and provide support for. [<a href='https://www.codeblocks.org/downloads/'>download</a>]
-  [<a href='https://drive.google.com/drive/folders/1jSmRyASH4vSD4wbdqSzqae1DjSkGRNkI'>Installation Guide & Video</a>]
+  [<a href='https://www.youtube.com/watch?v=S9NhsWepfOM'>Installation Guide</a>]
 </div>
-</div>
-<div style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1.5em; margin-top: 1em;">
-  <img src="assets/images/tools/psut.png" alt="Edstem Logo" width="50"/>
-  <div>
-    <strong>E-Learning System</strong><br>
-    We will use this system for the midterm and final exams. Your instructor might also use this system for communicating things specific to your section, rather than the course as a whole.
-  </div>
 </div>

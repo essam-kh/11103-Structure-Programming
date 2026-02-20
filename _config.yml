@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: 11103 Structure Programming
-tagline: Structured Programming (Spring 2026) @ PSUT
+tagline: Structured Programming
 description: Lab resources, schedule, and assignments for Structure Programming 11103.
 author: Essam Khader
 baseurl: '/11103-Structure-Programming' # the subpath of your site, e.g. /blog

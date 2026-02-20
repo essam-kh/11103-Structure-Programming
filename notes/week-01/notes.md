@@ -24,12 +24,12 @@ Your program typically follows this pattern:
 
 ## A Simple Program in C
 
-Here is a simple C program that prints "Welcome To PSUT" to the screen:
+Here is a simple C program that prints "Welcome To Structured Programming" to the screen:
 
 ```c
 #include <stdio.h>
 int main() {
-    printf("Welcome To PSUT\n");
+    printf("Welcome To Structured Programming\n");
     return 0;
 }
 ```
@@ -39,7 +39,7 @@ int main() {
 -   `#include <stdio.h>`: This line tells the compiler to include the **Standard Input Output** library. This library contains the definitions for functions like `printf/scanf` that we use to output/input text.
 -   `int main()`: This is the **main function** where the program execution begins. Every C program must have exactly one main function.
 -   `{ ... }`: The curly braces define the **scope** or body of the function. All the code for the `main` function lives inside these braces.
--   `printf("Welcome To PSUT\n");`: This function prints the text "Welcome To PSUT" to the screen.
+-   `printf("Welcome To Structured Programming\n");`: This function prints the text "Welcome To Structured Programming" to the screen.
 -   `return 0;`: This statement terminates the `main` function and returns the value `0` to the operating system. A return value of `0` generally signifies that the program executed successfully.
 
 ## Output Statements in C

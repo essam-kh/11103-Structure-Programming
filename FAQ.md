@@ -57,18 +57,3 @@ description: >-
 </details>
 
 </div>
-
-## Course Management
-
-<div class="faq-page">
-<details class="jtd-accordion">
-  <summary>Can I move to another section? </summary>
-  Yes, if you can do that officially through the deanship of admission and registration. Otherwise, No (see the <a href="{{ site.baseurl }}/policies">policies</a> page).
-</details>
-
-<details class="jtd-accordion">
-  <summary>I don't want to move permanently to another section, but I need to attend one or two lectures in another section. </summary>
-  Your attendance will be recorded in the section you are officially signed up for. However, if you know you are going to miss your section's lecture but want to make them lecture up with another section (so that you don't miss the material), you can reach out to the instructor of the section you want to attend and ask them if you can attend. See the <a href="{{ site.baseurl }}/staff">Staff</a> page to know which instructors teach which sections.
-</details>
-</div>
-
