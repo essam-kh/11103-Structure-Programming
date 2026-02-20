@@ -1002,3 +1002,66 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+
+/* ==============================
+   Language Toggle Pill
+   ============================== */
+.lang-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.lang-toggle-desc {
+  font-size: 0.9rem;
+  color: #718096;
+  margin-bottom: 2rem;
+  font-style: italic;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+.lang-toggle-label {
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+.lang-toggle-pill {
+  display: inline-flex;
+  background-color: #f1f5f9;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.lang-toggle-btn {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.6rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.lang-toggle-btn:hover {
+  color: #1e293b;
+}
+
+.lang-toggle-btn.active {
+  background-color: #3182ce;
+  color: white;
+}
+
+/* Language Content Visibility */
+body.show-c .lang-cpp {
+  display: none !important;
+}
+
+body.show-cpp .lang-c {
+  display: none !important;
+}

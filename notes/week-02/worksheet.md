@@ -26,7 +26,7 @@ Result Y: 29
 ```
 (Calculation: $$ 16 + 3(2) + 7 = 29 $$)
 
-{% include expandable-code.html title="Solution" id="sol-1" file="code/week-02/solution-01.c" %}
+{% include expandable-code.html title="Solution" id="sol-1" file_c="code/week-02/c/solution-01.c" file_cpp="code/week-02/cpp/solution-01.cpp" %}
 
 ## Exercise 2: Circle Properties
 Write a function named `CircleArea()`, which receives the `R` (Radius) of the circle and computes both the **Area** and **Perimeter** of the Circle.
@@ -42,7 +42,7 @@ Area: 78.54
 Perimeter: 31.42
 ```
 
-{% include expandable-code.html title="Solution" id="sol-2" file="code/week-02/solution-02.c" %}
+{% include expandable-code.html title="Solution" id="sol-2" file_c="code/week-02/c/solution-02.c" file_cpp="code/week-02/cpp/solution-02.cpp" %}
 
 ## Exercise 3: Calculator Function
 Implement a function named `Calc()`, that receives 2 integer arguments `n1`, `n2` and performs the basic mathematical operations (you need to display the results within the same function):
@@ -67,7 +67,7 @@ Quotient: 2
 Modulus: 0
 ```
 
-{% include expandable-code.html title="Solution" id="sol-3" file="code/week-02/solution-03.c" %}
+{% include expandable-code.html title="Solution" id="sol-3" file_c="code/week-02/c/solution-03.c" file_cpp="code/week-02/cpp/solution-03.cpp" %}
 
 ## Exercise 4: Average of Digits
 Implement a function named `DigitsNum()`, that receives a **3-digit integer** argument `num` and returns the **average** of its digits.
@@ -81,7 +81,7 @@ Average of digits: 2
 ```
 (Calculation: $$ (1+2+3)/3 = 2 $$)
 
-{% include expandable-code.html title="Solution" id="sol-4" file="code/week-02/solution-04.c" %}
+{% include expandable-code.html title="Solution" id="sol-4" file_c="code/week-02/c/solution-04.c" file_cpp="code/week-02/cpp/solution-04.cpp" %}
 
 ## Exercise 5: Currency Converter
 Implement a function named `CurrencyConvertor()`, which receives an amount of money (double value) in **JoD** (Jordanian Dinar) then converts it to **USD**, suppose that:
@@ -94,7 +94,7 @@ Enter amount in JoD: 100
 Amount in USD: 141.12
 ```
 
-{% include expandable-code.html title="Solution" id="sol-5" file="code/week-02/solution-05.c" %}
+{% include expandable-code.html title="Solution" id="sol-5" file_c="code/week-02/c/solution-05.c" file_cpp="code/week-02/cpp/solution-05.cpp" %}
 
 ---
 

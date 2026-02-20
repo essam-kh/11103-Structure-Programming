@@ -34,7 +34,7 @@ Division: 10 / 3 = 3
 Modulus: 10 % 3 = 1
 ```
 
-{% include expandable-code.html title="Solution" id="sol-1" file="code/week-01/solution-01.c" %}
+{% include expandable-code.html title="Solution" id="sol-1" file_c="code/week-01/c/solution-01.c" file_cpp="code/week-01/cpp/solution-01.cpp" %}
 
 ## Question 2
 Write a program that takes a character input from the user, an integer input, and a float input. The program should then print the ASCII value of the character, the square of the integer, and the cube of the float in a formatted manner.
@@ -49,7 +49,7 @@ The square of 4 is 16
 The cube of 2.50 is 15.62
 ```
 
-{% include expandable-code.html title="Solution" id="sol-2" file="code/week-01/solution-02.c" %}
+{% include expandable-code.html title="Solution" id="sol-2" file_c="code/week-01/c/solution-02.c" file_cpp="code/week-01/cpp/solution-02.cpp" %}
 
 
 ## Question 3
@@ -61,7 +61,7 @@ N=5678
 Output: 5678= 5000+600+70+8
 ```
 
-{% include expandable-code.html title="Solution" id="sol-3" file="code/week-01/solution-03.c" %}
+{% include expandable-code.html title="Solution" id="sol-3" file_c="code/week-01/c/solution-03.c" file_cpp="code/week-01/cpp/solution-03.cpp" %}
 
 ## Question 4
 Write a program that reads a date (year, month, and day) and calculates the total number of days from year 0 up to that date.
@@ -76,7 +76,7 @@ Enter the day (1-31): 25
 Total number of days is: 728305
 ```
 
-{% include expandable-code.html title="Solution" id="sol-4" file="code/week-01/solution-04.c" %}
+{% include expandable-code.html title="Solution" id="sol-4" file_c="code/week-01/c/solution-04.c" file_cpp="code/week-01/cpp/solution-04.cpp" %}
 
 
 
@@ -91,6 +91,6 @@ Enter the third integer: 34
 The average is: 21.33
 ```
 
-{% include expandable-code.html title="Solution" id="sol-5" file="code/week-01/solution-05.c" %}
+{% include expandable-code.html title="Solution" id="sol-5" file_c="code/week-01/c/solution-05.c" file_cpp="code/week-01/cpp/solution-05.cpp" %}
 
 {% include week-nav.html prev_link="/notes/week-01/syntax/" prev_title="Syntax Guide" next_link="/notes/week-01/practice/" next_title="Practice" %}

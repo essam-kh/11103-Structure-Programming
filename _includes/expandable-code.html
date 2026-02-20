@@ -18,15 +18,30 @@
             </button>
 
             <div class="expandable-code-block" id="{{ unique_id }}-block">
-                {% if include.file %}
-                    {% capture code_content %}{% include {{ include.file}} %}{% endcapture %}
+                {% if include.file_c and include.file_cpp %}
+                    <div class="lang-c">
+                        {% capture code_content_c %}{% include {{ include.file_c}} %}{% endcapture %}
+                        {% highlight c %}
+{{ code_content_c }}
+                        {% endhighlight %}
+                    </div>
+                    <div class="lang-cpp">
+                        {% capture code_content_cpp %}{% include {{ include.file_cpp}} %}{% endcapture %}
+                        {% highlight cpp %}
+{{ code_content_cpp }}
+                        {% endhighlight %}
+                    </div>
                 {% else %}
-                    {% assign code_content = include.code %}
-                {% endif %}
+                    {% if include.file %}
+                        {% capture code_content %}{% include {{ include.file}} %}{% endcapture %}
+                    {% else %}
+                        {% assign code_content = include.code %}
+                    {% endif %}
 
-                {% highlight c %}
+                    {% highlight c %}
 {{ code_content }}
-                {% endhighlight %}
+                    {% endhighlight %}
+                {% endif %}
             </div>
         </div>
     </div>

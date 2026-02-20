@@ -49,12 +49,30 @@ C provides many standard functions to perform common tasks, especially mathemati
 | `tan(x)` | Trigonometric tangent of *x* (in radians) | `tan(0.0)` | `0.0` |
 
 ### Example: Math Functions
+
+<div class="lang-c" markdown="1">
+
 ```c
 printf("Square root of 900.0: %.1f\n", sqrt(900.0)); // 30.0
 printf("2 raised to power 7: %.1f\n", pow(2, 7));    // 128.0
 printf("Absolute value of -5.0: %.1f\n", fabs(-5.0)); // 5.0
 printf("Ceiling of 9.2: %.1f\n", ceil(9.2));         // 10.0
 ```
+
+</div>
+
+<div class="lang-cpp" markdown="1">
+
+```cpp
+#include <iomanip>
+// ...
+cout << "Square root of 900.0: " << fixed << setprecision(1) << sqrt(900.0) << endl; // 30.0
+cout << "2 raised to power 7: " << pow(2, 7) << endl;    // 128.0
+cout << "Absolute value of -5.0: " << fabs(-5.0) << endl; // 5.0
+cout << "Ceiling of 9.2: " << ceil(9.2) << endl;         // 10.0
+```
+
+</div>
 
 ---
 
@@ -96,6 +114,8 @@ To allow the `rand` function to produce different sequences, we must **seed** th
     *   Requires `<time.h>`
     *   Call `srand(time(NULL));` **once** at the beginning of `main`.
 
+<div class="lang-c" markdown="1">
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -108,6 +128,26 @@ int main() {
 }
 ```
 
+</div>
+
+<div class="lang-cpp" markdown="1">
+
+```cpp
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main() {
+    srand(time(NULL)); // Seed with current time
+    cout << rand();
+    return 0;
+}
+```
+
+</div>
+
 ### Scaling Random Numbers
 
 To get a number within a specific range, use the modulus operator (`%`) and an offset.
@@ -116,26 +156,59 @@ To get a number within a specific range, use the modulus operator (`%`) and an o
 **Formula:** `rand() % n`
 
 **Example:** Generate a number between 0 and 5.
+
+<div class="lang-c" markdown="1">
+
 ```c
 int num = rand() % 6; 
 printf("%d", num);
 // Expected Output: A number like 0, 1, 2, 3, 4, or 5
 ```
 
+</div>
+
+<div class="lang-cpp" markdown="1">
+
+```cpp
+int num = rand() % 6; 
+cout << num;
+// Expected Output: A number like 0, 1, 2, 3, 4, or 5
+```
+
+</div>
+
 #### 2. Range `[1, n]`
 **Formula:** `1 + (rand() % n)`
 
 **Example:** Simulate a 6-sided die (1 to 6).
+
+<div class="lang-c" markdown="1">
+
 ```c
 int face = 1 + rand() % 6;
 printf("%d", face);
 // Expected Output: A number like 1, 2, 3, 4, 5, or 6
 ```
 
+</div>
+
+<div class="lang-cpp" markdown="1">
+
+```cpp
+int face = 1 + rand() % 6;
+cout << face;
+// Expected Output: A number like 1, 2, 3, 4, 5, or 6
+```
+
+</div>
+
 #### 3. General Range `[low, high]`
 **Formula:** `low + rand() % (high - low + 1)`
 
 **Example:** Generate a number between 10 and 20.
+
+<div class="lang-c" markdown="1">
+
 ```c
 int low = 10;
 int high = 20;
@@ -143,6 +216,20 @@ int result = low + rand() % (high - low + 1);
 printf("%d", result);
 // Expected Output: A number between 10 and 20 (inclusive)
 ```
+
+</div>
+
+<div class="lang-cpp" markdown="1">
+
+```cpp
+int low = 10;
+int high = 20;
+int result = low + rand() % (high - low + 1);
+cout << result;
+// Expected Output: A number between 10 and 20 (inclusive)
+```
+
+</div>
 
 ---
 
@@ -172,8 +259,13 @@ return_type function_name(parameter_list) {
   <div style="flex: 1; background: #f8f9fa; border: 1px solid #e1e4e8; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column;">
     <h3 style="margin-top: 0; color: #24292e; border-bottom: 1px solid #e1e4e8; padding-bottom: 0.5rem; margin-bottom: 1rem;">Void Function</h3>
     <p style="margin-bottom: 1rem; flex-grow: 1;">Using <code>void</code> means the function <strong>returns nothing</strong>.</p>
-    <div class="language-c highlighter-rouge" style="margin: 0;"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">printHello</span><span class="p">()</span> <span class="p">{</span>
+    <div class="language-c highlighter-rouge lang-c" style="margin: 0;"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">printHello</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">"Hello!\n"</span><span class="p">);</span>
+    <span class="c1">// No return needed</span>
+<span class="p">}</span>
+</code></pre></div></div>
+    <div class="language-cpp highlighter-rouge lang-cpp" style="margin: 0;"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">printHello</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Hello!\n"</span><span class="p">;</span>
     <span class="c1">// No return needed</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -183,7 +275,12 @@ return_type function_name(parameter_list) {
   <div style="flex: 1; background: #f8f9fa; border: 1px solid #e1e4e8; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column;">
     <h3 style="margin-top: 0; color: #24292e; border-bottom: 1px solid #e1e4e8; padding-bottom: 0.5rem; margin-bottom: 1rem;">Non-Void Function</h3>
     <p style="margin-bottom: 1rem; flex-grow: 1;">Specifying a type (e.g., <code>int</code>) means it <strong>must return a value</strong>.</p>
-    <div class="language-c highlighter-rouge" style="margin: 0;"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">square</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <div class="language-c highlighter-rouge lang-c" style="margin: 0;"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">square</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span><span class="p">;</span>
+    <span class="c1">// Must return an int</span>
+<span class="p">}</span>
+</code></pre></div></div>
+    <div class="language-cpp highlighter-rouge lang-cpp" style="margin: 0;"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">square</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span><span class="p">;</span>
     <span class="c1">// Must return an int</span>
 <span class="p">}</span>
@@ -215,6 +312,8 @@ A **Function Prototype** tells the compiler the function's name, return type, an
 ### Example: User-Defined Function
 Here is a complete program that calculates the square of numbers using a function.
 
+<div class="lang-c" markdown="1">
+
 ```c
 #include <stdio.h>
 
@@ -232,6 +331,32 @@ int square(int y) {
     return y * y; // Returns the square of y
 }
 ```
+
+</div>
+
+<div class="lang-cpp" markdown="1">
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+// Function Prototype
+int square(int y);
+
+int main() {
+    cout << square(2) << endl; // 4
+    cout << square(5) << endl; // 25
+    return 0;
+}
+
+// Function Definition
+int square(int y) {
+    return y * y; // Returns the square of y
+}
+```
+
+</div>
 
 ---
 
@@ -286,13 +411,29 @@ float result = x / y; // x is promoted to float (10.0), result is 3.333...
 ```
 
 ### Explicit Conversion (Casting)
-You can force a conversion using a **Cast Operator**: `(type) variable`.
+You can force a conversion using a **Cast Operator**: <span class="lang-c"><code>(type) variable</code></span><span class="lang-cpp"><code>static_cast&lt;type&gt;(variable)</code></span>.
+
+<div class="lang-c" markdown="1">
 
 ```c
 int total = 10;
 int count = 3;
 float average = (float) total / count; // total is cast to float explicitly
 ```
+
+</div>
+
+<div class="lang-cpp" markdown="1">
+
+```cpp
+int total = 10;
+int count = 3;
+// Recommended in C++
+float average = static_cast<float>(total) / count; 
+// Or C-style: float average = (float) total / count;
+```
+
+</div>
 
 > **Note:** Another common method is multiplying by `1.0` to force generic promotion (implicitly converts to double):
 {: .note }
@@ -320,6 +461,8 @@ Storage classes define the **scope** (visibility) and **lifetime** of variables.
 
 ### Example: Static vs. Auto
 
+<div class="lang-c" markdown="1">
+
 ```c
 #include <stdio.h>
 
@@ -337,6 +480,32 @@ int main() {
     return 0;
 }
 ```
+
+</div>
+
+<div class="lang-cpp" markdown="1">
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+void test_static() {
+    int a = 1;          // Auto: Re-created every time (Always 1)
+    static int s = 1;   // Static: Retains value (1, 2, 3...)
+    
+    cout << "a = " << a++ << ", s = " << s++ << endl;
+}
+
+int main() {
+    test_static(); // a = 1, s = 1
+    test_static(); // a = 1, s = 2
+    test_static(); // a = 1, s = 3
+    return 0;
+}
+```
+
+</div>
 ---
 
 ### Variable Default Values
@@ -357,6 +526,8 @@ The **Scope** of an identifier is the portion of the program where it can be ref
 3.  **Function Prototype Scope**: Identifiers in the parameter list of a prototype are only visible within the prototype itself.
 
 ### Example: Scope Rules
+
+<div class="lang-c" markdown="1">
 
 ```c
 #include <stdio.h>
@@ -395,6 +566,52 @@ void demo_scopes(int p) {
     printf("Inside demo_scopes function with parameter: %d\n", p);
 }
 ```
+
+</div>
+
+<div class="lang-cpp" markdown="1">
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+// 2. File Scope: 'global_var' is visible from here to the end of the file
+int global_var = 100; 
+
+// 3. Function Prototype Scope: The parameter name 'x' is only meaningful here
+void demo_scopes(int x); 
+
+int main() {
+    // 1. Block Scope: 'local_main' is visible only within the main function block
+    int local_main = 10; 
+
+    cout << "Main - Global: " << global_var << ", Local: " << local_main << endl;
+    
+    // Nested Block Scope
+    {
+        int local_nested = 20; // Visible only inside this block {}
+        cout << "Nested Block - Inner: " << local_nested << endl;
+    }
+    // cout << local_nested; // ERROR: local_nested is not visible here
+
+    // Nested Block Scope (Variable Shadowing)
+    {
+        int local_main = 999; // Hides the outer 'local_main'
+        cout << "Nested Block - Shadowed Local: " << local_main << endl; // Prints 999
+    }
+    cout << "Main - Local after block: " << local_main << endl; // Prints 10 again
+
+    demo_scopes(5);
+    return 0;
+}
+
+void demo_scopes(int p) {
+    cout << "Inside demo_scopes function with parameter: " << p << endl;
+}
+```
+
+</div>
 
 ---
 

@@ -9,6 +9,14 @@ seo:
 
 # 11103: Structure of Programming
 
+<div class="lang-toggle-container">
+    <div class="lang-toggle-pill">
+        <button id="btn-c" class="lang-toggle-btn active">C</button>
+        <button id="btn-cpp" class="lang-toggle-btn">C++</button>
+    </div>
+</div>
+<p class="lang-toggle-desc">Toggle between C and C++ to instantly translate all code examples, syntax guides, and worksheet solutions across the site. Your preference is saved automatically.</p>
+
 ## Table of contents
 {: .no_toc .text-delta }
 
@@ -53,27 +61,37 @@ We will use the following textbook. We will also use slides, notes, and other re
 
 ## Course Topics
 
-The first few weeks will focus on the fundamentals of C programming, including memory concepts, arithmetic, functions, selection statements, loops, and arrays. Each of the remaining weeks will explore advanced topics such as sorting, 2D arrays, recursion, and pointers. Here is what you should expect to achieve by the end of the course:
+The first few weeks will focus on the fundamentals of <span class="lang-c">C</span><span class="lang-cpp">C++</span> programming, including memory concepts, arithmetic, functions, selection statements, loops, and arrays. Each of the remaining weeks will explore advanced topics such as sorting, 2D arrays, recursion, and pointers. Here is what you should expect to achieve by the end of the course:
 
-- Be able to **analyze and solve** computational problems using core C programming concepts including variables, control structures, and functions.
+- Be able to **analyze and solve** computational problems using core <span class="lang-c">C</span><span class="lang-cpp">C++</span> programming concepts including variables, control structures, and functions.
 - Be able to **implement and manipulate** data structures such as 1D/2D arrays and strings for data processing.
 - Be able to **apply advanced techniques** including recursion and pointers to write efficient and modular code.
-- Be able to **design and debug** complete C programs using modern development tools.
+- Be able to **design and debug** complete <span class="lang-c">C</span><span class="lang-cpp">C++</span> programs using modern development tools.
 
 ## Tools
+<div class="lang-c" markdown="1">
 <div style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1.5em; margin-top: 1em;">
-<img src="assets/images/tools/c.png" alt="C Logo" width="50"/>
+<img src="assets/images/tools/c-logo.png" alt="C Logo" width="50"/>
 <div>
   <strong>C</strong><br>
   We will learn programming in C!
 </div>
 </div>
-
+</div>
+<div class="lang-cpp" markdown="1">
+<div style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1.5em; margin-top: 1em;">
+<img src="assets/images/tools/cpp-logo.png" alt="C++ Logo" width="50"/>
+<div>
+  <strong>C++</strong><br>
+  We will learn programming in C++!
+</div>
+</div>
+</div>
 <div style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1.5em; margin-top: 1em;">
 <img src="assets/images/tools/codeblocks.png" alt="Code::Blocks Logo" width="50"/>
 <div>
   <strong>Code::Blocks</strong><br>
-  This is the IDE (Integrated Development Environment) you will use for programming in C. While you are allowed to use other IDEs, this is the one we will use in the classroom, base the course material on, and provide support for. [<a href='https://www.codeblocks.org/downloads/'>download</a>]
+  This is the IDE (Integrated Development Environment) you will use for programming in <span class="lang-c">C</span><span class="lang-cpp">C++</span>. While you are allowed to use other IDEs, this is the one we will use in the classroom, base the course material on, and provide support for. [<a href='https://www.codeblocks.org/downloads/'>download</a>]
   [<a href='https://www.youtube.com/watch?v=S9NhsWepfOM'>Installation Guide</a>]
 </div>
 </div>
