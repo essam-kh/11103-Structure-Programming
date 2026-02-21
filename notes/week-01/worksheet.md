@@ -57,8 +57,9 @@ Write a program that reads a 4-digit integer and prints the decimal value for ea
 
 **Example:**
 ```
-N=5678
-Output: 5678= 5000+600+70+8
+please enter number of 4 digits
+5678
+5678=5000+600+70+8
 ```
 
 {% include expandable-code.html title="Solution" id="sol-3" file_c="code/week-01/c/solution-03.c" file_cpp="code/week-01/cpp/solution-03.cpp" %}
@@ -70,10 +71,10 @@ Write a program that reads a date (year, month, and day) and calculates the tota
 
 **Example:**
 ```
-Enter the year (e.g., 2023): 2023
+Enter the year: 2023
 Enter the month (1-12): 10
 Enter the day (1-31): 25
-Total number of days is: 728305
+Total number of days from year 0 is: 728305
 ```
 
 {% include expandable-code.html title="Solution" id="sol-4" file_c="code/week-01/c/solution-04.c" file_cpp="code/week-01/cpp/solution-04.cpp" %}

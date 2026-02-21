@@ -283,7 +283,7 @@ The `switch` statement is an alternative to nested `if...else` when comparing a 
 <div style="display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 2rem;">
   <div style="flex: 1;">
     <strong>With Break</strong>
-    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">switch</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <div class="language-c highlighter-rouge lang-c"><div class="highlight"><pre class="highlight"><code><span class="k">switch</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
         <span class="n">printf</span><span class="p">(</span><span class="s">"One"</span><span class="p">);</span>
         <span class="k">break</span><span class="p">;</span>
@@ -294,10 +294,21 @@ The `switch` statement is an alternative to nested `if...else` when comparing a 
         <span class="n">printf</span><span class="p">(</span><span class="s">"Other"</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
+    <div class="language-cpp highlighter-rouge lang-cpp"><div class="highlight"><pre class="highlight"><code><span class="k">switch</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"One"</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Two"</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">default</span><span class="p">:</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Other"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
   </div>
   <div style="flex: 1;">
     <strong>Without Break</strong>
-    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">switch</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <div class="language-c highlighter-rouge lang-c"><div class="highlight"><pre class="highlight"><code><span class="k">switch</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
         <span class="n">printf</span><span class="p">(</span><span class="s">"One"</span><span class="p">);</span>
     <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
@@ -307,8 +318,19 @@ The `switch` statement is an alternative to nested `if...else` when comparing a 
         <span class="n">printf</span><span class="p">(</span><span class="s">"Other"</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
+    <div class="language-cpp highlighter-rouge lang-cpp"><div class="highlight"><pre class="highlight"><code><span class="k">switch</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"One"</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Two"</span><span class="p">;</span>
+        <span class="c1">// Prints "OneTwo" if x is 1</span>
+    <span class="k">default</span><span class="p">:</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Other"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
   </div>
 </div>
+
 
 ### Multiple Cases for One Action
 

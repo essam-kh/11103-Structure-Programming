@@ -9,103 +9,97 @@ nav_exclude: true
 
 
 ## Exercise 1
-Write a complete C program that defines an integer array of size 50, and prompts the user to fill the array then print the array. After printing the array your program should also prompt the user enter `startValue`, and `endValue`. The program should print the number of values that are in between the value `startValue` and `endValue` inclusive where `startValue < endValue`.
+Write a complete <span class="lang-c">C</span><span class="lang-cpp">C++</span> program that defines an integer array of size 50, and prompts the user to fill the array then print the array. After printing the array your program should also prompt the user enter `startValue`, and `endValue`. The program should print the number of values that are in between the value `startValue` and `endValue` inclusive where `startValue < endValue`.
 
 **Example:**
 ```
-Enter array size: 5
-Enter element 0: 10
-Enter element 1: 5
-Enter element 2: 20
-Enter element 3: 8
-Enter element 4: 15
-Array: 10 5 20 8 15 
+Enter the number of elements (up to 50): 5
+Enter 5 integers:
+10 5 20 8 15
+Array elements: 10 5 20 8 15 
 
-Enter startValue: 5
-Enter endValue: 12
+Enter startValue and endValue: 5 12
 Count of values between 5 and 12: 3
 ```
 
-{% include expandable-code.html title="Solution" id="sol-1" file="code/week-06/solution-01.c" %}
+{% include expandable-code.html title="Solution" id="sol-1" file_c="code/week-06/c/solution-01.c" file_cpp="code/week-06/cpp/solution-01.cpp" %}
 
 ---
 
 ## Exercise 2
-Write a complete C program that defines an integer array of size 50, and prompts the user to fill the array with grades then print the array. Then compares the sum of even numbers in the array with the sum of odd numbers in the array.
+Write a complete <span class="lang-c">C</span><span class="lang-cpp">C++</span> program that defines an integer array of size 50, and prompts the user to fill the array with grades then print the array. Then compares the sum of even numbers in the array with the sum of odd numbers in the array.
 *   If the sum of even numbers is larger, the program prints `1`.
 *   If the sum of odd numbers is larger, the program prints `-1`.
 *   If both sums are equal, the program prints `0`.
 
 **Example:**
 ```
-Enter array size: 4
-Enter element 0: 2
-Enter element 1: 3
-Enter element 2: 4
-Enter element 3: 1
-Array: 2 3 4 1 
-
-Sum of Evens: 6 (2+4)
-Sum of Odds: 4 (3+1)
-Result: 1
+Enter the number of elements (up to 50): 4
+Enter 4 grades:
+2 3 4 1
+Array elements: 2 3 4 1 
+1
 ```
 
-{% include expandable-code.html title="Solution" id="sol-2" file="code/week-06/solution-02.c" %}
+{% include expandable-code.html title="Solution" id="sol-2" file_c="code/week-06/c/solution-02.c" file_cpp="code/week-06/cpp/solution-02.cpp" %}
 
 ---
 
 ## Exercise 3
-Write a complete C program that defines an integer array of size 50, and prompts the user to fill the array with grades then print the array. Then program then prints the number of the elements in the array that are multiples of five.
+Write a complete <span class="lang-c">C</span><span class="lang-cpp">C++</span> program that defines an integer array of size 50, and prompts the user to fill the array with grades then print the array. Then program then prints the number of the elements in the array that are multiples of five.
 
 **Example:**
 ```
-Enter array size: 7
-Enter elements: 15 17 413 1005 3 70 2
-Array: 15 17 413 1005 3 70 2 
-
-Count of multiples of 5: 3
-Elements: 15, 1005, 70
+Enter the number of elements (up to 50): 7
+Enter 7 grades:
+15 17 413 1005 3 70 2
+Array elements: 15 17 413 1005 3 70 2 
+Multiples of five: 15 1005 70 
+Total count: 3
 ```
 
-{% include expandable-code.html title="Solution" id="sol-3" file="code/week-06/solution-03.c" %}
+{% include expandable-code.html title="Solution" id="sol-3" file_c="code/week-06/c/solution-03.c" file_cpp="code/week-06/cpp/solution-03.cpp" %}
 
 ---
 
 ## Exercise 4
-Write a complete C program that defines two integer arrays each of size 50, the prompts the user to fill the arrays with integers. Then program prompts the user to enter the value of an integer variable named `Append`. The program should combine the arrays `A` & `B` and store the final results in `C` as follows:
+Write a complete <span class="lang-c">C</span><span class="lang-cpp">C++</span> program that defines two integer arrays each of size 50, the prompts the user to fill the arrays with integers. Then program prompts the user to enter the value of an integer variable named `Append`. The program should combine the arrays `A` & `B` and store the final results in `C` as follows:
 *   If `Append` is equal to `1` the program appends `A` to `B`.
 *   If `Append` is equal to `0` the function appends `B` to `A`.
 
 **Example:**
 ```
-Array A: 10 20 30 2
-Array B: 2 34 8 
-Enter Append (0 or 1): 1
-
-Array C: 2 34 8 10 20 30 2 
+Enter number of elements for A: 4
+Enter elements for A:
+10 20 30 2
+Enter number of elements for B: 3
+Enter elements for B:
+2 34 8
+Enter Append value (0 or 1): 1
+Result Array C: 2 34 8 10 20 30 2 
 ```
 
-{% include expandable-code.html title="Solution" id="sol-4" file="code/week-06/solution-04.c" %}
+{% include expandable-code.html title="Solution" id="sol-4" file_c="code/week-06/c/solution-04.c" file_cpp="code/week-06/cpp/solution-04.cpp" %}
 
 ---
 
 ## Exercise 5
-Write a complete C program that defines an integer array of size 50, and prompts the user to fill the array with quiz grades (between 0 and 10 inclusive). Then the program computes the frequency of each value in the array and prints the most frequent element.
+Write a complete <span class="lang-c">C</span><span class="lang-cpp">C++</span> program that defines an integer array of size 50, and prompts the user to fill the array with quiz grades (between 0 and 10 inclusive). Then the program computes the frequency of each value in the array and prints the most frequent element.
 
 **Example:**
 ```
-Enter array size: 10
-Enter grades (0-10): 5 8 5 9 5 8 10 5 7 5
-Most Frequent Grade: 5
-Frequency: 5 times
+Enter the number of elements (up to 50): 10
+Enter 10 quiz grades (0-10):
+5 8 5 9 5 8 10 5 7 5
+Most frequent element is: 5 (appeared 5 times)
 ```
 
-{% include expandable-code.html title="Solution" id="sol-5" file="code/week-06/solution-05.c" %}
+{% include expandable-code.html title="Solution" id="sol-5" file_c="code/week-06/c/solution-05.c" file_cpp="code/week-06/cpp/solution-05.cpp" %}
 
 ---
 
 ## Exercise 6
-Write a complete C program including a `main` and three functions named `Max`, `CountAbove`, and `IndexOf`.
+Write a complete <span class="lang-c">C</span><span class="lang-cpp">C++</span> program including a `main` and three functions named `Max`, `CountAbove`, and `IndexOf`.
 
 *   `Max()` takes an array of integer (`grades`) and its size as integer as input parameters and returns the maximum grade in the array as integer type.
 *   `SecondMax()` takes an array of integer (`grades`) and its size as integer as input parameters and returns the second maximum grade in the array as integer type.
@@ -128,28 +122,22 @@ Finally, define another array of size 70 and try to fill its values by using `Fi
 
 **Example Run:**
 ```
-Enter number of grades: 5
-Enter grade 0: 50
-Enter grade 1: 85
-Enter grade 2: 40
-Enter grade 3: 90
-Enter grade 4: 85
-
+Enter number of students (up to 70): 5
+Enter grades:
+50 85 40 90 85
 Max Grade: 90
-Second Max: 85
-Passing Grades (>= 50): 4
+Second Max Grade: 85
+Number of Passing Grades (>=50): 4
+Enter a grade to find its index: 85
+Index of 85: 1
+Most Appeared Grade: 85
+Grades entered: 50 85 40 90 85 
 
-Enter a grade to find index: 85
-Found at index: 1
-
-Grades: 50 85 40 90 85 
-Most Frequent Grade: 85
-
-Generating Random Unique Grades...
-Random Grades: 12 5 23 8 19 ...
+Filling new array with unique random numbers (0-100)...
+12 5 23 8 19 
 ```
 
-{% include expandable-code.html title="Solution" id="sol-6" file="code/week-06/solution-06.c" %}
+{% include expandable-code.html title="Solution" id="sol-6" file_c="code/week-06/c/solution-06.c" file_cpp="code/week-06/cpp/solution-06.cpp" %}
 
 
 {% include week-nav.html prev_link="/notes/week-06/syntax/" prev_title="Syntax Guide" next_link="/notes/week-06/practice/" next_title="Practice" %}

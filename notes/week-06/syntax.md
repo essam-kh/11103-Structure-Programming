@@ -21,6 +21,8 @@ functionName(actualArray, size);
 ```
 
 **Example:**
+<div class="lang-c" markdown="1">
+
 ```c
 void printArray(int arr[], int size) {
     for (int i = 0; i < size; i++) {
@@ -35,6 +37,27 @@ int main() {
     return 0;
 }
 ```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << "\n";
+}
+
+int main() {
+    int nums[5] = {1, 2, 3, 4, 5};
+    printArray(nums, 5); // Pass array name and size
+    return 0;
+}
+```
+
+</div>
+
 
 ---
 
@@ -65,14 +88,13 @@ int binarySearch(int arr[], int size, int key) {
     
     while (low <= high) {
         int mid = low + (high - low) / 2;
-        
-        if (arr[mid] == key)
-            return mid; // Match found
             
         if (arr[mid] < key)
             low = mid + 1; // Ignore left half
-        else
+        else if (arr[mid] > key)
             high = mid - 1; // Ignore right half
+        else
+            return mid; // Match found
     }
     
     return -1; // Not found

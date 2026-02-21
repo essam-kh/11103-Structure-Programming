@@ -14,7 +14,7 @@ While conditional statements allow a program to make choices, **repetition struc
 
 ## Types of Loops
 
-C provides three types of loops. Here is a quick comparison:
+<span class="lang-c">C</span><span class="lang-cpp">C++</span> provides three types of loops. Here is a quick comparison:
 
 <div style="display: flex; gap: 1.5rem; margin-top: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap;">
   <!-- For Loop Card -->
@@ -65,11 +65,24 @@ for (initialization; condition; update) {
 
 **Example:**
 
+<div class="lang-c" markdown="1">
+
 ```c
 for (int i = 0; i < 5; i++) {
     printf("%d\n", i);
 }
 ```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+for (int i = 0; i < 5; i++) {
+    cout << i << "\n";
+}
+```
+
+</div>
 
 ### 2. The `while` Loop
 
@@ -157,6 +170,8 @@ while (cond) {
 
 A **sentinel** is a specific value used to terminate a loop when the data count is unknown.
 
+<div class="lang-c" markdown="1">
+
 ```c
 int num;
 printf("Enter number (-1 to quit): ");
@@ -169,6 +184,23 @@ while (num != -1) { // -1 is the sentinel
 }
 ```
 
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+int num;
+cout << "Enter number (-1 to quit): ";
+cin >> num;
+
+while (num != -1) { // -1 is the sentinel
+    // Process num
+    cout << "Enter number (-1 to quit): ";
+    cin >> num;
+}
+```
+
+</div>
+
 ### Break and Continue
 
 *   **`break`**: Exits the loop immediately.
@@ -179,28 +211,60 @@ while (num != -1) { // -1 is the sentinel
   <div style="flex: 1;" markdown="1">
 
 **Break Example**
+<div class="lang-c" markdown="1">
+
 ```c
 for (int i=1; i<=5; i++) {
-    if (i == 3) break;
+    if (i == 3) 
+        break;
     printf("%d ", i);
 }
 ```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+for (int i=1; i<=5; i++) {
+    if (i == 3) 
+        break;
+    cout << i << " ";
+}
+```
+
+</div>
 Output: `1 2 `
   </div>
 
   <div style="flex: 1;" markdown="1">
 
 **Continue Example**
+<div class="lang-c" markdown="1">
+
 ```c
 for (int i=1; i<=5; i++) {
-    if (i == 3) continue;
+    if (i == 3) 
+        continue;
     printf("%d ", i);
 }
 ```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+for (int i=1; i<=5; i++) {
+    if (i == 3) 
+        continue;
+    cout << i << " ";
+}
+```
+
+</div>
 Output: `1 2 4 5 `
   </div>
 
-</div> 
+</div>
 
 
 ## Introduction to Arrays
@@ -263,6 +327,8 @@ The `#define` directive is used to define a **symbolic constant**.
 
 **Example: Dynamic Array Sizing**
 
+<div class="lang-c" markdown="1">
+
 ```c
 #include <stdio.h>
 #define SIZE 10
@@ -277,12 +343,34 @@ int main() {
 }
 ```
 
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+#include <iostream>
+using namespace std;
+#define SIZE 10
+
+int main() {
+    int arr[SIZE]; // Compiler sees: int arr[10];
+
+    for (int i = 0; i < SIZE; i++) {
+        arr[i] = i * 2;
+    }
+    return 0;
+}
+```
+
+</div>
+
 ---
 
 ## Array Workflows
 
 ### 1. Calculating Average
 Reading student grades and calculating the average.
+
+<div class="lang-c" markdown="1">
 
 ```c
 #include <stdio.h>
@@ -301,11 +389,35 @@ int main() {
 }
 ```
 
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+#include <iostream>
+#include <iomanip>
+using namespace std;
+#define STUDENTS 5
+
+int main() {
+    int grades[STUDENTS] = {85, 90, 78, 92, 88};
+    int sum = 0;
+
+    for (int i = 0; i < STUDENTS; i++) {
+        sum += grades[i];
+    }
+
+    cout << "Average: " << fixed << setprecision(2) << (float)sum / STUDENTS << "\n";
+    return 0;
+}
+```
+
+</div>
+
 ---
 
 ## Character Arrays (Strings)
 
-A **String** in C is essentially an array of characters ending with a **null terminator** (`'\0'`).
+A **String** in <span class="lang-c">C</span><span class="lang-cpp">C++</span> is essentially an array of characters ending with a **null terminator** (`'\0'`).
 
 ### Initialization
 
@@ -326,19 +438,33 @@ A **String** in C is essentially an array of characters ending with a **null ter
 
 <div style="flex: 1;" markdown="1">
 
-#### Method 1: Using `scanf`
+#### Method 1: Using <span class="lang-c">`scanf`</span><span class="lang-cpp">`cin`</span>
 Reads a string until the first **whitespace** (space, tab, newline).
+
+<div class="lang-c" markdown="1">
 
 ```c
 char name[20];
 scanf("%s", name);
 ```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+char name[20];
+cin >> name;
+```
+
+</div>
 </div>
 
 <div style="flex: 1;" markdown="1">
 
 #### Method 2: Character Loop
 Reads characters one by one. Useful for specific parsing or validation.
+
+<div class="lang-c" markdown="1">
 
 ```c
 char str[20];
@@ -347,6 +473,18 @@ for (int i=0; i<5; i++) {
     // Note space before %c
 }
 ```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+char str[20];
+for (int i=0; i<5; i++) {
+    cin >> str[i];
+}
+```
+
+</div>
 </div>
 
 </div>
@@ -354,6 +492,8 @@ for (int i=0; i<5; i++) {
 ### Iterating Over a String
 
 If the size is unknown, we rely on the `\0` terminator to stop the loop.
+
+<div class="lang-c" markdown="1">
 
 ```c
 char text[] = "Hello World";
@@ -364,10 +504,26 @@ for (int i = 0; text[i] != '\0'; i++) {
 // Output: H-e-l-l-o- -W-o-r-l-d-
 ```
 
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+char text[] = "Hello World";
+
+for (int i = 0; text[i] != '\0'; i++) {
+    cout << text[i] << "-";
+}
+// Output: H-e-l-l-o- -W-o-r-l-d-
+```
+
+</div>
+
 ---
 
 ### Frequency Counter
 Counting how many times each number (0-9) appears in a random set.
+
+<div class="lang-c" markdown="1">
 
 ```c
 #include <stdio.h>
@@ -400,6 +556,43 @@ int main() {
 }
 ```
 
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+#define SIZE 20
+
+int main() {
+    srand(time(NULL));
+    int arr[SIZE];
+
+    // 1. Generate Random Numbers
+    for (int i = 0; i < SIZE; i++) {
+        arr[i] = rand() % 10; // Numbers 0-9
+    }
+
+    // 2. Count Frequencies
+    // We need indices 0-9, so size is 10
+    int freq[10] = {0};
+
+    for (int i = 0; i < SIZE; i++) {
+        freq[arr[i]]++;
+    }
+
+    // 3. Print Results
+    for (int i = 0; i < 10; i++) {
+        cout << "Number " << i << " occurs " << freq[i] << " times\n";
+    }
+    return 0;
+}
+```
+
+</div>
+
 ### Frequency of Characters
 
 <div style="text-align: center; margin: 2rem 0;">
@@ -411,6 +604,8 @@ We can use the same logic to count characters. Since `char` is just a small inte
 *   **Example**: Calculate frequency of letters 'a' through 'z'.
 *   **Logic**: `index = char - 'a'`. So 'a' becomes 0, 'b' becomes 1, etc.
 *   **Size**: 26 (for English lowercase alphabet).
+
+<div class="lang-c" markdown="1">
 
 ```c
 #include <stdio.h>
@@ -439,7 +634,39 @@ int main() {
 }
 ```
 
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+    char text[] = "Programming is fun";
+    int freq[26] = {0}; // Indices 0-25 for 'a'-'z'
+
+    for (int i = 0; text[i] != '\0'; i++) {
+        char c = text[i];
+        // Check if character is a lowercase letter
+        if (c >= 'a' && c <= 'z') {
+            int index = c - 'a'; // Map 'a' -> 0, 'b' -> 1...
+            freq[index]++;
+        }
+    }
+
+    for (int i = 0; i < 26; i++) {
+        // Only print characters that appeared
+        if (freq[i] > 0) {
+            cout << "Letter '" << (char)(i + 'a') << "': " << freq[i] << "\n";
+        }
+    }
+    return 0;
+}
+```
+
+</div>
+
 ---
 
 {% include week-nav.html next_link="/notes/week-04-05/syntax/" next_title="Syntax Guide" %}
-```

@@ -21,8 +21,8 @@ In `main()`, you need to input the value for `X` and pass it to the function, th
 
 **Example:**
 ```
-Enter X: 4
-Result Y: 29
+Enter value for X: 4
+The value of Y is: 29.00
 ```
 (Calculation: $$ 16 + 3(2) + 7 = 29 $$)
 
@@ -37,9 +37,9 @@ In `main()`, you need to input the value for `R` and pass it to the function, th
 
 **Example:**
 ```
-Enter Radius: 5
-Area: 78.54
-Perimeter: 31.42
+Enter the radius (R): 5
+Area of the circle: 78.54
+Perimeter of the circle: 31.42
 ```
 
 {% include expandable-code.html title="Solution" id="sol-2" file_c="code/week-02/c/solution-02.c" file_cpp="code/week-02/cpp/solution-02.cpp" %}
@@ -59,12 +59,13 @@ In `main()`, you need to input the value for `n1`, `n2` and pass them to the fun
 
 **Example:**
 ```
-Enter two numbers: 10 5
-Sum: 15
-Difference: 5
-Product: 50
-Quotient: 2
-Modulus: 0
+Enter integer number 1: 10
+Enter integer number 2: 5
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2
+Modulation: 0
 ```
 
 {% include expandable-code.html title="Solution" id="sol-3" file_c="code/week-02/c/solution-03.c" file_cpp="code/week-02/cpp/solution-03.cpp" %}
@@ -76,8 +77,8 @@ In `main()`, you need to input the value for `num` and pass it to the function, 
 
 **Example:**
 ```
-Enter a 3-digit number: 123
-Average of digits: 2
+Enter a 3-digit integer: 123
+The average of the digits is: 2.00
 ```
 (Calculation: $$ (1+2+3)/3 = 2 $$)
 
@@ -90,8 +91,8 @@ $$ 1 \text{ JoD} = 1.4112 \text{ USD} $$
 
 **Example:**
 ```
-Enter amount in JoD: 100
-Amount in USD: 141.12
+Enter amount in JOD: 100
+Amount in USD: 141.1200
 ```
 
 {% include expandable-code.html title="Solution" id="sol-5" file_c="code/week-02/c/solution-05.c" file_cpp="code/week-02/cpp/solution-05.cpp" %}
