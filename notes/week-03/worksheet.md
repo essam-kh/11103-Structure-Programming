@@ -22,7 +22,7 @@ Enter Data Analysis grade: 88
 Total Grade: 341.00
 Lowest grade is: 78.00 in Geometry
 ```
-{% include expandable-code.html title="Solution" id="sol-1" file="code/week-03/solution-01.c" %}
+{% include expandable-code.html title="Solution" id="sol-1" file_c="code/week-03/c/solution-01.c" file_cpp="code/week-03/cpp/solution-01.cpp" %}
 
 ## Question 2
 <div style="display: flex; align-items: flex-start; gap: 2rem;">
@@ -38,7 +38,7 @@ Lowest grade is: 78.00 in Geometry
     <img src="{{ site.baseurl }}/assets/images/content/leap-year.png" alt="Leap Year Logic" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
   </div>
 </div>
-{% include expandable-code.html title="Solution" id="sol-2" file="code/week-03/solution-02.c" %}
+{% include expandable-code.html title="Solution" id="sol-2" file_c="code/week-03/c/solution-02.c" file_cpp="code/week-03/cpp/solution-02.cpp" %}
 
 ## Question 3
 Write a function named `WeatherState` that receives temperature (°C) and displays a message based on the status:
@@ -55,7 +55,7 @@ Write a function named `WeatherState` that receives temperature (°C) and displa
 Enter temperature: 15
 Cold weather
 ```
-{% include expandable-code.html title="Solution" id="sol-3" file="code/week-03/solution-03.c" %}
+{% include expandable-code.html title="Solution" id="sol-3" file_c="code/week-03/c/solution-03.c" file_cpp="code/week-03/cpp/solution-03.cpp" %}
 
 ## Question 4
 Write a function `TriangleType` that receives 3 integer edges and checks if the triangle is:
@@ -68,7 +68,7 @@ Write a function `TriangleType` that receives 3 integer edges and checks if the 
 Enter 3 edges: 5 5 5
 Equilateral
 ```
-{% include expandable-code.html title="Solution" id="sol-4" file="code/week-03/solution-04.c" %}
+{% include expandable-code.html title="Solution" id="sol-4" file_c="code/week-03/c/solution-04.c" file_cpp="code/week-03/cpp/solution-04.cpp" %}
 
 ## Question 5
 Write a function `VowelTest` that checks if an input character is a **Vowel** (`a, e, i, o, u`) or **Consonant**.
@@ -78,7 +78,7 @@ Write a function `VowelTest` that checks if an input character is a **Vowel** (`
 Enter a character: e
 e is a Vowel
 ```
-{% include expandable-code.html title="Solution" id="sol-5" file="code/week-03/solution-05.c" %}
+{% include expandable-code.html title="Solution" id="sol-5" file_c="code/week-03/c/solution-05.c" file_cpp="code/week-03/cpp/solution-05.cpp" %}
 
 ## Question 6
 Write a function `CharTest` that checks if an input is:
@@ -91,7 +91,7 @@ Write a function `CharTest` that checks if an input is:
 Enter character: $
 Special Character
 ```
-{% include expandable-code.html title="Solution" id="sol-6" file="code/week-03/solution-06.c" %}
+{% include expandable-code.html title="Solution" id="sol-6" file_c="code/week-03/c/solution-06.c" file_cpp="code/week-03/cpp/solution-06.cpp" %}
 
 ## Question 7
 Write a void function `printAscending` that receives 3 integers and prints them from smallest to largest.
@@ -101,7 +101,7 @@ Write a void function `printAscending` that receives 3 integers and prints them 
 Enter 3 numbers: 15 3 29
 Numbers in Ascending Order: 3 15 29
 ```
-{% include expandable-code.html title="Solution" id="sol-7" file="code/week-03/solution-07.c" %}
+{% include expandable-code.html title="Solution" id="sol-7" file_c="code/week-03/c/solution-07.c" file_cpp="code/week-03/cpp/solution-07.cpp" %}
 
 ## Question 8
 <div style="display: flex; align-items: flex-start; gap: 2rem;">
@@ -125,6 +125,6 @@ Perimeter: 31.42
     <img src="{{ site.baseurl }}/assets/images/content/perimeter-formulas.png" alt="Perimeter Formulas" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
   </div>
 </div>
-{% include expandable-code.html title="Solution" id="sol-8" file="code/week-03/solution-08.c" %}
+{% include expandable-code.html title="Solution" id="sol-8" file_c="code/week-03/c/solution-08.c" file_cpp="code/week-03/cpp/solution-08.cpp" %}
 
 {% include week-nav.html prev_link="/notes/week-03/syntax/" prev_title="Syntax Guide" next_link="/notes/week-03/practice/" next_title="Practice" %}

@@ -9,7 +9,7 @@ nav_exclude: true
 
 ## Introduction to Functions
 
-The best way to develop and maintain a large program is to divide it into several smaller program modules, each of which is more manageable than the original program. Modules are written as **functions** in C.
+The best way to develop and maintain a large program is to divide it into several smaller program modules, each of which is more manageable than the original program. Modules are written as **functions** in <span class="lang-c">C</span><span class="lang-cpp">C++</span>.
 
 ### Benefits of Functions
 
@@ -22,7 +22,7 @@ The best way to develop and maintain a large program is to divide it into severa
 
 ## Predefined Functions
 
-C provides many standard functions to perform common tasks, especially mathematical calculations. To use these, you often need to include the `<math.h>` header.
+<span class="lang-c">C</span><span class="lang-cpp">C++</span> provides many standard functions to perform common tasks, especially mathematical calculations. To use these, you often need to include the `<math.h>` header.
 
 {: .note }
 > **Black Box Concept**
@@ -376,14 +376,14 @@ Think of it like sharing a document:
 *   **Call by Value:** You give your friend a **photocopy** of the document. If they write on it (modify the data), your original document remains unchanged.
 *   **Call by Reference:** You give your friend access to the **original** document. If they write on it, you see the changes too.
 
-> **Note:** In C, functions use **Call by Value** by default. To use Call by Reference, we use **Pointers**, which will be covered in later weeks.
+> **Note:** In <span class="lang-c">C</span><span class="lang-cpp">C++</span>, functions use **Call by Value** by default. To use Call by Reference, we use **Pointers**, which will be covered in later weeks.
 {: .note }
 
 ---
 
 ## Type Promotion & Conversion
 
-When an expression contains variables of different data types, C automatically converts them to a common type. This is called **Implicit Conversion** or **Promotion**.
+When an expression contains variables of different data types, <span class="lang-c">C</span><span class="lang-cpp">C++</span> automatically converts them to a common type. This is called **Implicit Conversion** or **Promotion**.
 
 ### Promotion Hierarchy
 Data types are ranked from "High" to "Low". Operands of a lower type are promoted to the higher type in an expression.
@@ -438,7 +438,7 @@ float average = static_cast<float>(total) / count;
 > **Note:** Another common method is multiplying by `1.0` to force generic promotion (implicitly converts to double):
 {: .note }
 > ```c
-> float average = 1.0 * total / count; 
+> float average = 1.0 * total / count;
 > ```
 
 

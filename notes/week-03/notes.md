@@ -9,7 +9,7 @@ nav_exclude: true
 
 ## Introduction to Conditional Statements
 
-The real power of programming lies in the ability to make decisions and alter the flow of execution based on data. Instead of executing every line in sequential order, a program can choose different paths depending on the situation. This logic is implemented using **conditional statements** (or **selection structures**) in C.
+The real power of programming lies in the ability to make decisions and alter the flow of execution based on data. Instead of executing every line in sequential order, a program can choose different paths depending on the situation. This logic is implemented using **conditional statements** (or **selection structures**) in <span class="lang-c">C</span><span class="lang-cpp">C++</span>.
 
 <div style="text-align: center; margin: 2rem 0;">
   <img src="{{ site.baseurl }}/assets/images/content/control-structure.png" alt="Control Structure" style="max-width: 600px; width: 100%; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
@@ -43,21 +43,32 @@ if (condition) {
 <div style="display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 2rem;">
   <div style="flex: 1;">
     <strong>Incorrect Logic (Without Braces)</strong>
-    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span>
+    <div class="language-c highlighter-rouge lang-c"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">"Passed\n"</span><span class="p">);</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">"Next level unlocked\n"</span><span class="p">);</span>
-<span class="c1">// Next level unlocked Always get printed</span>
+<span class="c1">// Next level unlocked Always gets printed</span>
+</code></pre></div></div>
+    <div class="language-cpp highlighter-rouge lang-cpp"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Passed\n"</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Next level unlocked\n"</span><span class="p">;</span>
+<span class="c1">// Next level unlocked Always gets printed</span>
 </code></pre></div></div>
   </div>
   <div style="flex: 1;">
     <strong>Correct Logic (With Braces)</strong>
-    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span> <span class="p">{</span>
+    <div class="language-c highlighter-rouge lang-c"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">"Passed\n"</span><span class="p">);</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">"Next level unlocked\n"</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
+    <div class="language-cpp highlighter-rouge lang-cpp"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Passed\n"</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Next level unlocked\n"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
   </div>
 </div>
+
 
 > **Best Practice**:
 > 1. Always use indentation for readability.
@@ -86,11 +97,14 @@ The expression inside the `if` statement is the **decision maker**.
 ENDIF
 </code></pre></div></div>
   </div>
-  
   <div style="flex: 1;">
-    <strong>C Code</strong>
-    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span> <span class="p">{</span>
+    <strong><span class="lang-c">C Code</span><span class="lang-cpp">C++ Code</span></strong>
+    <div class="language-c highlighter-rouge lang-c"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">"Passed\n"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+    <div class="language-cpp highlighter-rouge lang-cpp"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Passed\n"</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
   </div>
@@ -126,13 +140,18 @@ ELSE
 ENDIF
 </code></pre></div></div>
   </div>
-  
   <div style="flex: 1;">
-    <strong>C Code</strong>
-    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span> <span class="p">{</span>
+    <strong><span class="lang-c">C Code</span><span class="lang-cpp">C++ Code</span></strong>
+    <div class="language-c highlighter-rouge lang-c"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">"Passed\n"</span><span class="p">);</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">"Failed\n"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+    <div class="language-cpp highlighter-rouge lang-cpp"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Passed\n"</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Failed\n"</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
   </div>
@@ -219,6 +238,8 @@ if (condition1) {
 
 ### `else if` Ladder
 
+<div class="lang-c" markdown="1">
+
 ```c
 if (score >= 90) {
     printf("A");
@@ -230,6 +251,23 @@ if (score >= 90) {
     printf("F");
 }
 ```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+if (score >= 90) {
+    cout << "A";
+} else if (score >= 80) {
+    cout << "B";
+} else if (score >= 70) {
+    cout << "C";
+} else {
+    cout << "F";
+}
+```
+
+</div>
 
 ## 7. Switch Structure
 
@@ -276,6 +314,8 @@ The `switch` statement is an alternative to nested `if...else` when comparing a 
 
 You can stack cases to perform the same action for multiple values.
 
+<div class="lang-c" markdown="1">
+
 ```c
 switch (grade) {
     case 'A':
@@ -291,9 +331,31 @@ switch (grade) {
 }
 ```
 
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+switch (grade) {
+    case 'A':
+    case 'a':
+        cout << "Excellent!";
+        break;
+    case 'B':
+    case 'b':
+        cout << "Good job";
+        break;
+    default:
+        cout << "Keep trying";
+}
+```
+
+</div>
+
 ### Grade Example: `if-else` vs `switch`
 
 This example compares checking a single variable `val` against specific values (90, 80, 70) using both `if-else` and `switch`.
+
+<div class="lang-c" markdown="1">
 
 **Using `if-else`**
 ```c
@@ -324,7 +386,39 @@ switch (val) {
 }
 ```
 
+</div>
+<div class="lang-cpp" markdown="1">
+
+**Using `if-else`**
+```cpp
+if (val == 90)
+    cout << "A";
+else if (val == 80)
+    cout << "B";
+else if (val == 70)
+    cout << "C";
+else
+    cout << "F";
+```
+
+**Using `switch`**
+```cpp
+switch (val) {
+    case 90:
+        cout << "A";
+        break;
+    case 80:
+        cout << "B";
+        break;
+    case 70:
+        cout << "C";
+        break;
+    default:
+        cout << "F";
+}
+```
+
+</div>
+
 
 {% include week-nav.html next_link="/notes/week-03/syntax/" next_title="Syntax Guide" %}
-
-</content>

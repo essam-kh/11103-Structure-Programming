@@ -78,7 +78,6 @@ int main() {
 <div class="lang-cpp" markdown="1">
 ###  Simple Output with `cout`
 - Used for simple string output with no formatting
-- Automatically appends a newline at the end
 - Can only print strings
 
 Example:
@@ -294,6 +293,11 @@ printf("Characters: %d %c\n", 'a', 65);
 
 <div class="lang-cpp" markdown="1">
 In C++, use `<iomanip>` manipulators to achieve similar formatting:
+
+<div class="lang-cpp" markdown="1">
+> **Note:** In C++, you can use `endl` or `"\n"` to output a newline. `endl` also flushes the output buffer, while `"\n"` does not. For most purposes, `"\n"` is preferred as it is faster.
+{: .note }
+</div>
 
 ### Basic Formatting
 ```cpp

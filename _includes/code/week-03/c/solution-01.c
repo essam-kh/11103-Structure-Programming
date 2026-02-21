@@ -18,16 +18,23 @@ int main() {
 
     min_grade = arithmetic;
     
-    if (algebra < min_grade) min_grade = algebra;
-    if (geometry < min_grade) min_grade = geometry;
-    if (analysis < min_grade) min_grade = analysis;
+    if (algebra < min_grade) 
+        min_grade = algebra;
+    if (geometry < min_grade) 
+        min_grade = geometry;
+    if (analysis < min_grade) 
+        min_grade = analysis;
 
     printf("Lowest grade is: %.2f in ", min_grade);
 
-    if (min_grade == arithmetic) printf("Arithmetic\n");
-    else if (min_grade == algebra) printf("Algebra\n");
-    else if (min_grade == geometry) printf("Geometry\n");
-    else printf("Data Analysis\n");
+    if (min_grade == arithmetic) 
+        printf("Arithmetic\n");
+    else if (min_grade == algebra) 
+        printf("Algebra\n");
+    else if (min_grade == geometry) 
+        printf("Geometry\n");
+    else 
+        printf("Data Analysis\n");
 
     return 0;
 }
