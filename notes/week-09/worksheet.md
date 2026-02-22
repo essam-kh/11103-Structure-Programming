@@ -11,7 +11,7 @@ nav_exclude: true
 {: .note }
 
 ## Exercise 1: Palindrome Check
-Write a recursive function named `isPalindrome()`, which receives a string and checks if it checks if a given string is a palindrome (reads the same forwards and backwards).
+Write a recursive function named `isPalindrome()`, which receives a string and checks if a given string is a palindrome (reads the same forwards and backwards).
 
 The function should take the string and relevant indices (start and end) as arguments and return `1` (true) or `0` (false).
 
@@ -29,7 +29,7 @@ Enter a word: hello
 Result: The word is not a Palindrome
 ```
 
-{% include expandable-code.html title="Solution" id="sol-1" file="code/week-09/solution-01.c" %}
+{% include expandable-code.html title="Solution" id="sol-1" file_c="code/week-09/c/solution-01.c" file_cpp="code/week-09/cpp/solution-01.cpp" %}
 
 ---
 
@@ -45,7 +45,7 @@ Sum of digits: 10
 ```
 (Calculation: $$ 1+2+3+4 = 10 $$)
 
-{% include expandable-code.html title="Solution" id="sol-2" file="code/week-09/solution-02.c" %}
+{% include expandable-code.html title="Solution" id="sol-2" file_c="code/week-09/c/solution-02.c" file_cpp="code/week-09/cpp/solution-02.cpp" %}
 
 ---
 
@@ -72,7 +72,7 @@ Final Volume: 989.80
 > **Note**: Since weather is random, your output will vary.
 {: .note }
 
-{% include expandable-code.html title="Solution" id="sol-3" file="code/week-09/solution-03.c" %}
+{% include expandable-code.html title="Solution" id="sol-3" file_c="code/week-09/c/solution-03.c" file_cpp="code/week-09/cpp/solution-03.cpp" %}
 
 ---
 
@@ -89,7 +89,7 @@ Enter a string: structure
 Reversed: erutcurts
 ```
 
-{% include expandable-code.html title="Solution" id="sol-4" file="code/week-09/solution-04.c" %}
+{% include expandable-code.html title="Solution" id="sol-4" file_c="code/week-09/c/solution-04.c" file_cpp="code/week-09/cpp/solution-04.cpp" %}
 
 ---
 
@@ -105,13 +105,15 @@ Enter elements: 10 5 20 8
 Max number is: 20
 ```
 
-{% include expandable-code.html title="Solution" id="sol-5" file="code/week-09/solution-05.c" %}
+{% include expandable-code.html title="Solution" id="sol-5" file_c="code/week-09/c/solution-05.c" file_cpp="code/week-09/cpp/solution-05.cpp" %}
 
 
 ---
 
 ## Exercise 6: Find the Output
 Consider the following recursive function. What will be the output if `fun(3)` is called?
+
+<div class="lang-c" markdown="1">
 
 ```c
 void fun(int n) {
@@ -123,7 +125,22 @@ void fun(int n) {
 }
 ```
 
-{% include expandable-code.html title="Solution" id="sol-6" file="code/week-09/solution-06.c" %}
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+void fun(int n) {
+    if (n == 0)
+        return;
+    cout << n << " ";
+    fun(n - 1);
+    cout << n << " ";
+}
+```
+
+</div>
+
+{% include expandable-code.html title="Solution" id="sol-6" file_c="code/week-09/c/solution-06.c" file_cpp="code/week-09/cpp/solution-06.cpp" %}
 
 ---
 
@@ -138,7 +155,7 @@ int fun(int x, int y) {
 }
 ```
 
-{% include expandable-code.html title="Solution" id="sol-7" file="code/week-09/solution-07.c" %}
+{% include expandable-code.html title="Solution" id="sol-7" file_c="code/week-09/c/solution-07.c" file_cpp="code/week-09/cpp/solution-07.cpp" %}
 
 ---
 
@@ -158,7 +175,7 @@ Output:
 3 10 5 16 8 4 2 1
 ```
 
-{% include expandable-code.html title="Solution" id="sol-8" file="code/week-09/solution-08.c" %}
+{% include expandable-code.html title="Solution" id="sol-8" file_c="code/week-09/c/solution-08.c" file_cpp="code/week-09/cpp/solution-08.cpp" %}
 
 
 {% include week-nav.html prev_link="/notes/week-09/syntax/" prev_title="Syntax Guide" next_link="/notes/week-09/practice/" next_title="Practice" %}

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 5. Resources
+title: 3. Resources
 description: >-
     Extra resources
 ---

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 6. FAQ
+title: 4. FAQ
 description: >-
     Frequently Asked Questions
 ---

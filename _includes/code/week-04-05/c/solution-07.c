@@ -6,7 +6,7 @@ void printRange(int m, int n) {
         return;
     }
 
-    printf("Expected output: ");
+    printf("Range: ");
     for (int i = m; i <= n; i++) {
         printf("%d ", i);
     }

@@ -11,7 +11,7 @@ nav_exclude: true
 
 ### Introduction to Nested Loops
 
-While a single loop is efficient for linear tasks, many problems require working in multiple dimensions or layers. Imagine a clock: the second hand must complete a full circle (60 ticks) for the minute hand to move just one step. This logic is implemented using **Nested Loops** in C.
+While a single loop is efficient for linear tasks, many problems require working in multiple dimensions or layers. Imagine a clock: the second hand must complete a full circle (60 ticks) for the minute hand to move just one step. This logic is implemented using **Nested Loops** in <span class="lang-c">C</span><span class="lang-cpp">C++</span>.
 
 By placing one loop inside another, a program can process complex structures like grids, tables, and patterns, where the inner loop completes an entire cycle for every single iteration of the outer loop.
 
@@ -32,6 +32,8 @@ for(int i = 0 ; i <= n ; i++){
 <div style="flex: 1;" markdown="1">
 
 **Pattern 1:**
+<div class="lang-c" markdown="1">
+
 ```c
 for(int i = 1 ; i <= n ; i++){
     for(int j = 1 ; j <= i ; j++){
@@ -40,6 +42,20 @@ for(int i = 1 ; i <= n ; i++){
     printf("\n");
 }
 ```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+for(int i = 1 ; i <= n ; i++){
+    for(int j = 1 ; j <= i ; j++){
+        cout << "*";
+    }
+    cout << "\n";
+}
+```
+
+</div>
 </div>
 <div style="flex: 1;" markdown="1">
 
@@ -58,6 +74,8 @@ for(int i = 1 ; i <= n ; i++){
 <div style="flex: 1;" markdown="1">
 
 **Pattern 2:**
+<div class="lang-c" markdown="1">
+
 ```c
 for(int i = 1 ; i <= n ; i++){
     for(int j = 1 ; j <= n - i ; j++){
@@ -69,6 +87,23 @@ for(int i = 1 ; i <= n ; i++){
     printf("\n");
 }
 ```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+for(int i = 1 ; i <= n ; i++){
+    for(int j = 1 ; j <= n - i ; j++){
+        cout << " ";
+    }
+    for(int j = 1 ; j <= i ; j++){
+        cout << "*";
+    }
+    cout << "\n";
+}
+```
+
+</div>
 </div>
 <div style="flex: 1;" markdown="1">
 
@@ -87,6 +122,8 @@ for(int i = 1 ; i <= n ; i++){
 <div style="flex: 1;" markdown="1">
 
 **Pattern 3:**
+<div class="lang-c" markdown="1">
+
 ```c
 for(int i = 1 ; i <= n ; i++){
     for(int j = 1 ; j <= n - i; j++){
@@ -95,6 +132,20 @@ for(int i = 1 ; i <= n ; i++){
     printf("\n");
 }
 ```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+for(int i = 1 ; i <= n ; i++){
+    for(int j = 1 ; j <= n - i; j++){
+        cout << "*";
+    }
+    cout << "\n";
+}
+```
+
+</div>
 </div>
 <div style="flex: 1;" markdown="1">
 
@@ -113,6 +164,8 @@ for(int i = 1 ; i <= n ; i++){
 <div style="flex: 1;" markdown="1">
 
 **Pattern 4:**
+<div class="lang-c" markdown="1">
+
 ```c
 for(int i = 1 ; i <= n ; i++){
     for(int j = 1 ; j < i ; j++){
@@ -124,6 +177,23 @@ for(int i = 1 ; i <= n ; i++){
     printf("\n");
 }
 ```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+for(int i = 1 ; i <= n ; i++){
+    for(int j = 1 ; j < i ; j++){
+        cout << " ";
+    }
+    for(int j = i ; j <= n ; j++){
+        cout << "*";
+    }
+    cout << "\n";
+}
+```
+
+</div>
 </div>
 <div style="flex: 1;" markdown="1">
 
@@ -179,7 +249,7 @@ void bubbleSort(int arr[], int n){
 
 ## Introduction to 2D Arrays
 
-While standard arrays allow you to store data in a single linear list, real-world information is often organized in a grid. Just as a spreadsheet has rows and columns, or a cinema has seating arrangements, programming often requires a table-like structure. This logic is implemented using **2D Arrays (Matrices)** in C, which can be thought of essentially as an "array of arrays".
+While standard arrays allow you to store data in a single linear list, real-world information is often organized in a grid. Just as a spreadsheet has rows and columns, or a cinema has seating arrangements, programming often requires a table-like structure. This logic is implemented using **2D Arrays (Matrices)** in <span class="lang-c">C</span><span class="lang-cpp">C++</span>, which can be thought of essentially as an "array of arrays".
 
 ### Defining 2D Arrays
 
@@ -219,6 +289,8 @@ A two-dimensional array can be processed in three different ways:
 
 This example demonstrates how to use nested loops to fill a 2D array from user input and then display it in a grid format.
 
+<div class="lang-c" markdown="1">
+
 ```c
 #include <stdio.h>
 
@@ -248,6 +320,41 @@ int main() {
 }
 ```
 
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int rows = 2, cols = 3;
+    int matrix[2][3];
+
+    // Reading elements
+    cout << "Enter elements for a 2x3 matrix:\n";
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cout << "Enter element [" << i << "][" << j << "]: ";
+            cin >> matrix[i][j];
+        }
+    }
+
+    // Printing elements
+    cout << "\nThe Matrix is:\n";
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << "\n"; // New line after each row
+    }
+
+    return 0;
+}
+```
+
+</div>
+
 **Output:**
 ```
 Enter elements for a 2x3 matrix:
@@ -266,6 +373,8 @@ The Matrix is:
 ### Example 2: Student Marks (Row Processing)
 
 In this example, we process the array **row by row**. We have 3 students, and each student has 4 marks. We want to calculate the total and average score for each student.
+
+<div class="lang-c" markdown="1">
 
 ```c
 #include <stdio.h>
@@ -296,6 +405,44 @@ int main() {
     return 0;
 }
 ```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int marks[3][4]; // 3 Students, 4 Marks each
+
+    // 1. Read Marks
+    for (int i = 0; i < 3; i++) {
+        cout << "Enter 4 marks for Student " << i + 1 << ": ";
+        for (int j = 0; j < 4; j++) {
+            cin >> marks[i][j];
+        }
+    }
+
+    // 2. Process and Print Results
+    cout << "\nResults:\n";
+    for (int i = 0; i < 3; i++) {
+        int sum = 0;
+        for (int j = 0; j < 4; j++) {
+            sum += marks[i][j]; // Summing marks for current student
+        }
+        
+        float avg = (float)sum / 4.0;
+        cout << "Student " << i + 1 << ": Sum = " << sum
+             << ", Average = " << fixed << setprecision(2) << avg << "\n";
+    }
+
+    return 0;
+}
+```
+
+</div>
 
 **Output:**
 ```

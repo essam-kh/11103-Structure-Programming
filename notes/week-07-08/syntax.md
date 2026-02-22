@@ -21,6 +21,8 @@ for (int i = 0; i < outerLimit; i++) {       // Outer Loop
 ```
 
 **Example:**
+<div class="lang-c" markdown="1">
+
 ```c
 for (int i = 1; i <= 3; i++) {
     for (int j = 1; j <= 2; j++) {
@@ -28,6 +30,19 @@ for (int i = 1; i <= 3; i++) {
     }
 }
 ```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+for (int i = 1; i <= 3; i++) {
+    for (int j = 1; j <= 2; j++) {
+        cout << "i=" << i << ", j=" << j << "\n";
+    }
+}
+```
+
+</div>
 
 ---
 
@@ -90,6 +105,8 @@ int x = matrix[1][2];   // Reads value from row 1, col 2
 We use nested loops to iterate through 2D arrays.
 
 **Common Pattern (Row-Major Order):**
+<div class="lang-c" markdown="1">
+
 ```c
 for (int i = 0; i < rows; i++) {           // Iterate Rows
     for (int j = 0; j < cols; j++) {       // Iterate Columns
@@ -98,5 +115,19 @@ for (int i = 0; i < rows; i++) {           // Iterate Rows
     printf("\n");
 }
 ```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+for (int i = 0; i < rows; i++) {           // Iterate Rows
+    for (int j = 0; j < cols; j++) {       // Iterate Columns
+        cout << matrix[i][j] << " ";      // Process Element
+    }
+    cout << "\n";
+}
+```
+
+</div>
 
 {% include week-nav.html prev_link="/notes/week-07-08/notes/" prev_title="Lecture Notes" next_link="/notes/week-07-08/worksheet/" next_title="Worksheet" %}

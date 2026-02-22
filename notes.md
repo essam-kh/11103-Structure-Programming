@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3. Course Notes
+title: 2. Course Notes
 description: Weekly course notes and materials.
 ---
 

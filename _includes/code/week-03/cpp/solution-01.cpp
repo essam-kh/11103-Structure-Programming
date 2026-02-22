@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -16,7 +16,7 @@ int main() {
     cin >> analysis;
 
     total = arithmetic + algebra + geometry + analysis;
-    cout << "Total Grade: " << total << endl;
+    cout << "Total Grade: " << fixed << setprecision(2) << total << "\n";
 
     min_grade = arithmetic;
     

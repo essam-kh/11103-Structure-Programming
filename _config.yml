@@ -29,12 +29,12 @@ heading_anchors: true
 permalink: pretty
 aux_links:
   Essam Khader:
-    - 'https://www.linkedin.com/in/essam-khader-b88474278/'
+    - '/11103-Structure-Programming/contributors/#essam-khader'
 # footer_content: "This website was created using the <a href='https://github.com/kevinlin1/just-the-class'>Just the Class</a> template."
 
 # Collections for website data
 collections:
-  staffers:
+  contributors:
   modules:
     output: false
 
@@ -44,9 +44,9 @@ collections:
 defaults:
   - scope:
       path: ''
-      type: staffers
+      type: contributors
     values:
-      layout: staffer
+      layout: contributor
       height: 300
       subpath: '/assets/images/'
       width: 300

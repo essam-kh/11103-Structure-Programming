@@ -20,10 +20,19 @@ function toggleExpandableCode(contentId, headerElement) {
 
 
 function copyExpandableCode(elementId, buttonElement) {
-    const codeElement = document.getElementById(elementId);
-    const text = codeElement.textContent;
+    const codeBlock = document.getElementById(elementId);
 
-    navigator.clipboard.writeText(text).then(function() {
+    // If there are language-specific divs, copy only the visible one
+    const langDivs = codeBlock.querySelectorAll('.lang-c, .lang-cpp');
+    let text;
+    if (langDivs.length > 0) {
+        const visibleDiv = Array.from(langDivs).find(div => div.offsetParent !== null);
+        text = visibleDiv ? visibleDiv.textContent : codeBlock.textContent;
+    } else {
+        text = codeBlock.textContent;
+    }
+
+    navigator.clipboard.writeText(text.trim()).then(function() {
         const originalText = buttonElement.textContent;
         buttonElement.textContent = 'Copied! ✓';
 

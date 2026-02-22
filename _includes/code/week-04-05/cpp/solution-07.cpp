@@ -7,7 +7,7 @@ void printRange(int m, int n) {
         return;
     }
 
-    cout << "Expected output: ";
+    cout << "Range: ";
     for (int i = m; i <= n; i++) {
         cout << i << " ";
     }

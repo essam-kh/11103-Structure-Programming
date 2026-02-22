@@ -72,7 +72,7 @@ Write a program that reads a date (year, month, and day) and calculates the tota
 **Example:**
 ```
 Enter the year: 2023
-Enter the month (1-12): 10
+Enter the month (1-12): 1
 Enter the day (1-31): 25
 Total number of days from year 0 is: 728305
 ```
