@@ -16,16 +16,35 @@ nav_exclude: true
 <img src="{{ site.baseurl }}/assets/images/content/recursion.png" alt="Recursion Visualization" style="max-width: 350px; width: 100%; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); flex-shrink: 0;">
 </div>
 
-### Steps to Implement Recursion
+## Anatomy of a Recursive Function
 
-1. **Define a base case**: Identify the simplest (or base) case for which the solution is known or trivial. This is the stopping condition for the recursion, as it prevents the function from infinitely calling itself.
-2. **Define a recursive case**: Define the problem in terms of smaller subproblems. Break the problem down into smaller versions of itself, and call the function recursively to solve each subproblem.
-3. **Ensure the recursion terminates**: Make sure that the recursive function eventually reaches the base case, and does not enter an infinite loop.
-4. **Combine the solutions**: Combine the solutions of the subproblems to solve the original problem.
+Every valid recursive function consists of two fundamental and essential parts. Missing either of these will lead to a broken program.
 
-> **Stack Overflow**: Each recursive call consumes memory on the **stack** to store variables and return addresses. If the recursion goes too deep (e.g., infinite recursion due to a missing base case) or if the problem size is too large, the stack memory runs out. This causes a **Stack Overflow** error, often leading to a program crash (Segmentation Fault).
+1. **The Base Case (The Stopping Condition):** This is the simplest, most trivial scenario where the answer is known immediately and no further recursion is needed. It acts as the exit mechanism. Without a base case, your function will call itself infinitely.
+2. **The Recursive Case (The Self-Call):** This is where the function calls itself, but critically, it must do so with a *modified* set of arguments that brings it one step closer to the base case. 
+
+**Standard Skeleton of a Recursive Function:**
+
+```c
+return_type recursive_function(parameters) {
+    if (base_condition_is_met) {
+        return base_case_value; // Stop recursing
+    }
+    // Do some work, then recursively call the function with a step towards the base case
+    return some_work + recursive_function(modified_parameters);
+}
+```
+
+## How Recursion Uses Memory (The Call Stack)
+
+When a function calls itself, how does the computer remember where it left off, or what the local variables were in previous calls? It does this using a data structure called the **Call Stack**.
+
+*   Every time a function is called, a new chunk of memory called a "Stack Frame" is created and placed on top of the stack. This frame stores the function's local variables, parameters, and the return address.
+*   The computer pauses the current function and begins executing the new function at the top of the stack.
+*   When a base case is reached and a function completes, its stack frame is destroyed (popped off the stack), and the computer resumes the function right below it using the returned value.
+
+> **Stack Overflow**: The stack has a limited amount of memory. If the recursion goes too deep (e.g., infinite recursion due to a missing base case) or if the problem size is simply too large, the memory runs out. This causes a **Stack Overflow** error, which usually results in an immediate program crash (Segmentation Fault).
 {: .warning }
-
 
 ---
 
@@ -77,29 +96,26 @@ int fib(int n) {
 #### Visualizing the Recursion Tree
 
 Trace of `fib(5)` calls:
-
-{% assign fib_images = "" | split: "" %}
-{% for file in site.static_files %}
-  {% if file.path contains "assets/images/content/fib-steps" %}
-    {% if file.extname == ".png" or file.extname == ".jpg" %}
-      {% assign fib_images = fib_images | push: file %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-
-{% include img-slider.html id="fib" images=fib_images bg_color="#fff" img_style="width: 100%;" %}
+<video controls style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+  <source src="{{ site.baseurl }}/assets/videos/fib-steps.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ---
 
 ## Recursion vs Iteration
 
+Both recursion and iteration can be used to solve the same repetition-based problems, but they do it in fundamentally different ways.
+
 | Feature | Iteration | Recursion |
 | :--- | :--- | :--- |
-| **Repetition** | Explicit loop | Repeated function calls |
-| **Termination** | Loop condition fails | Base case recognized |
-| **Infinite Loops** | Possible | Possible |
-| **Balance** | Performance | Good software engineering |
+| **Repetition Method** | Uses explicit loops (`for`, `while`, `do-while`). | Uses repeated function self-calls. |
+| **Termination** | Stops when the loop condition evaluates to false. | Stops when the base case is reached. |
+| **State Tracking** | Uses variables to track the current state (e.g., counters). | Uses the Call Stack to track the state across multiple function calls. |
+| **Memory Usage** | Minimal, as it reuses the same variables. | High, as each recursive call adds a new frame to the Call Stack. |
 
+> **Tip**: As a general rule: If a problem can be easily solved with a simple `while` or `for` loop, you should use iteration. If dividing the problem into smaller identical pieces makes it significantly simpler, use recursion!
+{: .tip }
 <br>
 
 {% include week-nav.html next_link="/notes/week-09/syntax/" next_title="Syntax Guide" %}

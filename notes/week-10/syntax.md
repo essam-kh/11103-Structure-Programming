@@ -51,20 +51,50 @@ int val = *p; // val gets the value of x (10)
 
 Comparing addresses (mostly used with arrays).
 
+<div class="lang-c" markdown="1">
+
 ```c
-if (p == q) { /* point to same location */ }
+if (p == q) {
+    printf("p and q are pointing to the same location\n");
+}
 if (p < q)  { /* p comes before q in memory */ }
 ```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+if (p == q) { 
+    cout << "p and q are pointing to the same location\n";
+}
+if (p < q)  { /* p comes before q in memory */ }
+```
+
+</div>
+
 
 ---
 
 ## Const Pointers
 
-| Declaration | Description | Can Change Address? | Can Change Value? |
-| :--- | :--- | :---: | :---: |
-| `const int *p` | Pointer to Constant | ✅ Yes | ❌ No |
-| `int *const p` | Constant Pointer | ❌ No | ✅ Yes |
-| `const int *const p` | Constant Pointer to Constant | ❌ No | ❌ No |
+```c
+int x = 10, y = 20;
+
+// 1. Pointer to Constant (Value is const)
+const int *p1 = &x;
+p1 = &y;       // ✅ OK: Changing Address
+// *p1 = 50;   // ❌ ERROR: Changing Value
+
+// 2. Constant Pointer (Address is const)
+int *const p2 = &x;
+*p2 = 50;      // ✅ OK: Changing Value
+// p2 = &y;    // ❌ ERROR: Changing Address
+
+// 3. Constant Pointer to Constant (Both are const)
+const int *const p3 = &x;
+// p3 = &y;    // ❌ ERROR: Changing Address
+// *p3 = 50;   // ❌ ERROR: Changing Value
+```
 
 ---
 

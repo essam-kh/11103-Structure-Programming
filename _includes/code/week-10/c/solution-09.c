@@ -19,9 +19,9 @@ void RemoveCommas(char * oldval, char * newval)
 
 int main()
 {
-    char Name[] = "value1,value2,3";
+    char Name[] = "v1,v2,v3";
     char FilteredName[20];
-    RemoveCommas("v1,v2,v3", FilteredName);
+    RemoveCommas(Name, FilteredName);
     printf("Name before filter is %s \n", Name);
     printf("Name after filter is %s \n", FilteredName);
 
