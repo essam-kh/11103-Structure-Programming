@@ -3,7 +3,7 @@
 
 // Just the Class styles
 @import 'module';
-@import 'staffer';
+@import 'contributor';
 
 // Overrides
 code {
@@ -566,8 +566,8 @@ body {
 
 
 
-/* Vertical center staff text next to photo */
-.staffer {
+/* Vertical center contributor text next to photo */
+.contributor {
   display: flex;
   align-items: center;
   /* Vertically center text beside the image */

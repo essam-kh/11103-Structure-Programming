@@ -222,6 +222,56 @@ Used to combine multiple conditions.
   </div>
 </div>
 
+### Examples: Multiple Conditions
+
+Here are practical examples of combining multiple conditions inside a single `if` statement using logical operators.
+
+**Example 1: Checking if a number is within a specific range [10, 20]**
+
+<div class="lang-c" markdown="1">
+```c
+int num = 15;
+if (num >= 10 && num <= 20) {
+    printf("The number is between 10 and 20.\n");
+} else {
+    printf("The number is outside the range.\n");
+}
+```
+</div>
+<div class="lang-cpp" markdown="1">
+```cpp
+int num = 15;
+if (num >= 10 && num <= 20) {
+    cout << "The number is between 10 and 20.\n";
+} else {
+    cout << "The number is outside the range.\n";
+}
+```
+</div>
+
+**Example 2: Checking for valid input (Yes or No)**
+
+<div class="lang-c" markdown="1">
+```c
+char response = 'y';
+if (response == 'Y' || response == 'y') {
+    printf("You answered Yes!\n");
+} else {
+    printf("You did not answer Yes.\n");
+}
+```
+</div>
+<div class="lang-cpp" markdown="1">
+```cpp
+char response = 'y';
+if (response == 'Y' || response == 'y') {
+    cout << "You answered Yes!\n";
+} else {
+    cout << "You did not answer Yes.\n";
+}
+```
+</div>
+
 ## 6. Nested Conditional Statements
 
 You can place an `if` statement inside another `if` statement.

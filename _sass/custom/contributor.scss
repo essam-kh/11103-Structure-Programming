@@ -1,8 +1,8 @@
-.staffer {
+.contributor {
   display: flex;
-  margin: $sp-4 0;
+  margin: $sp-6 0;
 
-  .staffer-image {
+  .contributor-image {
     border-radius: 50%;
     height: 100px;
     width: 100px;
@@ -15,30 +15,30 @@
     left: -$sp-5;
   }
 
-  .staffer-name,
-  .staffer-meta,
+  .contributor-name,
+  .contributor-meta,
   p {
     margin: 0 0 $sp-1 0;
   }
 
-  .staffer-name {
+  .contributor-name {
     @extend .d-inline-block;
   }
 
-  .staffer-pronouns {
+  .contributor-pronouns {
     @extend .label, .text-grey-dk-300, .bg-grey-lt-000;
 
     user-select: none;
   }
 
-  .staffer-meta {
+  .contributor-meta {
     dt, dd, dd + dt {
       margin-top: 0;
     }
   }
 
   @include mq(sm) {
-    .staffer-meta {
+    .contributor-meta {
       display: grid;
       grid-template-columns: auto 1fr;
     }

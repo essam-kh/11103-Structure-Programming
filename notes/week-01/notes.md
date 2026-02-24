@@ -85,6 +85,11 @@ Example:
 cout << "Hello and welcome to Structured Programming class";
 ```
 
+**Printing Strings (Character Arrays):**
+```cpp
+char name[] = "Essam";
+cout << "Hello, " << name << "!" << endl;
+```
 </div>
 ### Simple Output with `puts()`
 - Used for simple string output with no formatting
@@ -104,6 +109,14 @@ Example:
 printf("Hello and welcome to Structured Programming class");
 ```
 
+<div class="lang-c" markdown="1">
+**Printing Strings (Character Arrays):**
+Use the `%s` format specifier to print strings with `printf`:
+```c
+char name[] = "Essam";
+printf("Hello, %s!\n", name);
+```
+</div>
 <div class="lang-cpp" markdown="1">
 ### Formatted Output in C++
 - Use `iomanip` manipulators with `cout` to format outputs like floats.
@@ -218,19 +231,64 @@ const float PI = 3.14;
 > ```
 {: .warning }
 
-<h2 class="lang-c">Input Statements in C</h2>
-<h2 class="lang-cpp">Input Statements in C++</h2>
+## Arrays (Introduction)
+
+An **array** is a group of consecutive memory locations that all have the same name and the same data type.
+
+To refer to a specific element within an array, we specify the array name followed by the **position number** (or index) in square brackets `[]`.
+
+> **Note:** Array indices in <span class="lang-c">C</span><span class="lang-cpp">C++</span> always start at `0`. So the first element is at position `0`, the second is at position `1`, and the last element is at position `n - 1` (where n is the number of elements).
+{: .note }
+
+*Note: Since arrays are a more advanced topic, they will be covered in much greater detail in later weeks.*
+
+### Declaring and Initializing Arrays
+
+When defining an array, you must specify its type, name, and the number of elements:
+
+```cpp
+int c[12]; // An array of 12 integers
+float myArray[3284];
+char userName[50];
+```
+
+You can initialize an array when you declare it:
+```c
+float myList[4] = {1.9, 2.9, 3.4, 3.5};
+```
+If you provide fewer initializers than the array size, the remaining elements become `0`. Provide too many, and you get an error.
+
+### Array of Characters (String)
+
+An array of characters can be used to store a string (which is covered more later):
+```cpp
+char studentName[] = {'A', 'L', 'I'};
+// Or more simply:
+char studentName2[] = "ALI";
+```
+
+<h2 >Input Statements in <span class="lang-c">C</span><span class="lang-cpp">C++</span></h2>
+
 
 <div class="lang-cpp" markdown="1">
 ### Simple Input with `cin`
 the `cin` is a stream object that is used to read input from the user.
 
 Example:
-```c
+```cpp
 cin >> age;
 ```
 
 - age: the variable name
+
+**Reading Strings (Arrays of Characters):**
+You can also read a string using `cin`:
+```cpp
+char name[50];
+cin >> name;
+```
+> **Note:** `cin` will only read up to the first whitespace (space, tab, or newline).
+{: .note }
 
 </div>
 
@@ -243,6 +301,17 @@ scanf("%d", &age);
 ```
 - `%d`: Format specifier for integers
 - `&age`: Address-of operator to store the value in the correct memory location
+
+<div class="lang-c" markdown="1">
+**Reading Strings (Arrays of Characters):**
+For a string, you use `%s`, and you **do not** use the `&` operator:
+```c
+char name[50];
+scanf("%s", name);
+```
+> **Note:** `scanf` with `%s` will only read up to the first whitespace (space, tab, or newline).
+{: .note }
+</div>
 
 ### Format Specifiers
 Format specifiers act as **placeholders** inside the string. They tell the function (`printf` or `scanf`) exactly what type of data to process.

@@ -1,19 +1,19 @@
-<div class="staffer">
+<div class="contributor">
   {%- if include.contributor.photo -%}
-  <img class="staffer-image" src="{{ site.baseurl }}/assets/images/{{ include.contributor.photo }}" alt="{{ include.contributor.name }}" width="300" height="300">
+  <img class="contributor-image" src="{{ site.baseurl }}/assets/images/{{ include.contributor.photo }}" alt="{{ include.contributor.name }}" width="300" height="300">
   {%- endif -%}
   <div>
-    <h3 class="staffer-name" id="{{ include.contributor.name | slugify }}">
+    <h3 class="contributor-name" id="{{ include.contributor.name | slugify }}">
       {%- if include.contributor.website -%}
       <a href="{{ include.contributor.website }}">{{ include.contributor.name }}</a>
       {%- else -%}
       {{ include.contributor.name }}
       {%- endif -%}
     </h3>
-    {%- if include.contributor.email -%}
-    <p><a href="mailto:{{ include.contributor.email }}">{{ include.contributor.email }}</a></p>
-    {%- endif -%}
-    <div class="staffer-social" style="margin-top: 8px;">
+    <div class="contributor-social" style="margin-top: 8px;">
+      {%- if include.contributor.email -%}
+      <a href="mailto:{{ include.contributor.email }}" style="margin-right: 8px;"><img src="{{ site.baseurl }}/assets/images/gmail.png" alt="Email" width="35"></a>
+      {%- endif -%}
       {%- if include.contributor.github -%}
       <a href="{{ include.contributor.github }}" style="margin-right: 8px;"><img src="{{ site.baseurl }}/assets/images/github-logo.png" alt="GitHub" width="50"></a>
       {%- endif -%}

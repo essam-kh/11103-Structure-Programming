@@ -1,21 +1,22 @@
 ---
 layout: page
-title: Just the Class
+title: Structure Programming
 nav_exclude: true
 permalink: /:path/
 seo:
   type: Course
-  name: Just the Class
+  name: Structure Programming
 ---
 
-# Just the Class
+# Structure Programming
 
-Just the Class is a GitHub Pages template developed for the purpose of quickly deploying course websites. In addition to serving plain web pages and files, it provides a boilerplate for:
+Just the Class is a GitHub Pages template developed for the purpose of quickly deploying course websites. In addition to serving plain web pages and files, this course website provides:
 
-- [announcements](announcements.md),
-- a [course calendar](calendar.md),
-- a [staff](staff.md) page,
-- and a weekly [schedule](schedule.md).
+- a [syllabus](syllabus.md),
+- a [contributors](contributors.md) page,
+- [resources](resources.md),
+- [FAQ](FAQ.md),
+- and weekly [notes](notes.md).
 
 Just the Class is a template that extends the popular [Just the Docs](https://github.com/just-the-docs/just-the-docs) theme, which provides a robust and thoroughly-tested foundation for your website. Just the Docs include features such as:
 
