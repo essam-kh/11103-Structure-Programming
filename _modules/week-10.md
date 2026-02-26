@@ -2,7 +2,7 @@
 title: <b>Week 10</b>
 ---
 
-## Week 10 Topic
+## Pointers
 
 <div class="resource-grid">
   <a href="{{ site.baseurl }}/notes/week-10/notes/" class="resource-card card-notes">Lecture Notes</a>
