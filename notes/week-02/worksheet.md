@@ -79,9 +79,8 @@ In `main()`, you need to input the value for `num` and pass it to the function, 
 ```
 Enter a 3-digit integer: 123
 The average of the digits is: 2.00
-```
 (Calculation: $$ (1+2+3)/3 = 2 $$)
-
+```
 {% include expandable-code.html title="Solution" id="sol-4" file_c="code/week-02/c/solution-04.c" file_cpp="code/week-02/cpp/solution-04.cpp" %}
 
 ## Exercise 5: Currency Converter
