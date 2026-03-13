@@ -273,8 +273,6 @@ Before swap: a = 10, b = 20
 After swap: a = 10, b = 20
 ```
 
-</div>
-
 <div style="flex: 1;" markdown="1">
 
 ### 2. Call by Reference
@@ -332,7 +330,6 @@ Before swap: a = 10, b = 20
 After swap: a = 20, b = 10
 ```
 
-</div>
 </div>
 
 ## Function Return Value using Pointer
