@@ -181,7 +181,7 @@ Rules for variable names:
 1. Can contain alphanumeric characters and underscores
 2. No special characters (except underscore)
 3. Cannot start with a number
-4. Cannot be a reserved word (e.g., printf, scanf, return)
+4. Cannot be a reserved word (e.g., if, while, return)
 5. Must be unique within the same scope
 
 <div style="display: flex; gap: 4rem; align-items: flex-start;">
