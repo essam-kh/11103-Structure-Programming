@@ -63,13 +63,11 @@ int main() {
 -   `int main()`: This is the **main function** where the program execution begins. <span class="lang-c">Every C program must</span><span class="lang-cpp">Every C++ program must</span> have exactly one main function.
 -   `{ ... }`: The curly braces define the **scope** or body of the function. All the code for the `main` function lives inside these braces.
 <div class="lang-c" markdown="1">
--   `printf("Welcome To Structured Programming
-");`: This function prints
+-   `printf("Welcome To Structured Programming\n");`: This function prints the text "Welcome To Structured Programming" to the screen.
 </div>
 <div class="lang-cpp" markdown="1">
--   `cout << "Welcome To Structured Programming
-";`: This function prints
-</div> the text "Welcome To Structured Programming" to the screen.
+-   `cout << "Welcome To Structured Programming\n";`: This function prints the text "Welcome To Structured Programming" to the screen.
+</div>
 -   `return 0;`: This statement terminates the `main` function and returns the value `0` to the operating system. A return value of `0` generally signifies that the program executed successfully.
 
 <h2 class="lang-c">Output Statements in C</h2>
@@ -267,7 +265,7 @@ char studentName[] = {'A', 'L', 'I'};
 char studentName2[] = "ALI";
 ```
 
-<h2 >Input Statements in <span class="lang-c">C</span><span class="lang-cpp">C++</span></h2>
+<h2>Input Statements in <span class="lang-c">C</span><span class="lang-cpp">C++</span></h2>
 
 
 <div class="lang-cpp" markdown="1">
@@ -482,7 +480,7 @@ printf("%d %d\n", a, b);  // Output: 4 4
 
 ### Increment
 **Post-increment:**
-```c
+```cpp
 int a = 5;
 int b;
 b = a++;  // Equivalent to: b = a; a = a + 1;
@@ -490,7 +488,7 @@ cout << a << " " << b << "\n";  // Output: 6 5
 ```
 
 **Pre-increment:**
-```c
+```cpp
 int a = 5;
 int b;
 b = ++a;  // Equivalent to: a = a + 1; b = a;
@@ -499,7 +497,7 @@ cout << a << " " << b << "\n";  // Output: 6 6
 
 ### Decrement
 **Post-decrement:**
-```c
+```cpp
 int a = 5;
 int b;
 b = a--;  // Equivalent to: b = a; a = a - 1;
@@ -507,7 +505,7 @@ cout << a << " " << b << "\n";  // Output: 4 5
 ```
 
 **Pre-decrement:**
-```c
+```cpp
 int a = 5;
 int b;
 b = --a;  // Equivalent to: a = a - 1; b = a;

@@ -622,6 +622,10 @@ int main() {
             int index = c - 'a'; // Map 'a' -> 0, 'b' -> 1...
             freq[index]++;
         }
+        else if(c >= 'A' && c <= 'Z'){
+            int index = (c + 32) - 'a'; // Map 'A' -> 0, 'B' -> 1...
+            freq[index]++;
+        }
     }
 
     for (int i = 0; i < 26; i++) {
@@ -651,6 +655,10 @@ int main() {
         // Check if character is a lowercase letter
         if (c >= 'a' && c <= 'z') {
             int index = c - 'a'; // Map 'a' -> 0, 'b' -> 1...
+            freq[index]++;
+        }
+        else if (c >= 'A' && c <= 'Z') {
+            int index = (c + 32) - 'a'; // Map 'A' -> 0, 'B' -> 1...
             freq[index]++;
         }
     }

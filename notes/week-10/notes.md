@@ -583,7 +583,7 @@ printf("%d\n", *(p + 1)); // Prints arr[1] -> 2
 
 int list[6] = {11, 12, 13, 14, 15, 16};
 for (int i = 0; i < 6; i++) {
-    printf("Address: %p, Value: %d, Arr Value: %d\n", *(list + i), *(list + i), list[i]);
+    printf("Address: %p, Value: %d, Arr Value: %d\n", (list + i), *(list + i), list[i]);
 }
 ```
 
@@ -600,7 +600,7 @@ cout << *(p + 1) << "\n"; // Prints arr[1] -> 2
 
 int list[6] = {11, 12, 13, 14, 15, 16};
 for (int i = 0; i < 6; i++) {
-    cout << "Address: " << *(list + i) << ", Value: " << *(list + i) << ", Arr Value: " << list[i] << "\n";
+    cout << "Address: " << (list + i) << ", Value: " << *(list + i) << ", Arr Value: " << list[i] << "\n";
 }
 ```
 

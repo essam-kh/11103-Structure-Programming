@@ -16,8 +16,8 @@ While a single loop is efficient for linear tasks, many problems require working
 By placing one loop inside another, a program can process complex structures like grids, tables, and patterns, where the inner loop completes an entire cycle for every single iteration of the outer loop.
 
 ```c
-for(int i = 0 ; i <= n ; i++){
-    for(int j = 0 ; j <= m ; j++){
+for(int i = 0 ; i < n ; i++){
+    for(int j = 0 ; j < m ; j++){
         // code to be repeated
     }
 }
@@ -126,7 +126,7 @@ for(int i = 1 ; i <= n ; i++){
 
 ```c
 for(int i = 1 ; i <= n ; i++){
-    for(int j = 1 ; j <= n - i; j++){
+    for(int j = 1 ; j <= n - i + 1; j++){
         printf("*");
     }
     printf("\n");
@@ -138,7 +138,7 @@ for(int i = 1 ; i <= n ; i++){
 
 ```cpp
 for(int i = 1 ; i <= n ; i++){
-    for(int j = 1 ; j <= n - i; j++){
+    for(int j = 1 ; j <= n - i + 1; j++){
         cout << "*";
     }
     cout << "\n";
