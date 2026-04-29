@@ -177,5 +177,46 @@ Output:
 
 {% include expandable-code.html title="Solution" id="sol-8" file_c="code/week-09/c/solution-08.c" file_cpp="code/week-09/cpp/solution-08.cpp" %}
 
+---
+
+## Exercise 9: Calculate the Power of a Number
+Write a function that takes a base `x` and an exponent `y`, and returns `x` to the power of `y`.
+
+{% include expandable-code.html title="Solution" id="sol-9" file_c="code/week-09/c/solution-09.c" file_cpp="code/week-09/cpp/solution-09.cpp" %}
+
+---
+
+## Exercise 10: Count Specific Digits
+Write a function that counts how many times a specific digit appears in a number (e.g., counting how many `7`s are in `7071` should return `2`).
+
+{% include expandable-code.html title="Solution" id="sol-10" file_c="code/week-09/c/solution-10.c" file_cpp="code/week-09/cpp/solution-10.cpp" %}
+
+---
+
+## Exercise 11: Count Occurrences of an Item
+Write a function that takes an array and a target value, and returns how many times that target value appears in the array.
+
+{% include expandable-code.html title="Solution" id="sol-11" file_c="code/week-09/c/solution-11.c" file_cpp="code/week-09/cpp/solution-11.cpp" %}
+
+---
+
+## Exercise 12: Count the Vowels in a String
+Write a recursive function that takes a string and returns the total number of vowels (A, E, I, O, U) inside it.
+
+{% include expandable-code.html title="Solution" id="sol-12" file_c="code/week-09/c/solution-12.c" file_cpp="code/week-09/cpp/solution-12.cpp" %}
+
+---
+
+## Exercise 13: Check if an Array is Sorted
+Write a recursive function that takes an array of numbers and returns True if it is sorted in ascending order, and False if it isn't.
+
+{% include expandable-code.html title="Solution" id="sol-13" file_c="code/week-09/c/solution-13.c" file_cpp="code/week-09/cpp/solution-13.cpp" %}
+
+---
+
+## Exercise 14: Binary to Decimal Conversion
+Write a recursive function that takes a binary string and returns its decimal equivalent (e.g., `"1010"` becomes `10`).
+
+{% include expandable-code.html title="Solution" id="sol-14" file_c="code/week-09/c/solution-14.c" file_cpp="code/week-09/cpp/solution-14.cpp" %}
 
 {% include week-nav.html prev_link="/notes/week-09/syntax/" prev_title="Syntax Guide" next_link="/notes/week-09/practice/" next_title="Practice" %}
