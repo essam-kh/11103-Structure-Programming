@@ -456,4 +456,193 @@ Student 2: Sum = 285, Average = 71.25
 Student 3: Sum = 383, Average = 95.75
 ```
 
+---
+
+## 2D Arrays in Functions
+
+Now that we can process matrices from `main`, we can extract that logic into reusable functions — exactly like Week 6 did for 1D arrays. There is one critical new rule: the function must know the **number of columns** to correctly index the array in memory.
+
+### Passing a 2D Array to a Function
+
+*   You **must** declare the **number of columns** in the parameter. The row count can be omitted.
+*   Pass `rows` and `cols` as separate parameters so the function knows the actual dimensions.
+
+### Function Prototype
+
+The column size must be a **compile-time** constant. Use `#define COLS 4` and write:
+
+```c
+#define COLS 4
+void printMatrix(int arr[][COLS], int rows, int cols);
+```
+
+<div class="lang-c" markdown="1">
+
+> **Note (C only):** In C you can also pass `cols` before the array and write `int arr[][cols]` directly, without needing `#define`.
+```c
+void printMatrix(int rows, int cols, int arr[][cols]);
+```
+{: .note }
+
+</div>
+
+### Why Must We Specify Columns?
+
+A 2D array is stored **row by row** in one contiguous block of memory. To compute the address of `arr[i][j]`, the compiler uses:
+
+```
+address = base + (i × number_of_columns + j) × element_size
+```
+
+Without knowing the column count, it cannot calculate the correct offset. The row count is not needed because the compiler only needs to iterate *within* the array, not beyond it.
+
+---
+
+### Example 1: Printing a Matrix Using a Function
+
+<div class="lang-c" markdown="1">
+
+```c
+#include <stdio.h>
+
+#define COLS 4
+
+void printMatrix(int arr[][COLS], int rows, int cols) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    int matrix[3][COLS] = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12}
+    };
+
+    printf("Matrix:\n");
+    printMatrix(matrix, 3, COLS);
+
+    return 0;
+}
+```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+#include <iostream>
+using namespace std;
+
+#define COLS 4
+
+void printMatrix(int arr[][COLS], int rows, int cols) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cout << arr[i][j] << " ";
+        }
+        cout << "\n";
+    }
+}
+
+int main() {
+    int matrix[3][COLS] = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12}
+    };
+
+    cout << "Matrix:\n";
+    printMatrix(matrix, 3, COLS);
+
+    return 0;
+}
+```
+
+</div>
+
+**Output:**
+```
+Matrix:
+1 2 3 4 
+5 6 7 8 
+9 10 11 12 
+```
+
+---
+
+### Example 2: Summing All Elements Using a Function
+
+<div class="lang-c" markdown="1">
+
+```c
+#include <stdio.h>
+
+int sumMatrix(int rows, int cols, int arr[][cols]) {
+    int total = 0;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            total += arr[i][j];
+        }
+    }
+    return total;
+}
+
+int main() {
+    int matrix[3][4] = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12}
+    };
+
+    int total = sumMatrix(3, 4, matrix);
+    printf("Sum of all elements: %d\n", total);
+
+    return 0;
+}
+```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+#include <iostream>
+using namespace std;
+
+#define COLS 4
+
+int sumMatrix(int arr[][COLS], int rows, int cols) {
+    int total = 0;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            total += arr[i][j];
+        }
+    }
+    return total;
+}
+
+int main() {
+    int matrix[3][COLS] = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12}
+    };
+
+    int total = sumMatrix(matrix, 3, COLS);
+    cout << "Sum of all elements: " << total << "\n";
+
+    return 0;
+}
+```
+
+</div>
+
+**Output:**
+```
+Sum of all elements: 78
+```
+
 {% include week-nav.html next_link="/notes/week-07-08/syntax/" next_title="Syntax Guide" %}

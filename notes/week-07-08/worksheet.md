@@ -120,5 +120,44 @@ Result Matrix:
 
 {% include expandable-code.html title="Solution" id="sol-6" file_c="code/week-07-08/c/solution-06.c" file_cpp="code/week-07-08/cpp/solution-06.cpp" %}
 
+---
+
+## Question 7
+Write a <span class="lang-c">C</span><span class="lang-cpp">C++</span> program that reads a 3×4 matrix from the user, then uses **two separate functions** — `printMatrix` to display it and `sumMatrix` to compute and return the total of all elements — and prints the result in `main`.
+
+**Example:**
+```
+Enter elements of the 3x4 matrix:
+1 2 3 4
+5 6 7 8
+9 10 11 12
+
+Matrix:
+1 2 3 4 
+5 6 7 8 
+9 10 11 12 
+
+Sum of all elements: 78
+```
+
+{% include expandable-code.html title="Solution" id="sol-7" file_c="code/week-07-08/c/solution-07.c" file_cpp="code/week-07-08/cpp/solution-07.cpp" %}
+
+---
+
+## Question 8
+Write a <span class="lang-c">C</span><span class="lang-cpp">C++</span> program that reads a 3×4 matrix from the user and uses a function `countEvens` to count and return the number of **even** elements in the matrix. Print the result in `main`.
+
+**Example:**
+```
+Enter elements of the 3x4 matrix:
+1 2 3 4
+5 6 7 8
+9 10 11 12
+
+Number of even elements: 6
+```
+
+{% include expandable-code.html title="Solution" id="sol-8" file_c="code/week-07-08/c/solution-08.c" file_cpp="code/week-07-08/cpp/solution-08.cpp" %}
+
 {% include week-nav.html prev_link="/notes/week-07-08/syntax/" prev_title="Syntax Guide" next_link="/notes/week-07-08/practice/" next_title="Practice" %}
 

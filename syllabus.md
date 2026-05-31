@@ -7,7 +7,7 @@ seo:
   name: Structure of Programming
 ---
 
-# 11103: Structure of Programming
+# Structure of Programming
 
 <div class="lang-toggle-container">
     <div class="lang-toggle-pill">
@@ -15,7 +15,7 @@ seo:
         <button id="btn-cpp" class="lang-toggle-btn">C++</button>
     </div>
 </div>
-<p class="lang-toggle-desc">Toggle between C and C++ to instantly translate all code examples, syntax guides, and worksheet solutions across the site. Your preference is saved automatically.</p>
+<p class="lang-toggle-desc">Toggle between C and C++ to instantly translate all code examples, syntax guides, and worksheet solutions across the site.</p>
 
 ## Table of contents
 {: .no_toc .text-delta }

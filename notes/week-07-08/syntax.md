@@ -130,4 +130,90 @@ for (int i = 0; i < rows; i++) {           // Iterate Rows
 
 </div>
 
+---
+
+## 2D Arrays in Functions
+
+### 1. Prototype
+
+<div class="lang-c" markdown="1">
+
+In C, pass `rows` and `cols` **before** the array:
+
+```c
+ReturnType functionName(int rows, int cols, DataType arr[][cols]);
+```
+
+**Example:**
+```c
+void printMatrix(int rows, int cols, int arr[][cols]);
+int  sumMatrix(int rows, int cols, int arr[][cols]);
+```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+In C++, the column size must be a compile-time constant (`#define`):
+
+```cpp
+#define COLS 4
+ReturnType functionName(DataType arr[][COLS], int rows, int cols);
+```
+
+**Example:**
+```cpp
+void printMatrix(int arr[][COLS], int rows, int cols);
+int  sumMatrix(int arr[][COLS], int rows, int cols);
+```
+
+</div>
+
+### 2. Calling the Function
+
+<div class="lang-c" markdown="1">
+
+```c
+int matrix[3][4];
+printMatrix(3, 4, matrix);   // rows and cols first, then array name
+```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+int matrix[3][COLS];
+printMatrix(matrix, 3, COLS);  // array first, then rows and cols
+```
+
+</div>
+
+### 3. Processing Pattern Inside a Function
+
+<div class="lang-c" markdown="1">
+
+```c
+void processMatrix(int rows, int cols, int arr[][cols]) {
+    for (int i = 0; i < rows; i++) {       // Iterate rows
+        for (int j = 0; j < cols; j++) {   // Iterate columns
+            // Use arr[i][j]
+        }
+    }
+}
+```
+
+</div>
+<div class="lang-cpp" markdown="1">
+
+```cpp
+void processMatrix(int arr[][COLS], int rows, int cols) {
+    for (int i = 0; i < rows; i++) {       // Iterate rows
+        for (int j = 0; j < cols; j++) {   // Iterate columns
+            // Use arr[i][j]
+        }
+    }
+}
+```
+
+</div>
+
 {% include week-nav.html prev_link="/notes/week-07-08/notes/" prev_title="Lecture Notes" next_link="/notes/week-07-08/worksheet/" next_title="Worksheet" %}

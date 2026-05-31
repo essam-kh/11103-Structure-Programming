@@ -21,7 +21,7 @@ description: >-
         <button id="btn-cpp" class="lang-toggle-btn">C++</button>
     </div>
 </div>
-<p class="lang-toggle-desc">Toggle between C and C++ to instantly translate all code examples, syntax guides, and worksheet solutions across the site. Your preference is saved automatically.</p>
+<p class="lang-toggle-desc">Toggle between C and C++ to instantly translate all code examples, syntax guides, and worksheet solutions across the site.</p>
 
 ## Studying for this course
 

@@ -13,9 +13,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: 11103 Structure Programming
+title:  Structure Programming
 tagline: Structured Programming
-description: Lab resources, schedule, and assignments for Structure Programming 11103.
+description: Lab resources, schedule, and assignments for Structure Programming.
 author: Essam Khader
 baseurl: '/11103-Structure-Programming' # the subpath of your site, e.g. /blog
 url: "https://essam-kh.github.io" # the base hostname & protocol for your site, e.g. http://example.com
