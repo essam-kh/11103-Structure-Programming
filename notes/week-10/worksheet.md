@@ -10,6 +10,9 @@ nav_exclude: true
 > **Note:** Try to solve these questions on your own.
 {: .note }
 
+{% include question-filters.html %}
+
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Question 1: Find the Errors
 The following program has logic and/or compiler errors. Identify **5 errors** and for each error:
 1. Mention the **line number** where the error occurred.
@@ -177,9 +180,9 @@ int main() {
 </div>
 
 {% include expandable-code.html title="Solution (Part 2)" id="sol-2" file_c="code/week-10/c/solution-02.c" file_cpp="code/week-10/cpp/solution-02.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Question 2: What is the Output?
 Determine the output of the following code snippet:
 
@@ -217,9 +220,9 @@ cout << x << "  " << y << "  " << *p << "  " << *q;
 </div>
 
 {% include expandable-code.html title="Solution" id="sol-3" file_c="code/week-10/c/solution-03.c" file_cpp="code/week-10/cpp/solution-03.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Question 3: Valid or Invalid?
 Which of the following statements is **NOT** valid?
 
@@ -253,9 +256,9 @@ int *p = &y;
 *   `q = &x;`
 
 {% include expandable-code.html title="Solution (Part 2)" id="sol-5" file_c="code/week-10/c/solution-05.c" file_cpp="code/week-10/cpp/solution-05.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Question 4: Reverse Array using Pointers
 Write a program that asks the user for the number of elements `N`, reads `N` integers into an array using **pointers**, and then prints the array elements in **reverse order** using pointers.
 
@@ -269,9 +272,9 @@ Reversed Array:
 ```
 
 {% include expandable-code.html title="Solution" id="sol-6" file_c="code/week-10/c/solution-06.c" file_cpp="code/week-10/cpp/solution-06.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Hard" markdown="1">
 ## Question 5: Palindrome Check
 Write a program that reads a string from the user, calculates its length `N`, and checks if it is a **Palindrome** (a string that reads the same from left to right and right to left).
 
@@ -282,9 +285,9 @@ The string is a Palindrome.
 ```
 
 {% include expandable-code.html title="Solution" id="sol-7" file_c="code/week-10/c/solution-07.c" file_cpp="code/week-10/cpp/solution-07.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Hard" markdown="1">
 ## Question 6: What is the Output?
 Determine the output of the following code snippet, which tests your understanding of function parameters (call by value and call by reference).
 
@@ -397,9 +400,9 @@ int main() {
 </div>
 
 {% include expandable-code.html title="Solution" id="sol-8" file_c="code/week-10/c/solution-08.c" file_cpp="code/week-10/cpp/solution-08.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Hard" markdown="1">
 ## Question 7: Remove Commas
 Write a <span class="lang-c">C</span><span class="lang-cpp">C++</span> function called `RemoveCommas`. The function receives two Strings in the form of character pointers as the following: `void RemoveCommas(char * oldval, char * newval)`.
 
@@ -417,5 +420,39 @@ It should store the value `"v1v2v3"` inside `FilteredName`.
 - You are not allowed to use arrays inside your function, only character pointers.
 
 {% include expandable-code.html title="Solution" id="sol-9" file_c="code/week-10/c/solution-09.c" file_cpp="code/week-10/cpp/solution-09.cpp" %}
+</div>
+
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
+## Question 8: Find Min and Max of Array using Pointers
+Write a complete <span class="lang-c">C</span><span class="lang-cpp">C++</span> program including a function `FindMinMax()` that receives an array pointer, array size, and two pointer variables to store the minimum and maximum values found in the array.
+
+**Constraints:**
+- Do not use array bracket notation `[]` inside the `FindMinMax` function; perform array traversal using only pointer arithmetic and dereferencing.
+
+**Example:**
+```
+Enter number of elements: 5
+Enter 5 elements: 12 5 20 8 15
+Min: 5
+Max: 20
+```
+
+{% include expandable-code.html title="Solution" id="sol-10" file_c="code/week-10/c/solution-10.c" file_cpp="code/week-10/cpp/solution-10.cpp" %}
+</div>
+
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
+## Question 9: Sum Array Range via Pointers
+Write a complete <span class="lang-c">C</span><span class="lang-cpp">C++</span> program including a function `SumRange()` that receives two integer pointers representing the start (inclusive) and end (exclusive) boundaries of an array range, and returns the sum of the elements within that range.
+
+**Example:**
+```
+Enter number of elements: 5
+Enter 5 elements: 10 20 30 40 50
+Enter start and end indexes: 1 4
+Sum: 90
+```
+
+{% include expandable-code.html title="Solution" id="sol-11" file_c="code/week-10/c/solution-11.c" file_cpp="code/week-10/cpp/solution-11.cpp" %}
+</div>
 
 {% include week-nav.html prev_link="/notes/week-10/syntax/" prev_title="Syntax Guide" next_link="/notes/week-10/practice/" next_title="Practice" %}

@@ -11,7 +11,10 @@ nav_exclude: true
 {: .note }
 
 ---
+{% include question-filters.html %}
 
+
+<div class="question-card" data-question-difficulty="Easy" markdown="1">
 ## Exercise 1: Divisors
 Write a <span class="lang-c">C</span><span class="lang-cpp">C++</span> program that reads in a positive integer and prints all the divisors of the integer in **decreasing order**.
 
@@ -25,9 +28,9 @@ Divisors of 12 in decreasing order: 12 6 4 3 2 1
 ```
 
 {% include expandable-code.html title="Solution" id="sol-1" file_c="code/week-04-05/c/solution-01.c" file_cpp="code/week-04-05/cpp/solution-01.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Easy" markdown="1">
 ## Exercise 2: Power Calculation
 Write a <span class="lang-c">C</span><span class="lang-cpp">C++</span> program that reads in two positive integers `base` and `exp` and prints the result of:
 
@@ -42,9 +45,9 @@ Enter base and exponent: 2 5
 ```
 
 {% include expandable-code.html title="Solution" id="sol-2" file_c="code/week-04-05/c/solution-02.c" file_cpp="code/week-04-05/cpp/solution-02.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Easy" markdown="1">
 ## Exercise 3: Factorial
 Write a <span class="lang-c">C</span><span class="lang-cpp">C++</span> program that reads in a positive integer `n` and prints the result of `n!` (Factorial), where:
 
@@ -59,9 +62,9 @@ Enter a positive integer: 5
 ```
 
 {% include expandable-code.html title="Solution" id="sol-3" file_c="code/week-04-05/c/solution-03.c" file_cpp="code/week-04-05/cpp/solution-03.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Exercise 4: Prime Check
 Write a <span class="lang-c">C</span><span class="lang-cpp">C++</span> program that reads in an integer and checks whether the given number is **Prime** or not.
 
@@ -83,9 +86,9 @@ Enter an integer: 10
 ```
 
 {% include expandable-code.html title="Solution" id="sol-4" file_c="code/week-04-05/c/solution-04.c" file_cpp="code/week-04-05/cpp/solution-04.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Hard" markdown="1">
 ## Exercise 5: Reverse Number
 Write a <span class="lang-c">C</span><span class="lang-cpp">C++</span> program that reads a positive integer number and prints the number with its digits **reversed**.
 
@@ -98,9 +101,9 @@ Reversed number: 2985
 Note: Your program should work for any number of digits.
 
 {% include expandable-code.html title="Solution" id="sol-5" file_c="code/week-04-05/c/solution-05.c" file_cpp="code/week-04-05/cpp/solution-05.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Exercise 6: Sum of Digits
 Write a program that reads an integer number and prints the **sum of its digits**.
 
@@ -112,9 +115,9 @@ Sum of digits: 17
 (Calculation: $$ 4 + 6 + 7 = 17 $$)
 
 {% include expandable-code.html title="Solution" id="sol-6" file_c="code/week-04-05/c/solution-06.c" file_cpp="code/week-04-05/cpp/solution-06.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Easy" markdown="1">
 ## Exercise 7: Range Printer
 Write a function `printRange(int m, int n)` that prints all numbers from `m` to `n`.
 
@@ -130,9 +133,9 @@ Expected output: 3 4 5 6 7
 ```
 
 {% include expandable-code.html title="Solution" id="sol-7" file_c="code/week-04-05/c/solution-07.c" file_cpp="code/week-04-05/cpp/solution-07.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Hard" markdown="1">
 ## Exercise 8: Modular Functions
 Write the following functions and call them from `main()`. **Do not use the `math.h` library.**
 
@@ -155,11 +158,9 @@ Average of digits: 3.00
 ```
 
 {% include expandable-code.html title="Solution" id="sol-8" file_c="code/week-04-05/c/solution-08.c" file_cpp="code/week-04-05/cpp/solution-08.cpp" %}
+</div>
 
----
-
-## Tracing Exercises
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Exercise 9
 What is the output of the following code?
 
@@ -197,9 +198,9 @@ int main() {
 
 </div>
 {% include expandable-code.html title="Solution" id="sol-9" file_c="code/week-04-05/c/solution-09.c" file_cpp="code/week-04-05/cpp/solution-09.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Exercise 10
 What is the value of `indexOfMax` after executing the following code?
 
@@ -247,9 +248,9 @@ int main() {
 > **Think:** What would be the value of `indexOfMax` if the condition was `myList[i] >= max`?
 {: .note }
 {% include expandable-code.html title="Solution" id="sol-10" file_c="code/week-04-05/c/solution-10.c" file_cpp="code/week-04-05/cpp/solution-10.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Exercise 11
 Which of the following code segments produces the following output: `1 4 9 16 25`?
 
@@ -352,9 +353,9 @@ while (i < 5) {
 
 </div>
 {% include expandable-code.html title="Solution" id="sol-11" file_c="code/week-04-05/c/solution-11.c" file_cpp="code/week-04-05/cpp/solution-11.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Hard" markdown="1">
 ## Exercise 12
 Which of the following code segments will **not** finish (go to infinite loop)?
 
@@ -473,9 +474,9 @@ while (i <= 10) {
 
 </div>
 {% include expandable-code.html title="Solution" id="sol-12" file_c="code/week-04-05/c/solution-12.c" file_cpp="code/week-04-05/cpp/solution-12.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Exercise 13
 What is the output of the following code? And what is the purpose of this code?
 
@@ -515,6 +516,7 @@ int main() {
 
 </div>
 {% include expandable-code.html title="Solution" id="sol-13" file_c="code/week-04-05/c/solution-13.c" file_cpp="code/week-04-05/cpp/solution-13.cpp" %}
+</div>
 
 ---
 {% include week-nav.html prev_link="/notes/week-04-05/syntax/" prev_title="Syntax Guide" next_link="/notes/week-04-05/practice/" next_title="Practice" %}

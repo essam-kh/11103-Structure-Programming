@@ -7,7 +7,9 @@ nav_exclude: true
 
 # Week 6 Programming Questions
 
+{% include question-filters.html %}
 
+<div class="question-card" data-question-difficulty="Easy" markdown="1">
 ## Exercise 1
 Write a complete <span class="lang-c">C</span><span class="lang-cpp">C++</span> program that defines an integer array of size 50, and prompts the user to fill the array then print the array. After printing the array your program should also prompt the user enter `startValue`, and `endValue`. The program should print the number of values that are in between the value `startValue` and `endValue` inclusive where `startValue < endValue`.
 
@@ -23,9 +25,9 @@ Count of values between 5 and 12: 3
 ```
 
 {% include expandable-code.html title="Solution" id="sol-1" file_c="code/week-06/c/solution-01.c" file_cpp="code/week-06/cpp/solution-01.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Exercise 2
 Write a complete <span class="lang-c">C</span><span class="lang-cpp">C++</span> program that defines an integer array of size 50, and prompts the user to fill the array with grades then print the array. Then compares the sum of even numbers in the array with the sum of odd numbers in the array.
 *   If the sum of even numbers is larger, the program prints `1`.
@@ -42,9 +44,9 @@ Array elements: 2 3 4 1
 ```
 
 {% include expandable-code.html title="Solution" id="sol-2" file_c="code/week-06/c/solution-02.c" file_cpp="code/week-06/cpp/solution-02.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Easy" markdown="1">
 ## Exercise 3
 Write a complete <span class="lang-c">C</span><span class="lang-cpp">C++</span> program that defines an integer array of size 50, and prompts the user to fill the array with grades then print the array. Then program then prints the number of the elements in the array that are multiples of five.
 
@@ -59,9 +61,9 @@ Total count: 3
 ```
 
 {% include expandable-code.html title="Solution" id="sol-3" file_c="code/week-06/c/solution-03.c" file_cpp="code/week-06/cpp/solution-03.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Exercise 4
 Write a complete <span class="lang-c">C</span><span class="lang-cpp">C++</span> program that defines two integer arrays each of size 50, the prompts the user to fill the arrays with integers. Then program prompts the user to enter the value of an integer variable named `Append`. The program should combine the arrays `A` & `B` and store the final results in `C` as follows:
 *   If `Append` is equal to `1` the program appends `A` to `B`.
@@ -80,9 +82,9 @@ Result Array C: 2 34 8 10 20 30 2
 ```
 
 {% include expandable-code.html title="Solution" id="sol-4" file_c="code/week-06/c/solution-04.c" file_cpp="code/week-06/cpp/solution-04.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Hard" markdown="1">
 ## Exercise 5
 Write a complete <span class="lang-c">C</span><span class="lang-cpp">C++</span> program that defines an integer array of size 50, and prompts the user to fill the array with quiz grades (between 0 and 10 inclusive). Then the program computes the frequency of each value in the array and prints the most frequent element.
 
@@ -95,9 +97,9 @@ Most frequent element is: 5 (appeared 5 times)
 ```
 
 {% include expandable-code.html title="Solution" id="sol-5" file_c="code/week-06/c/solution-05.c" file_cpp="code/week-06/cpp/solution-05.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Hard" markdown="1">
 ## Exercise 6
 Write a complete <span class="lang-c">C</span><span class="lang-cpp">C++</span> program including a `main` and three functions named `Max`, `CountAbove`, and `IndexOf`.
 
@@ -138,6 +140,58 @@ Filling new array with unique random numbers (0-100)...
 ```
 
 {% include expandable-code.html title="Solution" id="sol-6" file_c="code/week-06/c/solution-06.c" file_cpp="code/week-06/cpp/solution-06.cpp" %}
+</div>
+
+<div class="question-card" data-question-difficulty="Hard" markdown="1">
+## Exercise 7
+Write a function `RemoveDuplicates()` that receives an array of integers and its size as input parameters. This function should modify the array in-place to remove any duplicate elements, shifting all subsequent unique elements to the left. The function should return the new logical size of the array.
+
+In `main()`, prompt the user to input the number of elements and fill the array. Call the function to remove duplicates, then print the unique array elements along with the new size.
+
+**Example:**
+```
+Enter the number of elements: 7
+Enter 7 elements: 10 20 10 30 20 10 40
+Array after removing duplicates: 10 20 30 40 
+New size: 4
+```
+
+{% include expandable-code.html title="Solution" id="sol-7" file_c="code/week-06/c/solution-07.c" file_cpp="code/week-06/cpp/solution-07.cpp" %}
+</div>
+
+<div class="question-card" data-question-difficulty="Hard" markdown="1">
+## Exercise 8
+Write a function `MergeSorted()` that receives two pre-sorted integer arrays $A$ and $B$, their sizes, and a third array $C$ of size $sizeA + sizeB$. The function should merge the sorted elements of $A$ and $B$ into $C$ such that $C$ remains sorted.
+
+In `main()`, read two sorted arrays from the user, call the function to merge them, and print the merged array $C$.
+
+**Example:**
+```
+Enter size of A: 3
+Enter 3 sorted elements for A: 1 5 8
+Enter size of B: 4
+Enter 4 sorted elements for B: 2 4 9 10
+Merged array C: 1 2 4 5 8 9 10 
+```
+
+{% include expandable-code.html title="Solution" id="sol-8" file_c="code/week-06/c/solution-08.c" file_cpp="code/week-06/cpp/solution-08.cpp" %}
+</div>
+
+<div class="question-card" data-question-difficulty="Hard" markdown="1">
+## Exercise 9
+An element in an array is called a **leader** if it is strictly greater than all elements situated to its right. The rightmost element is always a leader. Write a function `FindLeaders()` that receives an array of integers and its size, and prints all the leaders in the array.
+
+In `main()`, read the array size and elements, and call `FindLeaders()` to print the results.
+
+**Example:**
+```
+Enter number of elements: 6
+Enter 6 elements: 16 17 4 3 5 2
+Leaders in the array: 17 5 2 
+```
+
+{% include expandable-code.html title="Solution" id="sol-9" file_c="code/week-06/c/solution-09.c" file_cpp="code/week-06/cpp/solution-09.cpp" %}
+</div>
 
 
 {% include week-nav.html prev_link="/notes/week-06/syntax/" prev_title="Syntax Guide" next_link="/notes/week-06/practice/" next_title="Practice" %}

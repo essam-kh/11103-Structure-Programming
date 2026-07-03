@@ -1,5 +1,7 @@
+@charset "UTF-8";
 // Just the Class dependencies
 @import 'card';
+
 
 // Just the Class styles
 @import 'module';
@@ -1064,4 +1066,832 @@ body.show-c .lang-cpp {
 
 body.show-cpp .lang-c {
   display: none !important;
+}
+
+/* ==============================
+   User Guidance Page Styles
+   ============================== */
+
+
+/* -- Study Loop -- */
+.study-loop-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Scroll wrapper lets overflow-y stay visible so hover lift isn't clipped */
+.study-loop-scroll {
+  overflow-x: auto;
+  overflow-y: visible;
+  padding-top: 12px;    /* room for translateY hover lift */
+  margin-top: -12px;
+  padding-bottom: 4px;
+  margin-bottom: 3rem;
+}
+
+.study-loop {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  overflow: visible;    /* no clipping on child hover */
+}
+
+.study-step-card {
+  flex: 1;
+  min-width: 130px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.4rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.25s;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: #4299e1;
+  }
+}
+
+.study-step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4299e1, #667eea);
+  color: white;
+  font-weight: 800;
+  font-size: 0.85rem;
+  margin-bottom: 0.6rem;
+}
+
+.study-step-icon {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+  display: block;
+  line-height: 1;
+}
+
+.study-step-label {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+}
+
+.study-step-desc {
+  font-size: 0.78rem;
+  color: #718096;
+  line-height: 1.4;
+}
+
+.study-step-arrow {
+  display: flex;
+  align-items: center;
+  padding: 0 0.4rem;
+  color: #a0aec0;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+/* -- Study Tips -- */
+.tips-section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.tip-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem 1.1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.25s;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.09);
+    border-color: #4299e1;
+  }
+}
+
+.tip-card-icon {
+  font-size: 1.7rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.tip-card-body {}
+
+.tip-card-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+}
+
+.tip-card-text {
+  font-size: 0.82rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+/* -- Phase Roadmap -- */
+.roadmap-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.phase-container {
+  margin-bottom: 1.75rem;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.phase-header {
+  padding: 1.1rem 1.5rem;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.phase-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.7rem;
+  flex-shrink: 0;
+}
+
+.phase-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  flex: 1;
+}
+
+.phase-goal {
+  font-size: 0.82rem;
+  opacity: 0.9;
+  font-style: italic;
+  flex-basis: 100%;
+  margin-top: -0.25rem;
+}
+
+/* Phase color variants */
+.phase-1 .phase-header { background: linear-gradient(135deg, #2b6cb0, #4299e1); }
+.phase-2 .phase-header { background: linear-gradient(135deg, #276749, #38a169); }
+.phase-3 .phase-header { background: linear-gradient(135deg, #975a16, #d69e2e); }
+.phase-4 .phase-header { background: linear-gradient(135deg, #553c9a, #805ad5); }
+
+/* Week entries inside a phase */
+.phase-weeks {
+  background: #fff;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.week-entry {}
+
+.week-entry-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.65rem;
+}
+
+.week-entry-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 0.15rem 0.55rem;
+  flex-shrink: 0;
+}
+
+.phase-1 .week-entry-badge { background-color: #4299e1; }
+.phase-2 .week-entry-badge { background-color: #38a169; }
+.phase-3 .week-entry-badge { background-color: #d69e2e; }
+.phase-4 .week-entry-badge { background-color: #805ad5; }
+
+.week-entry-topic {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #2d3748;
+}
+
+.week-resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.week-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.3rem 0.75rem;
+  text-decoration: none !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+
+  &:hover {
+    transform: translateY(-2px);
+    text-decoration: none !important;
+  }
+}
+
+.week-link-notes {
+  background: #ebf8ff;
+  color: #2b6cb0 !important;
+  border-color: #bee3f8;
+  &:hover { background: #bee3f8; border-color: #4299e1; }
+}
+
+.week-link-syntax {
+  background: #e6fffa;
+  color: #285e61 !important;
+  border-color: #b2f5ea;
+  &:hover { background: #b2f5ea; border-color: #38b2ac; }
+}
+
+.week-link-worksheet {
+  background: #faf5ff;
+  color: #553c9a !important;
+  border-color: #e9d8fd;
+  &:hover { background: #e9d8fd; border-color: #805ad5; }
+}
+
+.week-link-practice {
+  background: #fffaf0;
+  color: #7b341e !important;
+  border-color: #feebc8;
+  &:hover { background: #feebc8; border-color: #ed8936; }
+}
+
+/* Week separator inside a phase */
+.week-entry + .week-entry {
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 1.25rem;
+}
+
+/* Responsive */
+@media (max-width: 680px) {
+  .study-loop {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .study-step-arrow {
+    transform: rotate(90deg);
+    align-self: center;
+    padding: 0.2rem 0;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+}
+
+
+/* ==============================
+   Course Roadmap / Dependency Tree
+   ============================== */
+
+.roadmap-tree {
+  position: relative;
+  padding-left: 2.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Gradient vertical spine */
+.roadmap-tree::before {
+  content: "";
+  position: absolute;
+  left: 0.6rem;
+  top: 0.9rem;
+  bottom: 1rem;
+  width: 3px;
+  border-radius: 3px;
+  background: linear-gradient(to bottom,
+    #4299e1 0%,
+    #4299e1 12%,
+    #38a169 12%,
+    #38a169 42%,
+    #d69e2e 42%,
+    #d69e2e 67%,
+    #805ad5 67%,
+    #805ad5 100%
+  );
+}
+
+/* Phase section wrappers */
+.rtree-section {
+  margin-bottom: 0.5rem;
+}
+
+/* Phase header banner */
+.rtree-phase-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  margin-left: -0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.rtree-p1 .rtree-phase-header { background: linear-gradient(135deg, #2b6cb0, #4299e1); }
+.rtree-p2 .rtree-phase-header { background: linear-gradient(135deg, #276749, #38a169); }
+.rtree-p3 .rtree-phase-header { background: linear-gradient(135deg, #975a16, #d69e2e); }
+.rtree-p4 .rtree-phase-header { background: linear-gradient(135deg, #553c9a, #805ad5); }
+
+.rtree-phase-num {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.22);
+  color: white;
+  padding: 0.15rem 0.6rem;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.rtree-phase-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: white;
+  flex: 1;
+}
+
+.rtree-phase-goal {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-style: italic;
+}
+
+/* Tree nodes */
+.rtree-node {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+/* Horizontal connector: dot -> card */
+.rtree-node::before {
+  content: "";
+  position: absolute;
+  left: -2.1rem;
+  top: 1.3rem;
+  width: 1.5rem;
+  height: 2px;
+  background: #e2e8f0;
+}
+
+/* Dot on the spine */
+.rtree-dot {
+  position: absolute;
+  left: -2.9rem;
+  top: 0.85rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  z-index: 2;
+}
+
+.rtree-p1 .rtree-dot { background: #4299e1; box-shadow: 0 0 0 2px #4299e1; }
+.rtree-p2 .rtree-dot { background: #38a169; box-shadow: 0 0 0 2px #38a169; }
+.rtree-p3 .rtree-dot { background: #d69e2e; box-shadow: 0 0 0 2px #d69e2e; }
+.rtree-p4 .rtree-dot { background: #805ad5; box-shadow: 0 0 0 2px #805ad5; }
+
+/* Node card */
+.rtree-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Node inner: week badge + topic title */
+.rtree-node-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.4rem;
+}
+
+.rtree-week-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: white;
+  padding: 0.15rem 0.55rem;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.rtree-p1 .rtree-week-tag { background: #4299e1; }
+.rtree-p2 .rtree-week-tag { background: #38a169; }
+.rtree-p3 .rtree-week-tag { background: #d69e2e; }
+.rtree-p4 .rtree-week-tag { background: #805ad5; }
+
+.rtree-topic {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+/* Prerequisite pills */
+.rtree-prereqs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.45rem;
+}
+
+.rtree-prereq-label {
+  font-size: 0.72rem;
+  color: #a0aec0;
+  font-weight: 600;
+}
+
+.rtree-prereq-pill {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: #f1f5f9;
+  color: #4a5568;
+  padding: 0.1rem 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Short description */
+.rtree-desc {
+  font-size: 0.84rem;
+  color: #718096;
+  line-height: 1.55;
+  margin: 0 0 0.7rem 0;
+}
+
+/* ==============================
+   Roadmap Milestones (Exams)
+   ============================== */
+.rtree-milestone {
+  margin: 2.5rem 0;
+}
+
+.rtree-dot-milestone {
+  background: #fbbf24;
+  box-shadow: 0 0 0 2px #fbbf24;
+  width: 1.4rem;
+  height: 1.4rem;
+  left: -3.1rem;
+  top: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+.rtree-card-milestone {
+  border-left-width: 4px;
+  border-left-color: #f59e0b;
+  background: #fffbeb;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.1);
+}
+
+.rtree-tag-milestone {
+  background: #f59e0b;
+  color: white;
+}
+
+.rtree-link-milestone {
+  background: #f59e0b !important;
+  color: white !important;
+  border-color: #f59e0b !important;
+}
+
+.rtree-link-milestone:hover {
+  background: #d97706 !important;
+}
+
+.rtree-link-milestone-outline {
+  background: transparent !important;
+  color: #d97706 !important;
+  border: 1px solid #d97706 !important;
+}
+
+.rtree-link-milestone-outline:hover {
+  background: #fef3c7 !important;
+}
+
+/* ==============================
+   Exam Solutions (Reveal Reference)
+   ============================== */
+.reveal-ref-btn {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s;
+  margin-top: 0.5rem;
+}
+
+.reveal-ref-btn:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.reveal-ref-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0;
+  padding: 0 1rem;
+  background: #f8fafc;
+  border-left: 3px solid #3b82f6;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.85rem;
+  color: #334155;
+  transition: max-height 0.35s ease-out, opacity 0.25s ease-out, padding 0.35s ease-out, margin-top 0.35s ease-out;
+}
+
+.reveal-ref-content.is-visible {
+  opacity: 1;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .roadmap-tree {
+    padding-left: 2rem;
+  }
+
+  .rtree-phase-goal {
+    display: none;
+  }
+
+  .rtree-node::before {
+    left: -1.5rem;
+    width: 1rem;
+  }
+
+  .rtree-dot {
+    left: -2.2rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    top: 0.95rem;
+  }
+}
+
+
+/* ==============================
+   Roadmap Scroll Animations
+   ============================== */
+
+/* Ripple keyframe lives outside media query so it can be referenced inside */
+@keyframes dotRipple {
+  0%   { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+  /* ── Phase header: slides in from left ── */
+  .rtree-phase-header {
+    opacity: 0;
+    transform: translateX(-28px);
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .rtree-phase-header.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* ── Week node: slides up from below ── */
+  .rtree-node {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .rtree-node.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Connector line draws from spine to card ── */
+  .rtree-node::before {
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1) 0.18s;
+  }
+
+  .rtree-node.is-visible::before {
+    transform: scaleX(1);
+  }
+
+  /* ── Dot bounces in with a slight pop ── */
+  .rtree-dot {
+    transform: scale(0);
+    /* delay is overridden per-node by JS for the stagger */
+    transition: transform 0.42s cubic-bezier(0.34, 1.6, 0.64, 1) 0.08s;
+  }
+
+  .rtree-node.is-visible .rtree-dot {
+    transform: scale(1);
+  }
+
+  /* ── Dot ripple pulse (expanding ring) ── */
+  .rtree-dot::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: dotRipple 3.2s ease-out infinite 1.2s;
+  }
+
+  .rtree-p1 .rtree-dot::after { border: 2px solid #4299e1; }
+  .rtree-p2 .rtree-dot::after { border: 2px solid #38a169; }
+  .rtree-p3 .rtree-dot::after { border: 2px solid #d69e2e; }
+  .rtree-p4 .rtree-dot::after { border: 2px solid #805ad5; }
+  .rtree-milestone .rtree-dot::after { border: 2px solid #fbbf24; }
+
+  /* ── Card hover: subtle lift ── */
+  .rtree-card {
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+                border-left-color 0.28s;
+  }
+
+  .rtree-card-milestone {
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+                border-left-color 0.28s;
+  }
+
+  .rtree-p1 .rtree-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(66, 153, 225, 0.18);
+    border-left-color: #3182ce;
+  }
+
+  .rtree-p2 .rtree-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(56, 161, 105, 0.18);
+    border-left-color: #2f855a;
+  }
+
+  .rtree-p3 .rtree-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(214, 158, 46, 0.18);
+    border-left-color: #b7791f;
+  }
+
+  .rtree-p4 .rtree-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(128, 90, 213, 0.18);
+    border-left-color: #6b46c1;
+  }
+
+  .rtree-card-milestone:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(245, 158, 11, 0.25) !important;
+  }
+
+  /* ── Prereq pill hover ── */
+  .rtree-prereq-pill {
+    transition: transform 0.18s ease, background 0.18s ease;
+    cursor: default;
+  }
+
+  .rtree-prereq-pill:hover {
+    transform: scale(1.07);
+    background: #edf2f7;
+  }
+
+  /* ── Week-link pill: already has lift, add scale ── */
+  .week-link {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                background 0.2s,
+                border-color 0.2s,
+                box-shadow 0.2s !important;
+  }
+
+  .week-link:hover {
+    transform: translateY(-2px) scale(1.03) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* ==============================
+   Floating Feedback Widget
+   ============================== */
+.feedback-floating-pill {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #2563eb;
+  color: white !important;
+  padding: 0.65rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s, background 0.2s;
+  z-index: 9999; /* Ensure it stays above all content */
+}
+
+.feedback-floating-pill:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+  background: #1d4ed8;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .feedback-floating-pill {
+    bottom: 16px;
+    right: 16px;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.85rem;
+  }
 }

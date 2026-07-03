@@ -10,6 +10,9 @@ nav_exclude: true
 > **Note:** Try to solve these questions on your own.
 {: .note }
 
+{% include question-filters.html %}
+
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Exercise 1: Palindrome Check
 Write a recursive function named `isPalindrome()`, which receives a string and checks if a given string is a palindrome (reads the same forwards and backwards).
 
@@ -30,9 +33,9 @@ Result: The word is not a Palindrome
 ```
 
 {% include expandable-code.html title="Solution" id="sol-1" file_c="code/week-09/c/solution-01.c" file_cpp="code/week-09/cpp/solution-01.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Easy" markdown="1">
 ## Exercise 2: Sum of Digits
 Write a recursive function named `sumDigits()`, that receives an integer `num` argument and recursively calculates the sum of its digits.
 
@@ -46,9 +49,9 @@ Sum of digits: 10
 (Calculation: $$ 1+2+3+4 = 10 $$)
 
 {% include expandable-code.html title="Solution" id="sol-2" file_c="code/week-09/c/solution-02.c" file_cpp="code/week-09/cpp/solution-02.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Hard" markdown="1">
 ## Exercise 3: Lake Volume Simulator
 Assume we have a lake that changes in volume according to the daily weather conditions:
 *   **Sunny** (35% probability): Loses 2% of volume.
@@ -73,9 +76,9 @@ Final Volume: 989.80
 {: .note }
 
 {% include expandable-code.html title="Solution" id="sol-3" file_c="code/week-09/c/solution-03.c" file_cpp="code/week-09/cpp/solution-03.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Exercise 4: Reverse String
 Develop a recursive function named `reverseString()` that takes a String `s` and prints it in reverse.
 
@@ -90,9 +93,9 @@ Reversed: erutcurts
 ```
 
 {% include expandable-code.html title="Solution" id="sol-4" file_c="code/week-09/c/solution-04.c" file_cpp="code/week-09/cpp/solution-04.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Exercise 5: Max Element in Array
 Write a recursive function named `findMax()` that finds the maximum number in an array of integers.
 
@@ -106,10 +109,10 @@ Max number is: 20
 ```
 
 {% include expandable-code.html title="Solution" id="sol-5" file_c="code/week-09/c/solution-05.c" file_cpp="code/week-09/cpp/solution-05.cpp" %}
+</div>
 
 
----
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Exercise 6: Find the Output
 Consider the following recursive function. What will be the output if `fun(3)` is called?
 
@@ -141,9 +144,9 @@ void fun(int n) {
 </div>
 
 {% include expandable-code.html title="Solution" id="sol-6" file_c="code/week-09/c/solution-06.c" file_cpp="code/week-09/cpp/solution-06.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Exercise 7: Find the Output
 Consider the following recursive function. What will be the output if `fun(4, 3)` is called?
 
@@ -156,9 +159,9 @@ int fun(int x, int y) {
 ```
 
 {% include expandable-code.html title="Solution" id="sol-7" file_c="code/week-09/c/solution-07.c" file_cpp="code/week-09/cpp/solution-07.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Exercise 8: Print Sequence
 Consider an algorithm that takes as input a positive integer `n`. If `n` is even, the algorithm divides it by two, and if `n` is odd, the algorithm multiplies it by three and adds one. The algorithm repeats this, until `n` is one. For example, the sequence for `n=3` is as follows:
 
@@ -176,47 +179,65 @@ Output:
 ```
 
 {% include expandable-code.html title="Solution" id="sol-8" file_c="code/week-09/c/solution-08.c" file_cpp="code/week-09/cpp/solution-08.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Easy" markdown="1">
 ## Exercise 9: Calculate the Power of a Number
 Write a function that takes a base `x` and an exponent `y`, and returns `x` to the power of `y`.
 
 {% include expandable-code.html title="Solution" id="sol-9" file_c="code/week-09/c/solution-09.c" file_cpp="code/week-09/cpp/solution-09.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Easy" markdown="1">
 ## Exercise 10: Count Specific Digits
 Write a function that counts how many times a specific digit appears in a number (e.g., counting how many `7`s are in `7071` should return `2`).
 
 {% include expandable-code.html title="Solution" id="sol-10" file_c="code/week-09/c/solution-10.c" file_cpp="code/week-09/cpp/solution-10.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Easy" markdown="1">
 ## Exercise 11: Count Occurrences of an Item
 Write a function that takes an array and a target value, and returns how many times that target value appears in the array.
 
 {% include expandable-code.html title="Solution" id="sol-11" file_c="code/week-09/c/solution-11.c" file_cpp="code/week-09/cpp/solution-11.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Exercise 12: Count the Vowels in a String
 Write a recursive function that takes a string and returns the total number of vowels (A, E, I, O, U) inside it.
 
 {% include expandable-code.html title="Solution" id="sol-12" file_c="code/week-09/c/solution-12.c" file_cpp="code/week-09/cpp/solution-12.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Medium" markdown="1">
 ## Exercise 13: Check if an Array is Sorted
 Write a recursive function that takes an array of numbers and returns True if it is sorted in ascending order, and False if it isn't.
 
 {% include expandable-code.html title="Solution" id="sol-13" file_c="code/week-09/c/solution-13.c" file_cpp="code/week-09/cpp/solution-13.cpp" %}
+</div>
 
----
-
+<div class="question-card" data-question-difficulty="Hard" markdown="1">
 ## Exercise 14: Binary to Decimal Conversion
 Write a recursive function that takes a binary string and returns its decimal equivalent (e.g., `"1010"` becomes `10`).
 
 {% include expandable-code.html title="Solution" id="sol-14" file_c="code/week-09/c/solution-14.c" file_cpp="code/week-09/cpp/solution-14.cpp" %}
+</div>
+
+<div class="question-card" data-question-difficulty="Hard" markdown="1">
+## Exercise 15: Count Subsequences with Target Sum
+Write a recursive function `CountSubsequences()` that receives an integer array, its size, current index, current running sum, and a target sum. The function should calculate and return the number of subsequences (contiguous or non-contiguous) of the array whose elements add up to the target sum.
+
+In `main()`, read the number of elements and fill the array. Then read the target sum, call the recursive function, and print the resulting count.
+
+**Example:**
+```
+Enter number of elements: 3
+Enter 3 elements: 1 2 3
+Enter target sum: 3
+Number of subsequences: 2
+```
+
+{% include expandable-code.html title="Solution" id="sol-15" file_c="code/week-09/c/solution-15.c" file_cpp="code/week-09/cpp/solution-15.cpp" %}
+</div>
 
 {% include week-nav.html prev_link="/notes/week-09/syntax/" prev_title="Syntax Guide" next_link="/notes/week-09/practice/" next_title="Practice" %}
