@@ -93,6 +93,16 @@
       if (btn.getAttribute('data-filter') === 'all') {
         var sortSelect = document.getElementById('difficulty-sort');
         if (sortSelect) sortSelect.value = 'default';
+        
+        // Reset custom dropdown UI if it exists
+        var triggerText = document.getElementById('sort-trigger-text');
+        var menu = document.getElementById('sort-menu');
+        if (triggerText && menu) {
+          triggerText.textContent = 'Default Order';
+          menu.querySelectorAll('.dropdown-item').forEach(function(el) { el.classList.remove('active'); });
+          var defItem = menu.querySelector('.dropdown-item[data-value="default"]');
+          if (defItem) defItem.classList.add('active');
+        }
       }
 
       applyFiltersAndSort();
@@ -101,6 +111,49 @@
     var sortSelect = document.getElementById('difficulty-sort');
     if (sortSelect) {
       sortSelect.addEventListener('change', applyFiltersAndSort);
+    }
+
+    // --- Custom Dropdown Logic ---
+    var dropdown = document.getElementById('difficulty-sort-dropdown');
+    var trigger = document.getElementById('sort-trigger');
+    var triggerText = document.getElementById('sort-trigger-text');
+    var menu = document.getElementById('sort-menu');
+
+    if (dropdown && trigger && menu && sortSelect) {
+      // Prevent multiple listeners if re-initialized
+      if (!dropdown.dataset.initialized) {
+        dropdown.dataset.initialized = 'true';
+
+        trigger.addEventListener('click', function(e) {
+          e.stopPropagation();
+          trigger.classList.toggle('open');
+          menu.classList.toggle('open');
+        });
+
+        document.addEventListener('click', function(e) {
+          if (!dropdown.contains(e.target)) {
+            trigger.classList.remove('open');
+            menu.classList.remove('open');
+          }
+        });
+
+        menu.addEventListener('click', function(e) {
+          var item = e.target.closest('.dropdown-item');
+          if (!item) return;
+
+          menu.querySelectorAll('.dropdown-item').forEach(function(el) {
+            el.classList.remove('active');
+          });
+          item.classList.add('active');
+          triggerText.textContent = item.textContent;
+          sortSelect.value = item.getAttribute('data-value');
+          
+          trigger.classList.remove('open');
+          menu.classList.remove('open');
+
+          applyFiltersAndSort();
+        });
+      }
     }
   }
 

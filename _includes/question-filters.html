@@ -47,28 +47,114 @@
   border-color: #3182ce;
 }
 
-.sort-select {
-  padding: 0.4rem 2rem 0.4rem 0.8rem;
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 6px;
   border: 1px solid #cbd5e1;
   background-color: white;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%234a5568'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 0.7rem center;
-  background-size: 0.6rem auto;
   color: #4a5568;
   font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  min-width: 130px;
+  transition: all 0.2s ease;
+  font-family: inherit;
 }
 
-.sort-select:focus {
-  outline: none;
+.dropdown-trigger:hover {
+  border-color: #94a3b8;
+}
+
+.dropdown-trigger.open {
   border-color: #3182ce;
   box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}
+
+.dropdown-arrow {
+  width: 10px;
+  height: 6px;
+  fill: #94a3b8;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-trigger.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.35rem;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5px);
+  transition: all 0.2s ease;
+}
+
+.dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  background: transparent;
+  border: none;
+  padding: 0.45rem 0.6rem;
+  text-align: left;
+  font-size: 0.85rem;
+  color: #4a5568;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dropdown-item::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: transparent;
+  transition: background 0.15s ease;
+}
+
+.dropdown-item:hover {
+  background: #f1f5f9;
+}
+
+.dropdown-item.active {
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.dropdown-item.active::before {
+  background: #3b82f6;
 }
 
 .question-card {
@@ -103,7 +189,18 @@
 
   <div class="filter-group" style="margin-left: auto;">
     <span class="filter-label">Sort:</span>
-    <select class="sort-select" id="difficulty-sort">
+    <div class="custom-dropdown" id="difficulty-sort-dropdown">
+      <button class="dropdown-trigger" id="sort-trigger">
+        <span id="sort-trigger-text">Default Order</span>
+        <svg viewBox="0 0 10 6" class="dropdown-arrow"><path d="M0 0l5 6 5-6z" fill="currentColor"/></svg>
+      </button>
+      <div class="dropdown-menu" id="sort-menu">
+        <button class="dropdown-item active" data-value="default">Default Order</button>
+        <button class="dropdown-item" data-value="asc">Easiest First</button>
+        <button class="dropdown-item" data-value="desc">Hardest First</button>
+      </div>
+    </div>
+    <select class="sort-select" id="difficulty-sort" style="display: none;">
       <option value="default">Default Order</option>
       <option value="asc">Easiest First</option>
       <option value="desc">Hardest First</option>

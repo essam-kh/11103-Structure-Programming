@@ -1895,3 +1895,153 @@ body.show-cpp .lang-c {
     font-size: 0.85rem;
   }
 }
+
+/* ══════════════════════════════════════════
+   Floating IDE Panel
+   ══════════════════════════════════════════ */
+$ide-width: 680px;
+$ide-bg: #0f172a;
+$ide-header-bg: #1e293b;
+$ide-border: #334155;
+$ide-accent: #3b82f6;
+$ide-text: #e2e8f0;
+$ide-muted: #94a3b8;
+$ide-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+/* ── Toggle tab — glued to right edge of panel ── */
+#ide-tab {
+  position: absolute;
+  right: -22px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background: #151f2e;
+  border-radius: 0 6px 6px 0;
+  width: 22px;
+  padding: 1.4rem 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s, color 0.2s;
+  user-select: none;
+  color: #4a6080;
+
+  &:hover {
+    background: #1e2d42;
+    color: #94a3b8;
+  }
+}
+
+.ide-tab-text {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+/* ── Panel container ── */
+#ide-panel {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: $ide-width;
+  z-index: 1099;
+  display: flex;
+  flex-direction: column;
+  background: $ide-bg;
+  box-shadow: 4px 0 28px rgba(0, 0, 0, 0.4);
+  transform: translateX(-100%);
+  transition: transform $ide-transition;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+/* ── Header bar ── */
+.ide-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.85rem;
+  background: $ide-header-bg;
+  border-bottom: 1px solid $ide-border;
+  flex-shrink: 0;
+}
+
+.ide-title {
+  color: $ide-text;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: monospace;
+  letter-spacing: 0.02em;
+}
+
+
+
+
+/* ── iframe container ── */
+.ide-body {
+  flex: 1;
+  overflow: hidden;
+  background: $ide-bg;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+}
+
+/* ── Resize handle ── */
+#ide-resize-handle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 100%;
+  cursor: ew-resize;
+  background: transparent;
+  transition: background 0.18s;
+  z-index: 10;
+
+  &:hover,
+  &:active {
+    background: rgba($ide-accent, 0.35);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 1px;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 36px;
+    border-radius: 2px;
+    background: $ide-border;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  #ide-panel {
+    width: 100vw !important;
+    max-width: 100vw;
+  }
+
+  #ide-resize-handle {
+    display: none;
+  }
+
+  #ide-tab.is-open {
+    left: 90vw;
+  }
+}
