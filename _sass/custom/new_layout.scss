@@ -462,13 +462,108 @@
    Layout Overrides for Navbar
    ============================== */
 .side-bar { display: none !important; }
+.main { width: 100% !important; max-width: 100% !important; }
 .main-content-wrap { 
   margin-left: 0 !important; 
   width: 100% !important; 
+  max-width: 100% !important; 
 }
 .main-content {
-  max-width: 1000px !important;
+  max-width: 850px !important;
+  width: 100% !important;
   margin: 0 auto;
   padding-top: calc(var(--navbar-height) + 2rem) !important;
 }
 .site-header { display: none !important; }
+
+/* ==============================
+   Right Sidebar & Grid Layout
+   ============================== */
+.layout-grid {
+  display: block;
+  width: 100%;
+}
+.layout-grid .layout-main {
+  width: 100%;
+}
+
+/* When the JS detects a TOC and activates the grid */
+.layout-grid.has-right-sidebar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  gap: 3rem;
+}
+.layout-grid.has-right-sidebar .layout-main {
+  max-width: none;
+}
+
+/* Ensure the grid expands just enough to hold the 850px text column + the sidebar */
+.main-content:has(.layout-grid.has-right-sidebar) {
+  max-width: 1150px !important;
+}
+
+
+
+.layout-right-sidebar {
+  display: none;
+}
+.layout-grid.has-right-sidebar .layout-right-sidebar {
+  display: block;
+}
+
+.sticky-toc-container {
+  position: sticky;
+  top: calc(var(--navbar-height) + 2.5rem);
+  max-height: calc(100vh - var(--navbar-height) - 4rem);
+  overflow-y: auto;
+  border-left: 2px solid #edf2f7;
+  padding-left: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.sticky-toc-container .toc-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #1e293b;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+/* Style the cloned Jekyll TOC */
+.sticky-toc-container #markdown-toc {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sticky-toc-container #markdown-toc li {
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+.sticky-toc-container #markdown-toc a {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.88rem;
+  display: block;
+  transition: color 0.2s;
+}
+.sticky-toc-container #markdown-toc a:hover {
+  color: var(--link-color);
+}
+.sticky-toc-container #markdown-toc ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  border-left: 1px solid #e2e8f0;
+}
+
+/* Responsive: hide right sidebar on smaller screens */
+@media (max-width: 1024px) {
+  .layout-grid.has-right-sidebar {
+    grid-template-columns: 1fr;
+  }
+  .layout-grid.has-right-sidebar .layout-right-sidebar {
+    display: none;
+  }
+}

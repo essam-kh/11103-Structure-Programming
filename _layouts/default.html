@@ -15,18 +15,54 @@ layout: table_wrappers
     <div class="main-content-wrap">
       {% include components/breadcrumbs.html %}
       <div id="main-content" class="main-content">
-        <main>
-          {% if site.heading_anchors != false %}
-            {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
-          {% else %}
-            {{ content }}
-          {% endif %}
+        <div class="layout-grid">
+          <div class="layout-main">
+            <main>
+              {% if site.heading_anchors != false %}
+                {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
+              {% else %}
+                {{ content }}
+              {% endif %}
 
-          {% if page.has_toc != false %}
-            {% include components/children_nav.html %}
-          {% endif %}
-        </main>
-        {% include components/footer.html %}
+              {% if page.has_toc != false %}
+                {% include components/children_nav.html %}
+              {% endif %}
+            </main>
+            {% include components/footer.html %}
+          </div>
+          
+          <div class="layout-right-sidebar">
+            <div class="sticky-toc-container" id="sticky-toc-container" style="display: none;">
+              <h4 class="toc-title">On this page</h4>
+              <div id="sticky-toc-content"></div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            var originalToc = document.getElementById("markdown-toc");
+            var stickyContainer = document.getElementById("sticky-toc-container");
+            var stickyContent = document.getElementById("sticky-toc-content");
+            var layoutGrid = document.querySelector(".layout-grid");
+            
+            if (originalToc) {
+              // Move a clone of the TOC to the sticky sidebar
+              stickyContent.appendChild(originalToc.cloneNode(true));
+              stickyContainer.style.display = "block";
+              
+              // Activate the grid layout
+              layoutGrid.classList.add("has-right-sidebar");
+              
+              // Hide the original inline TOC and its header
+              var tocHeader = document.querySelector(".no_toc.text-delta");
+              if (tocHeader && tocHeader.textContent.toLowerCase().includes("table of contents")) {
+                tocHeader.style.display = "none";
+              }
+              originalToc.style.display = "none";
+            }
+          });
+        </script>
       </div>
     </div>
     {% if site.search_enabled != false %}

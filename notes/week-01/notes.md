@@ -10,7 +10,7 @@ nav_exclude: true
 ## Program Structure
 Your program typically follows this pattern:
 
-<div style="display: flex; align-items: center; gap: 4rem; margin: 2rem 0;">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 4rem; margin: 2rem 0;">
   <div style="font-size: 1.1em;">
     <ul>
       <li>Receive inputs</li>
@@ -132,7 +132,7 @@ cout << fixed << setprecision(2) << 3.14159;
 ### What is a Variable?
 A variable is a named memory location that stores a value. Each variable has:
 
-<div style="display: flex; align-items: center; gap: 4rem; margin: 2rem 0;">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 4rem; margin: 2rem 0;">
   <div style="font-size: 1.1em;">
     <ul>
       <li>Name</li>

@@ -7,10 +7,13 @@ permalink: /guidance/
 
 ## How to Study Each Week
 
-> **Study Principles:**
-> *   **Write from scratch:** You cannot learn programming by just reading notes. You must write and run the code yourself.
-> *   **Don't rely on AI too early:** When you get stuck, try to debug it yourself first. Resorting to AI immediately skips the critical learning process.
-{: .highlight }
+<div class="principles-card">
+  <h3 class="principles-title">Study Principles:</h3>
+  <ul class="principles-list">
+    <li><strong>Write from scratch:</strong> You cannot learn programming by just reading notes. You must write and run the code yourself.</li>
+    <li><strong>Don't rely on AI too early:</strong> When you get stuck, try to debug it yourself first. Resorting to AI immediately skips the critical learning process.</li>
+  </ul>
+</div>
 
 
 <p class="study-loop-title">Follow this 4-step loop every week:</p>
@@ -46,6 +49,14 @@ permalink: /guidance/
       <div class="study-step-label">Practice</div>
       <div class="study-step-desc">Reinforce with extra problems.</div>
     </div>
+  </div>
+
+  <div class="study-return-arrow">
+    <svg viewBox="0 0 800 40" preserveAspectRatio="none">
+      <path d="M 700,0 Q 700,30 400,30 Q 100,30 100,0" fill="none" stroke="#a0aec0" stroke-width="2" stroke-dasharray="6 4" />
+      <polygon points="95,0 105,0 100,-8" fill="#a0aec0" />
+    </svg>
+    <span class="study-return-text">Repeat</span>
   </div>
 </div>
 

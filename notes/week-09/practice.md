@@ -84,4 +84,4 @@ nav_exclude: true
   </div>
 </div>
 
-{% include week-nav.html prev_link="/notes/week-09/worksheet/" prev_title="Worksheet" %}
+{% include week-nav.html prev_link="/notes/week-09/worksheet/" prev_title="Worksheet" next_link="/notes/week-10/notes/" next_title="Week 10 Notes" %}

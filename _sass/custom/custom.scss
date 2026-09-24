@@ -1073,6 +1073,36 @@ body.show-cpp .lang-c {
    ============================== */
 
 
+/* -- Study Principles Card -- */
+.principles-card {
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid var(--link-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.principles-title {
+  margin-top: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+.principles-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.principles-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #334155;
+}
+
 /* -- Study Loop -- */
 .study-loop-title {
   font-size: 1.15rem;
@@ -1110,15 +1140,7 @@ body.show-cpp .lang-c {
   padding: 1.4rem 1rem;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.25s;
   position: relative;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border-color: #4299e1;
-  }
 }
 
 .study-step-number {
@@ -1128,7 +1150,7 @@ body.show-cpp .lang-c {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, #4299e1, #667eea);
+  background: var(--link-color);
   color: white;
   font-weight: 800;
   font-size: 0.85rem;
@@ -1165,6 +1187,35 @@ body.show-cpp .lang-c {
   align-self: center;
 }
 
+/* -- Study Loop Return Arrow -- */
+.study-return-arrow {
+  position: relative;
+  width: 100%;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.study-return-arrow svg {
+  width: 100%;
+  height: 40px;
+  display: block;
+}
+
+.study-return-text {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 0 12px;
+  color: #718096;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 /* -- Study Tips -- */
 .tips-section-title {
   font-size: 1.15rem;
@@ -1192,14 +1243,7 @@ body.show-cpp .lang-c {
   display: flex;
   gap: 0.85rem;
   align-items: flex-start;
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.25s;
-
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.09);
-    border-color: #4299e1;
-  }
+  position: relative;
 }
 
 .tip-card-icon {
@@ -1212,16 +1256,20 @@ body.show-cpp .lang-c {
 .tip-card-body {}
 
 .tip-card-title {
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: #2d3748;
-  margin-bottom: 0.25rem;
+  font-family: inherit !important;
+  font-weight: bold !important;
+  font-size: 1.1rem !important;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+  margin-top: 0;
+  text-transform: none !important;
+  letter-spacing: normal !important;
 }
 
 .tip-card-text {
-  font-size: 0.82rem;
-  color: #4a5568;
-  line-height: 1.5;
+  font-size: 0.95rem;
+  color: #334155;
+  line-height: 1.6;
 }
 
 /* -- Phase Roadmap -- */
@@ -1280,10 +1328,7 @@ body.show-cpp .lang-c {
 }
 
 /* Phase color variants */
-.phase-1 .phase-header { background: linear-gradient(135deg, #2b6cb0, #4299e1); }
-.phase-2 .phase-header { background: linear-gradient(135deg, #276749, #38a169); }
-.phase-3 .phase-header { background: linear-gradient(135deg, #975a16, #d69e2e); }
-.phase-4 .phase-header { background: linear-gradient(135deg, #553c9a, #805ad5); }
+.phase-header { background: linear-gradient(135deg, var(--link-hover), var(--link-color)); }
 
 /* Week entries inside a phase */
 .phase-weeks {
@@ -1314,10 +1359,7 @@ body.show-cpp .lang-c {
   flex-shrink: 0;
 }
 
-.phase-1 .week-entry-badge { background-color: #4299e1; }
-.phase-2 .week-entry-badge { background-color: #38a169; }
-.phase-3 .week-entry-badge { background-color: #d69e2e; }
-.phase-4 .week-entry-badge { background-color: #805ad5; }
+.week-entry-badge { background-color: var(--link-color); }
 
 .week-entry-topic {
   font-weight: 700;
@@ -1349,32 +1391,14 @@ body.show-cpp .lang-c {
   }
 }
 
-.week-link-notes {
-  background: #ebf8ff;
-  color: #2b6cb0 !important;
-  border-color: #bee3f8;
-  &:hover { background: #bee3f8; border-color: #4299e1; }
-}
-
-.week-link-syntax {
-  background: #e6fffa;
-  color: #285e61 !important;
-  border-color: #b2f5ea;
-  &:hover { background: #b2f5ea; border-color: #38b2ac; }
-}
-
-.week-link-worksheet {
-  background: #faf5ff;
-  color: #553c9a !important;
-  border-color: #e9d8fd;
-  &:hover { background: #e9d8fd; border-color: #805ad5; }
-}
-
+.week-link-notes,
+.week-link-syntax,
+.week-link-worksheet,
 .week-link-practice {
-  background: #fffaf0;
-  color: #7b341e !important;
-  border-color: #feebc8;
-  &:hover { background: #feebc8; border-color: #ed8936; }
+  background: #f8fafc;
+  color: #475569 !important;
+  border-color: #e2e8f0;
+  &:hover { background: #f1f5f9; border-color: #cbd5e1; color: #1e293b !important; }
 }
 
 /* Week separator inside a phase */
@@ -1424,16 +1448,7 @@ body.show-cpp .lang-c {
   bottom: 1rem;
   width: 3px;
   border-radius: 3px;
-  background: linear-gradient(to bottom,
-    #4299e1 0%,
-    #4299e1 12%,
-    #38a169 12%,
-    #38a169 42%,
-    #d69e2e 42%,
-    #d69e2e 67%,
-    #805ad5 67%,
-    #805ad5 100%
-  );
+  background: #bee3f8;
 }
 
 /* Phase section wrappers */
@@ -1455,10 +1470,7 @@ body.show-cpp .lang-c {
   z-index: 1;
 }
 
-.rtree-p1 .rtree-phase-header { background: linear-gradient(135deg, #2b6cb0, #4299e1); }
-.rtree-p2 .rtree-phase-header { background: linear-gradient(135deg, #276749, #38a169); }
-.rtree-p3 .rtree-phase-header { background: linear-gradient(135deg, #975a16, #d69e2e); }
-.rtree-p4 .rtree-phase-header { background: linear-gradient(135deg, #553c9a, #805ad5); }
+.rtree-phase-header { background: linear-gradient(135deg, var(--link-hover), var(--link-color)); }
 
 .rtree-phase-num {
   font-size: 0.7rem;
@@ -1512,12 +1524,9 @@ body.show-cpp .lang-c {
   border-radius: 50%;
   border: 2px solid #fff;
   z-index: 2;
+  background: var(--link-color);
+  box-shadow: 0 0 0 2px var(--link-color);
 }
-
-.rtree-p1 .rtree-dot { background: #4299e1; box-shadow: 0 0 0 2px #4299e1; }
-.rtree-p2 .rtree-dot { background: #38a169; box-shadow: 0 0 0 2px #38a169; }
-.rtree-p3 .rtree-dot { background: #d69e2e; box-shadow: 0 0 0 2px #d69e2e; }
-.rtree-p4 .rtree-dot { background: #805ad5; box-shadow: 0 0 0 2px #805ad5; }
 
 /* Node card */
 .rtree-card {
@@ -1543,15 +1552,11 @@ body.show-cpp .lang-c {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: white;
+  background: var(--link-color);
   padding: 0.15rem 0.55rem;
   border-radius: 6px;
   flex-shrink: 0;
 }
-
-.rtree-p1 .rtree-week-tag { background: #4299e1; }
-.rtree-p2 .rtree-week-tag { background: #38a169; }
-.rtree-p3 .rtree-week-tag { background: #d69e2e; }
-.rtree-p4 .rtree-week-tag { background: #805ad5; }
 
 .rtree-topic {
   font-size: 0.97rem;
@@ -1600,8 +1605,8 @@ body.show-cpp .lang-c {
 }
 
 .rtree-dot-milestone {
-  background: #fbbf24;
-  box-shadow: 0 0 0 2px #fbbf24;
+  background: var(--link-color);
+  box-shadow: 0 0 0 2px var(--link-color);
   width: 1.4rem;
   height: 1.4rem;
   left: -3.1rem;
@@ -1614,34 +1619,34 @@ body.show-cpp .lang-c {
 
 .rtree-card-milestone {
   border-left-width: 4px;
-  border-left-color: #f59e0b;
-  background: #fffbeb;
-  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.1);
+  border-left-color: var(--link-color);
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .rtree-tag-milestone {
-  background: #f59e0b;
+  background: var(--link-color);
   color: white;
 }
 
 .rtree-link-milestone {
-  background: #f59e0b !important;
+  background: var(--link-color) !important;
   color: white !important;
-  border-color: #f59e0b !important;
+  border-color: var(--link-color) !important;
 }
 
 .rtree-link-milestone:hover {
-  background: #d97706 !important;
+  background: var(--link-hover) !important;
 }
 
 .rtree-link-milestone-outline {
   background: transparent !important;
-  color: #d97706 !important;
-  border: 1px solid #d97706 !important;
+  color: var(--link-hover) !important;
+  border: 1px solid var(--link-color) !important;
 }
 
 .rtree-link-milestone-outline:hover {
-  background: #fef3c7 !important;
+  background: #f1f5f9 !important;
 }
 
 /* ==============================
@@ -1772,77 +1777,11 @@ body.show-cpp .lang-c {
     transform: scale(1);
   }
 
-  /* ── Dot ripple pulse (expanding ring) ── */
-  .rtree-dot::after {
-    content: "";
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border-radius: 50%;
-    opacity: 0;
-    animation: dotRipple 3.2s ease-out infinite 1.2s;
-  }
 
-  .rtree-p1 .rtree-dot::after { border: 2px solid #4299e1; }
-  .rtree-p2 .rtree-dot::after { border: 2px solid #38a169; }
-  .rtree-p3 .rtree-dot::after { border: 2px solid #d69e2e; }
-  .rtree-p4 .rtree-dot::after { border: 2px solid #805ad5; }
-  .rtree-milestone .rtree-dot::after { border: 2px solid #fbbf24; }
 
-  /* ── Card hover: subtle lift ── */
-  .rtree-card {
-    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
-                border-left-color 0.28s;
-  }
+  /* ── Card hover removed as requested ── */
 
-  .rtree-card-milestone {
-    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
-                border-left-color 0.28s;
-  }
-
-  .rtree-p1 .rtree-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 28px rgba(66, 153, 225, 0.18);
-    border-left-color: #3182ce;
-  }
-
-  .rtree-p2 .rtree-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 28px rgba(56, 161, 105, 0.18);
-    border-left-color: #2f855a;
-  }
-
-  .rtree-p3 .rtree-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 28px rgba(214, 158, 46, 0.18);
-    border-left-color: #b7791f;
-  }
-
-  .rtree-p4 .rtree-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 28px rgba(128, 90, 213, 0.18);
-    border-left-color: #6b46c1;
-  }
-
-  .rtree-card-milestone:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 28px rgba(245, 158, 11, 0.25) !important;
-  }
-
-  /* ── Prereq pill hover ── */
-  .rtree-prereq-pill {
-    transition: transform 0.18s ease, background 0.18s ease;
-    cursor: default;
-  }
-
-  .rtree-prereq-pill:hover {
-    transform: scale(1.07);
-    background: #edf2f7;
-  }
+  /* ── Prereq pill hover removed as requested ── */
 
   /* ── Week-link pill: already has lift, add scale ── */
   .week-link {

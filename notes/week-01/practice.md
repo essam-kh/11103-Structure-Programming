@@ -118,4 +118,4 @@ Additional exercises for mastery.
 
 
 
-{% include week-nav.html prev_link="/notes/week-01/worksheet/" prev_title="Worksheet" %}
+{% include week-nav.html prev_link="/notes/week-01/worksheet/" prev_title="Worksheet" next_link="/notes/week-02/notes/" next_title="Week 2 Notes" %}
