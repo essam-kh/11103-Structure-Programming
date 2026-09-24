@@ -95,8 +95,8 @@ permalink: /guidance/
   <div class="rtree-section rtree-p1">
     <div class="rtree-phase-header">
       <span class="rtree-phase-num">PHASE 1</span>
-      <span class="rtree-phase-name">Foundations</span>
-      <span class="rtree-phase-goal">Write, compile, and run your first program</span>
+      <span class="rtree-phase-name">Basics &amp; Control Flow</span>
+      <span class="rtree-phase-goal">Write programs that calculate and make decisions</span>
     </div>
 
     <div class="rtree-node">
@@ -114,15 +114,6 @@ permalink: /guidance/
           <a href="{{ site.baseurl }}/notes/week-01/practice/"  class="week-link week-link-practice">🚀 Practice</a>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- ── PHASE 2 ── -->
-  <div class="rtree-section rtree-p2">
-    <div class="rtree-phase-header">
-      <span class="rtree-phase-num">PHASE 2</span>
-      <span class="rtree-phase-name">Control Flow</span>
-      <span class="rtree-phase-goal">Organize code into functions and make conditional decisions</span>
     </div>
 
     <div class="rtree-node">
@@ -169,12 +160,12 @@ permalink: /guidance/
     </div>
   </div>
 
-  <!-- ── PHASE 3 ── -->
-  <div class="rtree-section rtree-p3">
+  <!-- ── PHASE 2 ── -->
+  <div class="rtree-section rtree-p2">
     <div class="rtree-phase-header">
-      <span class="rtree-phase-num">PHASE 3</span>
-      <span class="rtree-phase-name">Data Structures</span>
-      <span class="rtree-phase-goal">Store and process collections of data with loops and arrays</span>
+      <span class="rtree-phase-num">PHASE 2</span>
+      <span class="rtree-phase-name">Arrays &amp; Loops</span>
+      <span class="rtree-phase-goal">Store and process sequences of data efficiently</span>
     </div>
 
     <div class="rtree-node">
@@ -232,9 +223,8 @@ permalink: /guidance/
         </div>
         <div class="rtree-prereqs">
           <span class="rtree-prereq-label">Tests:</span>
-          <span class="rtree-prereq-pill">Phase 1</span>
-          <span class="rtree-prereq-pill">Phase 2</span>
-          <span class="rtree-prereq-pill">Phase 3</span>
+          <span class="rtree-prereq-pill">Phase 1 (Basics &amp; Control Flow)</span>
+          <span class="rtree-prereq-pill">Phase 2 (1D Arrays)</span>
         </div>
         <p class="rtree-desc">A comprehensive mock exam focusing on paper-based code tracing, output prediction, and debugging.</p>
         <div class="week-resource-links">
@@ -247,12 +237,12 @@ permalink: /guidance/
     </div>
   </div>
 
-  <!-- ── PHASE 4 ── -->
-  <div class="rtree-section rtree-p4">
+  <!-- ── PHASE 3 ── -->
+  <div class="rtree-section rtree-p3">
     <div class="rtree-phase-header">
-      <span class="rtree-phase-num">PHASE 4</span>
+      <span class="rtree-phase-num">PHASE 3</span>
       <span class="rtree-phase-name">Advanced Topics</span>
-      <span class="rtree-phase-goal">Master 2D data, recursive thinking, and direct memory access</span>
+      <span class="rtree-phase-goal">Master recursive thinking and direct memory access</span>
     </div>
 
     <div class="rtree-node">
@@ -276,7 +266,6 @@ permalink: /guidance/
         </div>
       </div>
     </div>
-
     <div class="rtree-node">
       <div class="rtree-dot"></div>
       <div class="rtree-card">

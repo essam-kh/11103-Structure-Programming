@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 6 Worksheet
 parent: Week 6
 nav_exclude: true
 ---
@@ -194,4 +193,3 @@ Leaders in the array: 17 5 2
 </div>
 
 
-{% include week-nav.html prev_link="/notes/week-06/syntax/" prev_title="Syntax Guide" next_link="/notes/week-06/practice/" next_title="Practice" %}

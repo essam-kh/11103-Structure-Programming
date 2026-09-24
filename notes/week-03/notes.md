@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 3 Notes
 parent: Week 3
 nav_exclude: true
 ---
@@ -493,4 +492,3 @@ switch (val) {
 </div>
 
 
-{% include week-nav.html next_link="/notes/week-03/syntax/" next_title="Syntax Guide" %}

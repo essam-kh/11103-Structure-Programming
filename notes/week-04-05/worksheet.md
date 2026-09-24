@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 4 & 5 Worksheet
 parent: Week 4 & 5
 nav_exclude: true
 ---
@@ -519,4 +518,3 @@ int main() {
 </div>
 
 ---
-{% include week-nav.html prev_link="/notes/week-04-05/syntax/" prev_title="Syntax Guide" next_link="/notes/week-04-05/practice/" next_title="Practice" %}

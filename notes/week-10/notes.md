@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 10 Notes
 parent: Week 10
 nav_exclude: true
 ---
@@ -682,4 +681,3 @@ while (*p1 != '\0') {
 ```
 Without `*p2 = '\0';`, the `dest` string might not end where you expect, and printing it could show garbage characters.
 
-{% include week-nav.html next_link="/notes/week-10/syntax/" next_title="Syntax Guide" %}

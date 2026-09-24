@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 9 Notes
 parent: Week 9
 nav_exclude: true
 ---
@@ -118,4 +117,3 @@ Both recursion and iteration can be used to solve the same repetition-based prob
 {: .tip }
 <br>
 
-{% include week-nav.html next_link="/notes/week-09/syntax/" next_title="Syntax Guide" %}

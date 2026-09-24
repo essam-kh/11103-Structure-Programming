@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 4 & 5 Syntax
 parent: Week 4 & 5
 nav_exclude: true
 ---
@@ -406,4 +405,3 @@ while (n != -1) {
 
 </div>
 
-{% include week-nav.html prev_link="/notes/week-04-05/notes/" prev_title="Lecture Notes" next_link="/notes/week-04-05/worksheet/" next_title="Worksheet" %}

@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Mockup Final Solutions 1
 nav_exclude: true
 ---
 

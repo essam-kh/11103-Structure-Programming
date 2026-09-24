@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 6 Notes
 parent: Week 6
 nav_exclude: true
 ---
@@ -122,4 +121,3 @@ void rotateLeft(char arr[], int size) {
 
 <img src="{{ site.baseurl }}/assets/images/content/rotation.png" alt="Array Rotation" style="display: block; margin: 0 auto; max-width: 60%; height: auto;">
 
-{% include week-nav.html next_link="/notes/week-06/syntax/" next_title="Syntax Guide" %}

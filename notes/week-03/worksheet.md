@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 3 Questions
 parent: Week 3
 nav_exclude: true
 ---
@@ -232,4 +231,3 @@ printf("x = %d, y = %d, z = %d\n", x, y, z);
 {% include expandable-code.html title="Solution" id="sol-13" file_c="code/week-03/c/solution-13.c" file_cpp="code/week-03/cpp/solution-13.cpp" %}
 </div>
 
-{% include week-nav.html prev_link="/notes/week-03/syntax/" prev_title="Syntax Guide" next_link="/notes/week-03/practice/" next_title="Practice" %}

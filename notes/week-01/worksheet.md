@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 1 Worksheet
 parent: Week 1
 nav_exclude: true
 ---
@@ -153,4 +152,3 @@ After swapping: A = 20, B = 10
 {% include expandable-code.html title="Solution" id="sol-8" file_c="code/week-01/c/solution-08.c" file_cpp="code/week-01/cpp/solution-08.cpp" %}
 </div>
 
-{% include week-nav.html prev_link="/notes/week-01/syntax/" prev_title="Syntax Guide" next_link="/notes/week-01/practice/" next_title="Practice" %}

@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 7 & 8 Syntax
 parent: Week 7 & 8
 nav_exclude: true
 ---
@@ -216,4 +215,3 @@ void processMatrix(int arr[][COLS], int rows, int cols) {
 
 </div>
 
-{% include week-nav.html prev_link="/notes/week-07-08/notes/" prev_title="Lecture Notes" next_link="/notes/week-07-08/worksheet/" next_title="Worksheet" %}

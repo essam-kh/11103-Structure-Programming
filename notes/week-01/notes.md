@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 1 Notes
 parent: Week 1
 nav_exclude: true
 ---
@@ -514,4 +513,3 @@ cout << a << " " << b << "\n";  // Output: 4 4
 
 </div>
 
-{% include week-nav.html next_link="/notes/week-01/syntax/" next_title="Syntax Guide" %}

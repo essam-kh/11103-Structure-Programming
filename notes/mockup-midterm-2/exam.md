@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Mockup Midterm Exam 2
 nav_exclude: true
 ---
 
@@ -218,4 +217,3 @@ switch (light) {
 ```
 </div>
 
-{% include week-nav.html next_link="/notes/mockup-midterm-2/solutions/" next_title="Solutions" %}

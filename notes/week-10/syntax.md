@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 10 Syntax
 parent: Week 10
 nav_exclude: true
 ---
@@ -144,4 +143,3 @@ int* getArray() {
 > **Warning**: Never return the address of a local automatic variable!
 {: .warning }
 
-{% include week-nav.html prev_link="/notes/week-10/notes/" prev_title="Lecture Notes" next_link="/notes/week-10/worksheet/" next_title="Worksheet" %}

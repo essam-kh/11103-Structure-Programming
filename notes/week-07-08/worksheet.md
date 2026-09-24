@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 7 & 8 Worksheet
 parent: Week 7 & 8
 nav_exclude: true
 ---
@@ -229,5 +228,4 @@ Matrix after swap:
 {% include expandable-code.html title="Solution" id="sol-11" file_c="code/week-07-08/c/solution-11.c" file_cpp="code/week-07-08/cpp/solution-11.cpp" %}
 </div>
 
-{% include week-nav.html prev_link="/notes/week-07-08/syntax/" prev_title="Syntax Guide" next_link="/notes/week-07-08/practice/" next_title="Practice" %}
 

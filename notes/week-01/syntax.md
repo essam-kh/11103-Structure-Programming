@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 1 Syntax
 parent: Week 1
 nav_exclude: true
 ---
@@ -225,4 +224,3 @@ cout << "Value of x after postfix decrement: " << x << endl; // prints 5
 Shows the difference between prefix (`++x`, `--x`) and postfix (`x++`, `x--`) operators.
 
 
-{% include week-nav.html prev_link="/notes/week-01/notes/" prev_title="Lecture Notes" next_link="/notes/week-01/worksheet/" next_title="Worksheet" %}

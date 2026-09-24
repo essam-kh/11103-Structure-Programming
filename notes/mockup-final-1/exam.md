@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Mockup Final Exam 1
 nav_exclude: true
 ---
 

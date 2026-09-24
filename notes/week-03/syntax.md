@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 3 Syntax
 parent: Week 3
 nav_exclude: true
 ---
@@ -250,4 +249,3 @@ if (!isLightOn) {
 ```
 </div>
 
-{% include week-nav.html prev_link="/notes/week-03/notes/" prev_title="Lecture Notes" next_link="/notes/week-03/worksheet/" next_title="Worksheet" %}

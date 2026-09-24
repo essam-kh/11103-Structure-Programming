@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 2 Worksheet
 parent: Week 2
 nav_exclude: true
 ---
@@ -124,4 +123,3 @@ The distance between the points is: 5.00
 {% include expandable-code.html title="Solution" id="sol-6" file_c="code/week-02/c/solution-06.c" file_cpp="code/week-02/cpp/solution-06.cpp" %}
 </div>
 
-{% include week-nav.html prev_link="/notes/week-02/syntax/" prev_title="Syntax Guide" next_link="/notes/week-02/practice/" next_title="Practice" %}

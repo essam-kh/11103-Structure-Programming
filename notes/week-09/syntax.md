@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 9 Syntax
 parent: Week 9
 nav_exclude: true
 ---
@@ -96,4 +95,3 @@ int fib(int n) {
 > **Note**: Be careful with multiple recursive calls as they can grow exponentially in complexity if not managed correctly.
 {: .note }
 
-{% include week-nav.html prev_link="/notes/week-09/notes/" prev_title="Lecture Notes" next_link="/notes/week-09/worksheet/" next_title="Worksheet" %}

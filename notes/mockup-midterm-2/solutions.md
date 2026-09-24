@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Mockup Midterm Solutions 2
 nav_exclude: true
 ---
 
@@ -224,4 +223,3 @@ if (light == 'R' || light == 'r') {
 ```
 </div>
 
-{% include week-nav.html prev_link="/notes/mockup-midterm-2/exam/" prev_title="Exam" %}

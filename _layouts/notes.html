@@ -3,7 +3,6 @@ layout: table_wrappers
 ---
 
 <!DOCTYPE html>
-
 <html lang="{{ site.lang | default: 'en-US' }}">
 {% include head.html %}
 <body>
@@ -14,80 +13,56 @@ layout: table_wrappers
     {% include navbar.html %}
     
     <style>
-      /* Sidebar styles for notes section */
-      .notes-sidebar-wrapper {
-        position: fixed;
-        left: 0;
-        top: 6rem;
-        bottom: 0;
-        width: 280px;
-        z-index: 50;
-        padding-left: 2rem;
-      }
-      .notes-left-sidebar {
-        width: 240px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        border-right: 1px solid #e2e8f0;
-        padding-right: 1.5rem;
-      }
-      .notes-sidebar-title {
-        flex-shrink: 0;
-        background: white;
-        z-index: 10;
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: #1e293b;
-        margin-bottom: 1rem;
-        padding-top: 0.5rem;
-        padding-bottom: 0.75rem;
-        border-bottom: 1px solid #e2e8f0;
-      }
-      .notes-sidebar-nav {
-        flex-grow: 1;
-        overflow-y: auto;
-        overflow-x: hidden;
-        padding-bottom: 2rem;
-      }
-      @media (max-width: 1280px) {
-        .notes-sidebar-wrapper { display: none; }
-      }
-      /* Ensure layout-grid can hold absolute sidebar */
-      .layout-grid {
+      .notes-layout {
         position: relative;
         max-width: 850px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
       }
+      
+      .notes-left-sidebar {
+        position: absolute;
+        right: calc(100% + 3rem); /* Hang outside the left edge */
+        width: 240px;
+        top: 6rem;
+        align-self: start; 
+        max-height: calc(100vh - 8rem);
+        overflow-y: auto;
+        overflow-x: hidden;
+        border-right: 1px solid #e2e8f0;
+        padding-right: 1.5rem;
+      }
+
+      .notes-sidebar-title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
       .layout-main {
         width: 100%;
         max-width: 850px;
       }
-      .layout-grid.has-right-sidebar .layout-right-sidebar {
-        position: absolute;
-        left: calc(100% + 3rem);
-        top: 6rem;
-        width: 220px;
+
+      @media (max-width: 1280px) {
+        .notes-left-sidebar { display: none; }
       }
     </style>
 
-    <div class="main-content-wrap">
-      {% include components/breadcrumbs.html %}
-      <div id="main-content" class="main-content">
-        <div class="layout-grid">
+    <div class="main-content-wrap" style="max-width: 1200px !important;">
+      <div id="main-content" class="main-content" style="max-width: 100% !important;">
+        <div class="notes-layout" id="notes-layout-grid">
           
-          {% if page.url contains '/notes/' and page.url != '/notes/' and page.url != '/notes/index.html' %}
-          <div class="notes-sidebar-wrapper">
-            <div class="notes-left-sidebar">
-              <div class="notes-sidebar-title">Course Materials</div>
-              <div class="notes-sidebar-nav">
-                {% include notes_sidebar.html %}
-              </div>
+          <div class="notes-left-sidebar">
+            <div class="notes-sidebar-title">Course Materials</div>
+            <div class="notes-sidebar-nav">
+              {% include notes_sidebar.html %}
             </div>
           </div>
-          {% endif %}
 
           <div class="layout-main">
             <main>
@@ -96,16 +71,13 @@ layout: table_wrappers
               {% else %}
                 {{ content }}
               {% endif %}
-
-              {% if page.has_toc != false %}
-                {% include components/children_nav.html %}
-              {% endif %}
             </main>
             {% include components/footer.html %}
           </div>
           
+          <!-- We keep the right sidebar outside the main flow so it can be handled if needed -->
           <div class="layout-right-sidebar">
-            <div class="sticky-toc-container" id="sticky-toc-container" style="display: none;">
+            <div class="sticky-toc-container" id="sticky-toc-container" style="display: none; position: absolute; left: calc(100% + 3rem); top: 6rem; width: 220px;">
               <h4 class="toc-title">On this page</h4>
               <div id="sticky-toc-content"></div>
             </div>
@@ -117,17 +89,12 @@ layout: table_wrappers
             var originalToc = document.getElementById("markdown-toc");
             var stickyContainer = document.getElementById("sticky-toc-container");
             var stickyContent = document.getElementById("sticky-toc-content");
-            var layoutGrid = document.querySelector(".layout-grid");
+            var layoutGrid = document.getElementById("notes-layout-grid");
             
             if (originalToc) {
-              // Move a clone of the TOC to the sticky sidebar
               stickyContent.appendChild(originalToc.cloneNode(true));
               stickyContainer.style.display = "block";
               
-              // Activate the grid layout
-              layoutGrid.classList.add("has-right-sidebar");
-              
-              // Hide the original inline TOC and its header
               var tocHeader = document.querySelector(".no_toc.text-delta");
               if (tocHeader && tocHeader.textContent.toLowerCase().includes("table of contents")) {
                 tocHeader.style.display = "none";
@@ -138,13 +105,7 @@ layout: table_wrappers
         </script>
       </div>
     </div>
-    {% if site.search_enabled != false %}
-      {% include components/search_footer.html %}
-    {% endif %}
   </div>
-
-  {% if site.mermaid %}
-    {% include components/mermaid.html %}
-  {% endif %}
+  {% include ide-panel.html %}
 </body>
 </html>

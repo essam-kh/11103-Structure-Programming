@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 6 Syntax
 parent: Week 6
 nav_exclude: true
 ---
@@ -155,4 +154,3 @@ void rotateLeft(int arr[], int size) {
 </div>
 </div>
 
-{% include week-nav.html prev_link="/notes/week-06/notes/" prev_title="Lecture Notes" next_link="/notes/week-06/worksheet/" next_title="Worksheet" %}

@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 9 Worksheet
 parent: Week 9
 nav_exclude: true
 ---
@@ -240,4 +239,3 @@ Number of subsequences: 2
 {% include expandable-code.html title="Solution" id="sol-15" file_c="code/week-09/c/solution-15.c" file_cpp="code/week-09/cpp/solution-15.cpp" %}
 </div>
 
-{% include week-nav.html prev_link="/notes/week-09/syntax/" prev_title="Syntax Guide" next_link="/notes/week-09/practice/" next_title="Practice" %}

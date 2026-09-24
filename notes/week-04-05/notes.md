@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 4 & 5 Notes
 parent: Week 4 & 5
 nav_exclude: true
 ---
@@ -677,4 +676,3 @@ int main() {
 
 ---
 
-{% include week-nav.html next_link="/notes/week-04-05/syntax/" next_title="Syntax Guide" %}

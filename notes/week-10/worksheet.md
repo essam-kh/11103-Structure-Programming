@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 10 Worksheet
 parent: Week 10
 nav_exclude: true
 ---
@@ -455,4 +454,3 @@ Sum: 90
 {% include expandable-code.html title="Solution" id="sol-11" file_c="code/week-10/c/solution-11.c" file_cpp="code/week-10/cpp/solution-11.cpp" %}
 </div>
 
-{% include week-nav.html prev_link="/notes/week-10/syntax/" prev_title="Syntax Guide" next_link="/notes/week-10/practice/" next_title="Practice" %}

@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Week 4 & 5 Practice
 parent: Week 4 & 5
 nav_exclude: true
 ---
@@ -134,4 +133,3 @@ Additional exercises for mastery.
 
 </div>
 
-{% include week-nav.html prev_link="/notes/week-04-05/worksheet/" prev_title="Worksheet" next_link="/notes/week-06/notes/" next_title="Week 6 Notes" %}

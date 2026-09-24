@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Practice
 parent: Week 10
 nav_order: 4
 ---
