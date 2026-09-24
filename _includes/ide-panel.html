@@ -1,19 +1,37 @@
-<!-- ── Floating IDE Panel ── -->
-<div id="ide-panel">
-  <div id="ide-tab" title="Toggle Code Playground">
-    <span class="ide-tab-text">Code Playground</span>
-  </div>
+<!-- ═══════════ PLAYGROUND FAB (bottom-left) ═══════════ -->
+<div class="fab-group">
+  <button class="fab-btn fab-playground" id="fab-playground" onclick="toggleIDE()">
+    IDE Panel
+  </button>
+</div>
 
-  <div class="ide-body">
-    <iframe
-      id="ide-frame"
-      src=""
-      frameborder="0"
-      width="100%"
-      height="100%"
-      allowfullscreen
-      loading="lazy"
-    ></iframe>
+<!-- ═══════════ FEEDBACK (bottom-right, original position) ═══════════ -->
+<a class="feedback-pill" href="https://docs.google.com/forms/d/e/1FAIpQLSfo5dKo2k0jT7-zJpRB1MwoEZ6eTchQq_zhGSBfgqwkfS7oxw/viewform?usp=publish-editor" target="_blank">
+  Feedback &amp; Bugs
+</a>
+
+<!-- ═══════════ IDE PANEL ═══════════ -->
+<div class="ide-panel" id="ide-panel">
+  <div class="ide-resize-edge top" data-resize="top"></div>
+  <div class="ide-resize-edge bottom" data-resize="bottom"></div>
+  <div class="ide-resize-edge left" data-resize="left"></div>
+  <div class="ide-resize-edge right" data-resize="right"></div>
+  <div class="ide-resize-edge top-left" data-resize="top-left"></div>
+  <div class="ide-resize-edge top-right" data-resize="top-right"></div>
+  <div class="ide-resize-edge bottom-left" data-resize="bottom-left"></div>
+  <div class="ide-resize-edge bottom-right" data-resize="bottom-right"></div>
+
+  <div class="ide-panel-header" id="ide-drag-handle">
+    <div class="ide-panel-title">
+      <span class="ide-panel-title-dot"></span>
+      Code Playground
+    </div>
+    <div class="ide-panel-actions">
+      <button class="ide-panel-action-btn" onclick="toggleFullscreen()">⛶ Fullscreen</button>
+      <button class="ide-panel-action-btn" onclick="toggleIDE()">✕ Close</button>
+    </div>
   </div>
-  <div id="ide-resize-handle" title="Drag to resize"></div>
+  <div class="ide-panel-body">
+    <iframe id="ide-frame" src="" loading="lazy" allowfullscreen></iframe>
+  </div>
 </div>

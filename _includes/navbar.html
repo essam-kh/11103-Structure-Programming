@@ -1,0 +1,60 @@
+<nav class="navbar" id="main-header">
+  <div class="navbar-inner">
+    <a href="{{ site.baseurl }}/" class="navbar-logo">
+      <img src="{{ site.baseurl }}/assets/images/structure-logo.png" alt="Structure Programming">
+    </a>
+
+    <div class="navbar-links">
+      <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">Course Info</a>
+      <a href="{{ site.baseurl }}/guidance/" class="{% if page.url contains '/guidance/' %}active{% endif %}">Student Guidance</a>
+      <a href="{{ site.baseurl }}/notes/" class="{% if page.url contains '/notes/' or page.url contains '/week-' %}active{% endif %}">Course Notes</a>
+      <a href="{{ site.baseurl }}/resources/" class="{% if page.url contains '/resources/' %}active{% endif %}">Resources</a>
+      <a href="{{ site.baseurl }}/contributors/" class="{% if page.url contains '/contributors/' %}active{% endif %}">Contributors</a>
+      <a href="{{ site.baseurl }}/FAQ/" class="{% if page.url contains '/FAQ/' %}active{% endif %}">FAQ</a>
+    </div>
+
+    <div class="navbar-right">
+      <div class="search" role="search">
+        <div class="search-input-wrap">
+          <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search" aria-label="Search" autocomplete="off">
+          <label for="search-input" class="search-label">
+            <svg viewBox="0 0 24 24" class="search-icon">
+              <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+          </label>
+        </div>
+        <div id="search-results" class="search-results"></div>
+      </div>
+
+      {% if site.aux_links %}
+        <ul class="navbar-aux-links">
+          {% for link in site.aux_links %}
+            <li><a href="{{ link.last.first }}">{{ link.first }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    <button class="navbar-hamburger" onclick="toggleMobileNav()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-nav-overlay" id="mobile-nav" onclick="toggleMobileNav()">
+  <div class="mobile-nav-drawer" onclick="event.stopPropagation()">
+    <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">Course Info</a>
+    <a href="{{ site.baseurl }}/guidance/" class="{% if page.url contains '/guidance/' %}active{% endif %}">Student Guidance</a>
+    <a href="{{ site.baseurl }}/notes/" class="{% if page.url contains '/notes/' or page.url contains '/week-' %}active{% endif %}">Course Notes</a>
+    <a href="{{ site.baseurl }}/resources/" class="{% if page.url contains '/resources/' %}active{% endif %}">Resources</a>
+    <a href="{{ site.baseurl }}/contributors/" class="{% if page.url contains '/contributors/' %}active{% endif %}">Contributors</a>
+    <a href="{{ site.baseurl }}/FAQ/" class="{% if page.url contains '/FAQ/' %}active{% endif %}">FAQ</a>
+  </div>
+</div>
+
+<script>
+  function toggleMobileNav() {
+    document.getElementById('mobile-nav').classList.toggle('active');
+  }
+</script>
