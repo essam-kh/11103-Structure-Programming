@@ -6,7 +6,6 @@
 
     <div class="navbar-links">
       <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">Course Info</a>
-      <a href="{{ site.baseurl }}/guidance/" class="{% if page.url contains '/guidance/' %}active{% endif %}">Student Guidance</a>
       <a href="{{ site.baseurl }}/notes/" class="{% if page.url contains '/notes/' or page.url contains '/week-' %}active{% endif %}">Course Notes</a>
       <a href="{{ site.baseurl }}/resources/" class="{% if page.url contains '/resources/' %}active{% endif %}">Resources</a>
       <a href="{{ site.baseurl }}/contributors/" class="{% if page.url contains '/contributors/' %}active{% endif %}">Contributors</a>
@@ -24,6 +23,13 @@
           </label>
         </div>
         <div id="search-results" class="search-results"></div>
+      </div>
+
+      <div class="lang-toggle-container" style="margin: 0 1rem 0 0;">
+        <div class="lang-toggle-pill" style="transform: scale(0.85); transform-origin: center right; border: 1px solid #cbd5e1; background-color: #f8fafc;">
+          <button id="btn-c" class="lang-toggle-btn active" style="padding: 0.3rem 1rem; font-size: 0.85rem;">C</button>
+          <button id="btn-cpp" class="lang-toggle-btn" style="padding: 0.3rem 1rem; font-size: 0.85rem;">C++</button>
+        </div>
       </div>
 
       {% if site.aux_links %}
@@ -45,7 +51,6 @@
 <div class="mobile-nav-overlay" id="mobile-nav" onclick="toggleMobileNav()">
   <div class="mobile-nav-drawer" onclick="event.stopPropagation()">
     <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">Course Info</a>
-    <a href="{{ site.baseurl }}/guidance/" class="{% if page.url contains '/guidance/' %}active{% endif %}">Student Guidance</a>
     <a href="{{ site.baseurl }}/notes/" class="{% if page.url contains '/notes/' or page.url contains '/week-' %}active{% endif %}">Course Notes</a>
     <a href="{{ site.baseurl }}/resources/" class="{% if page.url contains '/resources/' %}active{% endif %}">Resources</a>
     <a href="{{ site.baseurl }}/contributors/" class="{% if page.url contains '/contributors/' %}active{% endif %}">Contributors</a>

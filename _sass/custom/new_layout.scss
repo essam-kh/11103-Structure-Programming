@@ -96,6 +96,7 @@
       text-decoration: none;
       font-size: 0.85rem;
       font-weight: 400;
+      white-space: nowrap;
     }
 
     .navbar-aux-links a:hover {
@@ -204,21 +205,21 @@
        ======================================= */
     .fab-group {
       position: fixed;
-      bottom: 24px;
-      right: 24px;
+      bottom: 20px;
+      right: 20px;
       z-index: 1100;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 12px;
-      width: 170px;
+      gap: 8px;
+      width: 100px;
     }
 
     .fab-btn {
       width: 100%;
-      height: 48px;
+      height: 32px;
       padding: 0;
-      border-radius: 24px;
+      border-radius: 20px;
       border: none;
       cursor: pointer;
       display: flex;
@@ -233,7 +234,7 @@
     .fab-playground {
       background: #0f172a;
       color: #e2e8f0;
-      font-size: 0.95rem;
+      font-size: 0.78rem;
       font-weight: 700;
       font-family: inherit;
       letter-spacing: 0.3px;
@@ -280,13 +281,13 @@
     /* Feedback pill — inside fab-group */
     .feedback-pill {
       width: 100%;
-      height: 48px;
+      height: 32px;
       background: #2563eb;
       color: white !important;
       padding: 0;
-      border-radius: 24px;
+      border-radius: 20px;
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.78rem;
       text-decoration: none !important;
       display: flex;
       align-items: center;

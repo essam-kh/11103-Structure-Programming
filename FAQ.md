@@ -15,13 +15,6 @@ description: >-
 
 # Frequently Asked Questions
 
-<div class="lang-toggle-container">
-    <div class="lang-toggle-pill">
-        <button id="btn-c" class="lang-toggle-btn active">C</button>
-        <button id="btn-cpp" class="lang-toggle-btn">C++</button>
-    </div>
-</div>
-<p class="lang-toggle-desc">Toggle between C and C++ to instantly translate all code examples, syntax guides, and worksheet solutions across the site.</p>
 
 ## Studying for this course
 
